@@ -20,6 +20,7 @@ function App() {
         </div>
       </header>
 
+
       <div className="contents">
         <div className="contents-1">
           글 목록
