@@ -1,5 +1,45 @@
+
+@font-face {
+  font-family: 'TmonMonsori';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: normal;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+}
+
+body {
+  font-family: 'Godo', sans-serif;
+  font-size: 16px;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 8px;
+}
+
+.login, .signup{
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.199);
+  margin: 10px;
+}
+
+.login:hover, .signup:hover {
+  color: #ffffff;
+  background: rgba(104, 34, 216, 0.664);
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
+  background-color: #837261;
 }
 
 .App-logo {
@@ -13,20 +53,48 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-1{
+  font-size: 600;
+  color: aliceblue;
 }
 
+.nav-2{
+  font-size: 600;
+  color: aliceblue;
+}
+
+.contents{
+  display: flex;
+  padding: 10px;
+  background-color:rgb(255, 255, 255);
+  justify-content: space-between;
+}
+.contents-1{
+  border-radius: 8px;
+  margin: 5px;
+background-color: rgb(216, 216, 216);
+padding: 20px;
+flex: 2;
+}
+.contents-2{
+  border-radius: 8px;
+  margin: 5px;
+  background-color:rgb(216, 216, 216);
+  padding: 20px;
+  flex: 1;
+}
 .App-link {
   color: #61dafb;
 }
+
+.nav{
+  background-color: rgb(84, 0, 219);
+  justify-content: space-between;
+  display: flex;
+  padding: 20px 20px;
+  font-weight: 20px;
+}
+
 
 @keyframes App-logo-spin {
   from {
