@@ -1,5 +1,5 @@
 import React,  { useState } from 'react';
-
+import { Link, RouteComponentProps } from 'react-router-dom';
 
 
 function Header() {
@@ -7,13 +7,13 @@ function Header() {
     return (
         <header className="nav">
         <div className="nav-1">
-            <i class="fas fa-frog"></i>
-            <a href="">자유 게시판</a>
+            <i className="fas fa-frog"></i>
+            <Link className="logo" to="/">자유 게시판</Link>
         </div>
         <div className="nav-2">
-            <button  className="login">Log in</button>
+            <Link  className="login" to="/login" >Log in</Link>
 
-            <button className="signup">sign up</button>
+            <Link className="signup" to="/signup" >sign up</Link>
            
         </div>
     </header>

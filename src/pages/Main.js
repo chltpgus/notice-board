@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-function Content() {
+function Main() {
     let [글제목, 글제목변경] = useState('내가 쓴 글 목록');
    
     return (
@@ -17,4 +17,4 @@ function Content() {
   
   }
 
-export default Content;
+export default Main;
