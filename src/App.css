@@ -25,6 +25,15 @@ a{
   padding: 10px 8px;
 }
 
+button{
+  font-family: 'Godo', sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  border: 0;
+  color: rgb(255, 255, 255);
+  padding: 10px 8px;
+}
+
 .login, .signup{
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.199);
@@ -54,11 +63,14 @@ a{
 }
 
 .nav-1{
+  margin-top: 20px;
   font-size: 600;
   color: aliceblue;
+  position: static;
 }
 
 .nav-2{
+  margin: 0px;
   font-size: 600;
   color: aliceblue;
 }
@@ -70,7 +82,6 @@ a{
   justify-content: space-between;
 }
 .contents-1{
-  
   border-radius: 8px;
   margin: 5px;
 background-color: rgb(216, 216, 216);
