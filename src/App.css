@@ -76,6 +76,21 @@ button{
   text-decoration: none;
 }
 
+.Signuppage{
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+.signuptext{
+  font-family:'TmonMonsori';
+  margin: 30px;
+  font-size: 70px;
+}
+
+.signuptext2{
+  color:  rgb(78, 78, 78);;
+}
+
 .App {
   text-align: center;
   background-color: #837261;
@@ -104,6 +119,16 @@ button{
   color: aliceblue;
 }
 
+.postlist{
+  display: flex;
+  flex:1
+}
+
+.newpost{
+  display: flex;
+
+}
+
 .loginpage{
   padding: 5px;
   background-color: rgb(255, 255, 255);
@@ -129,39 +154,60 @@ button{
   color: rgb(0, 0, 0);;
   background-color:rgba(243, 243, 243, 0.021);;
   outline-color: rgb(230, 187, 0);
+  border-color: rgba(0, 0, 0, 0.24);
 }
 
-.INPUT01:hover, .signup:hover {
+.INPUT01:hover {
   color: #000000d5;
   background: rgba(245, 245, 245, 0.664);
   text-decoration: none;
 }
 
-.ID, .PASS{
+.INPUT02{
+  height: auto; 
+  line-height: normal; 
+  padding: .8em .5em; 
+  width: 340px;
+  height: 25px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);;
+  background-color:rgba(243, 243, 243, 0.021);;
+  outline-color: rgb(230, 187, 0);
+  border-color: rgba(0, 0, 0, 0.24);
+}
+
+.INPUT02:hover{
+  color: #000000d5;
+  background: rgba(245, 245, 245, 0.664);
+  text-decoration: none;
+}
+
+.ID, .PASS, .NICKNAME, .PASS2{
   margin-block-end: 5px;
   height: auto; 
   margin: 20px;
 }
 
 .contents{
-  display: flex;
+  display: block;
   padding: 10px;
   background-color:rgb(255, 255, 255);
   justify-content: space-between;
 }
 .contents-1{
   border-radius: 8px;
+  display: flex;
   margin: 5px;
 background-color: rgb(216, 216, 216);
 padding: 20px;
-flex: 2;
+
 }
 .contents-2{
   border-radius: 8px;
   margin: 5px;
   background-color:rgb(216, 216, 216);
   padding: 20px;
-  flex: 1;
+ 
 }
 .App-link {
   color: #61dafb;
