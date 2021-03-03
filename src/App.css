@@ -15,8 +15,8 @@
 body {
   font-family: 'Godo', sans-serif;
   font-size: 16px;
-  margin: 20px;
-  background-color: rgb(255, 255, 255);
+  margin: 2cm;
+  background-color: rgb(245, 244, 244);
 }
 
 a{
@@ -40,15 +40,39 @@ button{
   margin: 10px;
 }
 
+.logbtndiv{
+  padding: 30px;
+}
 .loginbtn{
   border-radius: 8px;
-  background-color: rgb(0, 0, 0);
-  margin: 10px;
+  background-color:  rgb(230, 187, 0);
+  padding: 20px 135px;
+}
+.loginbtn:hover {
+  color: #ffffff;
+  border-radius: 20px;
+  background: rgba(230, 188, 0, 0.541);
+  text-decoration: none;
+}
+.logsign{
+  padding: 30px;
+}
+
+.loginbtn2{
+  border-radius: 8px;
+  color: black;
+  padding: 20px 20px;
+}
+
+.loginbtn2:hover {
+  color: #707070;
+  border-radius: 20px;
+  text-decoration: none;
 }
 
 .login:hover, .signup:hover {
   color: #ffffff;
-  background: rgba(104, 34, 216, 0.664);
+  background: rgba(230, 188, 0, 0.514);
   text-decoration: none;
 }
 
@@ -91,19 +115,34 @@ button{
   font-size: 70px;
 }
 
+.logintext2{
+  color:  rgb(78, 78, 78);;
+}
+
 .INPUT01{
-  margin: 5px 5px;
   height: auto; 
   line-height: normal; 
   padding: .8em .5em; 
+  width: 340px;
+  height: 25px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);;
+  background-color:rgba(243, 243, 243, 0.021);;
+  outline-color: rgb(230, 187, 0);
 }
+
+.INPUT01:hover, .signup:hover {
+  color: #000000d5;
+  background: rgba(245, 245, 245, 0.664);
+  text-decoration: none;
+}
+
 .ID, .PASS{
-  background-color: rgba(0, 0, 0, 0.192);
   margin-block-end: 5px;
   height: auto; 
-  line-height: normal; 
-  padding: .8em .5em; 
+  margin: 20px;
 }
+
 .contents{
   display: flex;
   padding: 10px;
@@ -129,7 +168,7 @@ flex: 2;
 }
 
 .nav{
-  background-color: rgb(84, 0, 219);
+  background-color: rgb(230, 187, 0);
   justify-content: space-between;
   display: flex;
   padding: 20px 20px;
@@ -144,4 +183,15 @@ flex: 2;
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.foo{
+  padding: 25px;
+  background-color: rgb(235, 233, 233);
+  display: flex;
+}
+
+.footertext{
+  color: #2c2c2c;
 }

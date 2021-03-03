@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Main from './pages/Main';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" exact component={Main}/>
         <Route path="/login" exact component={Login}/>
         <Route path="/signup" exact component={Signup}/>
-        
+        <Footer/>
       </div>
     </BrowserRouter>
   );
