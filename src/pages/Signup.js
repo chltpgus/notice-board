@@ -29,7 +29,7 @@ function Signup() {
 
     const handleClick = () => {
 
-        users=[{
+        let users=[{
 
         }];
 
@@ -40,9 +40,9 @@ function Signup() {
             .then(function (res) {
                 console.log(res[0]);    
                 users = res;
+                console.log(users.length);
             });
 
-        console.log(length.users);
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
