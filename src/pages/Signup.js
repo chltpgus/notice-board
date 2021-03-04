@@ -29,14 +29,16 @@ function Signup() {
 
     const handleClick = () => {
 
-        fetch('https://noticeboardserverr.herokuapp.com/signup')
+        fetch('https://noticeboardserverr.herokuapp.com/signup') //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
             .then(function (res) {
                 return res.json();
             })
             .then(function (res) {
-                console.log(res[0]);
+                console.log(res[0]);    
 
             });
+
+        
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
