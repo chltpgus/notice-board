@@ -39,9 +39,8 @@ function Signup() {
             })
             .then(function (res) {
                 console.log(res[0]);    
-                users = this.res;
+                users = then.res;
                 console.log(users.length);
-                console.log(users);
             });
 
 
