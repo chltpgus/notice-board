@@ -27,7 +27,7 @@ function Signup() {
 
     
 
-    const handleClick = () => {
+    const handleClick = (a) => {
 
         let users={
             email: emailInput,
@@ -49,23 +49,26 @@ function Signup() {
                         var json = JSON.parse(xhr.responseText);
                     }
                 };
+
+                if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
+                    setEmailError(false);
+                }
+                else{
+                    setEmailError(true);
+                    return a;
+                }
+        
+               if(passInput !== pass2Input){
+                setPasswordError(true);
+                return a;
+               }
+               else{setPasswordError(false);}
+
                 console.log(users)
                 var data = JSON.stringify(users);
                 xhr.send(data);
             });
-            console.log(Object.keys(users).length);
-
-        if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
-            setEmailError(false);
-        }
-        else{
-            setEmailError(true);
-        }
-
-       if(passInput !== pass2Input){
-        setPasswordError(true);
-       }
-       else{setPasswordError(false);}
+ 
 
 
     }
