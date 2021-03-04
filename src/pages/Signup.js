@@ -31,7 +31,7 @@ function Signup() {
           method: 'GET',
         });
         const data = await response.json();
-        console.log(data[0]);
+        console.log(data);
       }
 
     const handleClick = () => {
