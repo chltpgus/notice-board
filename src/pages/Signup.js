@@ -41,7 +41,7 @@ function Signup() {
                 console.log(res[0]);    
                 users = res;
             });
-            console.log(Object.keys(users).length);
+            //console.log(Object.keys(users).length);
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
