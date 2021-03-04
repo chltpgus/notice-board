@@ -57,7 +57,7 @@ function Signup() {
                     password: passInput,
                     nickname: nicknameInput
                 }),
-              }).then((response) => console.log(response))
+              }).then((response) => console.log(response.body))
            
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
