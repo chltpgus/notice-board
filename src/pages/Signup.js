@@ -29,7 +29,7 @@ function Signup() {
 
     const handleClick = () => {
 
-        fetch('https://noticeboardserverr.herokuapp.com/signup') //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
+        fetch('https://noticeboardserverr.herokuapp.com/signup', {method:'get'}) //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
             .then(function (res) {
                 return res.json();
             })
