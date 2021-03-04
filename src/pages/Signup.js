@@ -25,18 +25,18 @@ function Signup() {
         nicknameInputChange(e.target.value);
     }
 
-    
+    async function request() {
+        const response = await fetch('https://noticeboardserverr.herokuapp.com/signup',
+        {
+          method: 'GET',
+        });
+        const data = await response.json();
+        console.log(data[0]);
+      }
 
     const handleClick = () => {
 
-        fetch('https://noticeboardserverr.herokuapp.com/signup') //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
-            .then(function (res) {
-                return res.json();
-            })
-            .then(function (res) {
-                console.log(res);    
-
-            });
+        request();
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
