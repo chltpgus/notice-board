@@ -25,20 +25,18 @@ function Signup() {
         nicknameInputChange(e.target.value);
     }
 
-    
+    async function request() {
+        const response = await fetch('https://noticeboardserverr.herokuapp.com/signup',
+        {
+          method: 'GET',
+        });
+        const data = await response.json();
+        console.log(data[0]);
+      }
 
     const handleClick = () => {
 
-        fetch('https://api.github.com/orgs/nodejs', {
-            method: 'GET',
-        })
-            .then(response => {
-                return response.json();
-            })
-            .then(data => {
-                console.log(data[0]);
-            });
-
+        request();
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
