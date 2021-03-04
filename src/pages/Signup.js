@@ -29,9 +29,7 @@ function Signup() {
 
     const handleClick = () => {
 
-        fetch('https://noticeboardserverr.herokuapp.com/signup', {
-            method: 'GET',
-        })
+        fetch('https://noticeboardserverr.herokuapp.com/signup')
             .then(function (res) {
                 return res.json();
             })
