@@ -34,9 +34,7 @@ function Signup() {
         }];
 
         fetch('https://noticeboardserverr.herokuapp.com/signup', {method:'post'}) //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
-            .then(function (res) {
-                return res.json();
-            })
+            
             .then(function (res) {
                 console.log(res[10]);    
                 users = res;
