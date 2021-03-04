@@ -29,21 +29,30 @@ function Signup() {
 
     const handleClick = () => {
 
-        let users=[{
-
-        }];
+        let users={
+            email: emailInput,
+            password: passInput,
+            nickname: nicknameInput
+        };
 
         fetch('https://noticeboardserverr.herokuapp.com/signup', {method:'post'}) //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
             .then(function (res) {
                 return res.json();
             })
             .then(function (res) {
-                console.log(res[10]);    
-                users = res;
-                console.log(users);
-                //console.log(Object.keys(users).length);
+                var xhr = new XMLHttpRequest();
+                var url = "https://mapleing.herokuapp.com/api/user";
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var json = JSON.parse(xhr.responseText);
+                    }
+                };
+                var data = JSON.stringify(users[0]);
+                xhr.send(data);
             });
-           
+            console.log(Object.keys(users).length);
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
