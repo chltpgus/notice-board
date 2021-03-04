@@ -29,12 +29,16 @@ function Signup() {
 
     const handleClick = () => {
 
-        const response = await fetch('https://noticeboardserverr.herokuapp.com/signup',
-        {
-          method: 'GET',
-        });
-        const data = await response.json();
-        console.log(data[0]);
+        fetch('https://noticeboardserverr.herokuapp.com/signup', {
+            method: 'GET',
+        })
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (res) {
+                console.log(res[0]);
+
+            });
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
