@@ -34,30 +34,25 @@ function Signup() {
             password: passInput,
             nickname: nicknameInput
         };
-        let user=[{
-            
-        }];
 
-        fetch('https://noticeboardserverr.herokuapp.com/signup')//fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 결과 버튼을 누르면 사용한 사용자수 +1하고 서버에 보낸다.
-        .then(function (res) {
-            return res.json();
-        })
-        .then(function (res) {
-            user = res;
-          
-            var xhr = new XMLHttpRequest();
-            var url = "https://noticeboardserverr.herokuapp.com/signup";
-            xhr.open("POST", url, true);
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var json = JSON.parse(xhr.responseText);
-                }
-            };
-            var data = JSON.stringify(users);
-            xhr.send(data);
-        })
-
+        fetch('https://noticeboardserverr.herokuapp.com/signup', {method:'post'}) //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (res) {
+                var xhr = new XMLHttpRequest();
+                var url = "https://noticeboardserverr.herokuapp.com/signup";
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var json = JSON.parse(xhr.responseText);
+                    }
+                };
+                var data = JSON.stringify(users);
+                xhr.send(data);
+            });
+            console.log(Object.keys(users).length);
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
