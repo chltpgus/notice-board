@@ -35,34 +35,24 @@ function Signup() {
             nickname: nicknameInput
         };
 
-       
-                var xhr = new XMLHttpRequest();
-                var url = "https://noticeboardserverr.herokuapp.com/signup";
-                xhr.open("POST", url, true);
-                xhr.setRequestHeader("Content-Type", "application/json");
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        var json = JSON.parse(xhr.responseText);
-                    }
-                };
+        fetch('https://noticeboardserverr.herokuapp.com/signup', {method:'post'}) //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
+            .then(function (res) {
+                let data = JSON.stringify(users);
+                return data;
+            });
+            console.log(Object.keys(users).length);
 
-                if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
-                    setEmailError(false);
-                }
-                else{
-                    setEmailError(true);
-                }
-        
-               if(passInput !== pass2Input){
-                setPasswordError(true);
-               }
-               else{setPasswordError(false);}
+        if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
+            setEmailError(false);
+        }
+        else{
+            setEmailError(true);
+        }
 
-                console.log(users)
-                var data = JSON.stringify(users);
-                xhr.send(data);
-           
- 
+       if(passInput !== pass2Input){
+        setPasswordError(true);
+       }
+       else{setPasswordError(false);}
 
 
     }
