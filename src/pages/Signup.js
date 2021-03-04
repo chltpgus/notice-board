@@ -35,8 +35,7 @@ function Signup() {
             nickname: nicknameInput
         };
 
-        fetch('https://noticeboardserverr.herokuapp.com/signup', {method:'post'}) //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
-            .then(function (res) {
+        
                 var xhr = new XMLHttpRequest();
                 var url = "https://noticeboardserverr.herokuapp.com/signup";
                 xhr.open("POST", url, true);
@@ -48,7 +47,7 @@ function Signup() {
                 };
                 var data = JSON.stringify(users);
                 xhr.send(data);
-            });
+          
             console.log(Object.keys(users).length);
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
