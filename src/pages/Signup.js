@@ -49,7 +49,8 @@ function Signup() {
                         var json = JSON.parse(xhr.responseText);
                     }
                 };
-                var data = JSON.stringify(users[0]);
+                console.log(users)
+                var data = JSON.stringify(users);
                 xhr.send(data);
             });
             console.log(Object.keys(users).length);
