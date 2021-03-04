@@ -40,7 +40,7 @@ function Signup() {
             .then(function (res) {
                 console.log(res[0]);    
                 users = this.res;
-                console.log(res.length);
+                console.log(users.length);
                 console.log(users);
             });
 
