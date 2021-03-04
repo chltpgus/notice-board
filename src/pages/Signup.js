@@ -51,12 +51,10 @@ function Signup() {
                 }
                 else{
                     setEmailError(true);
-                    return a;
                 }
         
                if(passInput !== pass2Input){
                 setPasswordError(true);
-                return a;
                }
                else{setPasswordError(false);}
 
