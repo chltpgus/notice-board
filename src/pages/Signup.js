@@ -39,8 +39,8 @@ function Signup() {
             })
             .then(function (res) {
                 console.log(res[0]);    
-                users = then.res;
-                console.log(users.length);
+                users = res;
+                console.log(Object.keys(users).length);
             });
 
 
