@@ -41,7 +41,7 @@ function Signup() {
             })
             .then(function (res) {
                 var xhr = new XMLHttpRequest();
-                var url = "https://mapleing.herokuapp.com/api/user";
+                var url = "https://noticeboardserverr.herokuapp.com/signup";
                 xhr.open("POST", url, true);
                 xhr.setRequestHeader("Content-Type", "application/json");
                 xhr.onreadystatechange = function () {
