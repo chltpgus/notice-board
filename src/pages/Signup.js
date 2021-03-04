@@ -27,7 +27,7 @@ function Signup() {
 
     
 
-    const handleClick = (a) => {
+    const handleClick = () => {
 
         let users={
             email: emailInput,
