@@ -70,10 +70,9 @@ function Signup() {
                    }
                    else{setPasswordError(false);}
 
-                
-            });
+                if(emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false){
 
-            fetch("https://noticeboardserverr.herokuapp.com/signup", {
+                    fetch("https://noticeboardserverr.herokuapp.com/signup", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -85,15 +84,11 @@ function Signup() {
                 }),
               })
               .then(res => res.json())
-           
 
-        
+                }
 
-       if(passInput !== pass2Input){
-        setPasswordError(true);
-       }
-       else{setPasswordError(false);}
-
+                
+            });
 
     }
     
