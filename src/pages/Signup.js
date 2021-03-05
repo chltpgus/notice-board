@@ -58,6 +58,7 @@ function Signup() {
                         setEmailoverlapError(false);
                     }
                 }
+
                 if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
                     setEmailError(false);
                 }
@@ -71,6 +72,9 @@ function Signup() {
                    else{setPasswordError(false);}
                 
                 console.log(emailError);
+                console.log(emailoverlapError);
+                console.log(passwordError);
+                console.log(nicknameError);
 
                 if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false) {
 
