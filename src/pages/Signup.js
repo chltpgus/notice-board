@@ -36,25 +36,19 @@ function Signup() {
 
         };
 
-
-        fetch('https://mapleing.herokuapp.com/api/user') //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
-            .then(function (res) {
-                return res.json();
-            })
-            .then(function (res) {
-                console.log(res);
-
-
-            });
-
-        
-        axios.post("https://noticeboardserverr.herokuapp.com/signup", JSON.stringify(users), {
-            headers: {
-                "Content-Type": `application/json`,
-            },
-        })
-    
-            
+            fetch("https://noticeboardserverr.herokuapp.com/signup", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: emailInput,
+                    password: passInput,
+                    nickname: nicknameInput
+                }),
+              })
+              .then(res => res.json())
+           
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
@@ -94,7 +88,7 @@ function Signup() {
                 {nicknameInput && <p style={{color : 'red'}}>이미 있는 계정 이름 입니다.</p>}
             </div>
             <div className="logbtndiv">
-                <Link className="loginbtn"  onClick={ handleClick } >게시판 회원가입</Link>
+                <Link className="loginbtn" onClick={ handleClick } to = "/">게시판 회원가입</Link>
             </div>
             <div className="logsign">
                 <Link className="loginbtn2" to="/login">로그인</Link>
