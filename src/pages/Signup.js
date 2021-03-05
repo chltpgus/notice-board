@@ -37,6 +37,18 @@ function Signup() {
 
         };
 
+        if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
+            setEmailError(true);
+        }
+        else{
+            setEmailError(false);
+        }
+
+        if(passInput !== pass2Input){
+            setPasswordError(true);
+           }
+           else{setPasswordError(false);}
+
         fetch('https://noticeboardserverr.herokuapp.com/signup') //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
             .then(function (res) {
                 return res.json();
@@ -59,17 +71,7 @@ function Signup() {
                     }
                 }
 
-                if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
-                    setEmailError(false);
-                }
-                else{
-                    setEmailError(true);
-                }
-
-                if(passInput !== pass2Input){
-                    setPasswordError(true);
-                   }
-                   else{setPasswordError(false);}
+                
                 
                 console.log(emailError);
                 console.log(emailoverlapError);
