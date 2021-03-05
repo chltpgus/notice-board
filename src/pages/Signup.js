@@ -69,21 +69,23 @@ function Signup() {
                     setPasswordError(true);
                    }
                    else{setPasswordError(false);}
+                
+                console.log(emailError);
 
-                if(emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false){
+                if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false) {
 
                     fetch("https://noticeboardserverr.herokuapp.com/signup", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email: emailInput,
-                    password: passInput,
-                    nickname: nicknameInput
-                }),
-              })
-              .then(res => res.json())
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            email: emailInput,
+                            password: passInput,
+                            nickname: nicknameInput
+                        }),
+                    })
+                        .then(res => res.json())
 
                 }
 
