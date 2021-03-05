@@ -72,10 +72,10 @@ function Signup() {
                 }
 
 
-                console.log(emailError);
-                console.log(emailoverlapError);
-                console.log(passwordError);
-                console.log(nicknameError);
+                console.log(emailError+ "emailError");
+                console.log(emailoverlapError+ "emailoverlapError");
+                console.log(passwordError+ "passwordError");
+                console.log(nicknameError+ "nicknameError");
 
                 if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false) {
 
