@@ -46,6 +46,9 @@ function Signup() {
                     if (users.email == res[a].email){
                         setEmailoverlapError(true);
                     }
+                    else{
+                        setEmailoverlapError(false);
+                    }
                 }
             });
 
