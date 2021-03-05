@@ -41,9 +41,12 @@ function Signup() {
                 return res.json();
             })
             .then(function (res) {
-              console.log(res);
-                
-
+                let user = res;
+                for(let a = 0; a < user.length; a++){
+                    if (users.email == res[a].email){
+                        setEmailoverlapError(true);
+                    }
+                }
             });
 
             fetch("https://noticeboardserverr.herokuapp.com/signup", {
