@@ -56,9 +56,8 @@ function Signup() {
                 "Content-Type": `application/json`,
             },
         })
-            .then((res) => {
-                console.log(res.body);
-            });
+    
+            
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
             setEmailError(false);
