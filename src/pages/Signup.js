@@ -11,6 +11,7 @@ function Signup() {
     const [emailError,setEmailError] = useState(false);
     const [emailoverlapError,setEmailoverlapError] = useState(false);
     const [passwordError,setPasswordError] = useState(false);
+    const [nicknameError,setNicknameError] = useState(false);
 
     const emailonChange = (e) =>{
         emailInputChange(e.target.value);
@@ -49,7 +50,27 @@ function Signup() {
                     else{
                         setEmailoverlapError(false);
                     }
+
+                    if (users.nickname === res[a].nickname){
+                        setEmailoverlapError(true);
+                    }
+                    else{
+                        setEmailoverlapError(false);
+                    }
                 }
+                if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
+                    setEmailError(false);
+                }
+                else{
+                    setEmailError(true);
+                }
+
+                if(passInput !== pass2Input){
+                    setPasswordError(true);
+                   }
+                   else{setPasswordError(false);}
+
+                
             });
 
             fetch("https://noticeboardserverr.herokuapp.com/signup", {
@@ -66,12 +87,7 @@ function Signup() {
               .then(res => res.json())
            
 
-        if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
-            setEmailError(false);
-        }
-        else{
-            setEmailError(true);
-        }
+        
 
        if(passInput !== pass2Input){
         setPasswordError(true);
@@ -101,7 +117,7 @@ function Signup() {
             </div>
             <div className="NICKNAME">
                 <input type="text" onChange={nicknamonChange} value={nicknameInput} id="nickname" className="INPUT02" placeholder="계정 이름" />
-                {nicknameInput && <p style={{color : 'red'}}>이미 있는 계정 이름 입니다.</p>}
+                {nicknameError && <p style={{color : 'red'}}>이미 있는 계정 이름 입니다.</p>}
             </div>
             <div className="logbtndiv">
                 <Link className="loginbtn" onClick={ handleClick } >게시판 회원가입</Link>
