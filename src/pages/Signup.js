@@ -56,7 +56,7 @@ function Signup() {
                     password: passInput,
                     nickname: nicknameInput
                 }),
-              }).then((response) => console.log(response.body))
+              }).then((response) => console.log(response))
            
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
@@ -97,7 +97,7 @@ function Signup() {
                 {nicknameInput && <p style={{color : 'red'}}>이미 있는 계정 이름 입니다.</p>}
             </div>
             <div className="logbtndiv">
-                <Link className="loginbtn" onClick={ handleClick } to = "/login">게시판 회원가입</Link>
+                <Link className="loginbtn" onClick={ handleClick } to = "/">게시판 회원가입</Link>
             </div>
             <div className="logsign">
                 <Link className="loginbtn2" to="/login">로그인</Link>
