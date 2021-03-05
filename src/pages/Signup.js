@@ -40,7 +40,7 @@ function Signup() {
 
 
         
-        axios.post("https://noticeboardserverr.herokuapp.com/signup", JSON.stringify(users), {
+        axios.post("http://localhost/signupp", JSON.stringify(users), {
             headers: {
                 "Content-Type": `application/json`,
             },
