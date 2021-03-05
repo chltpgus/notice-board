@@ -39,9 +39,8 @@ function Signup() {
 
 
 
-
         
-        axios.get("https://noticeboardserverr.herokuapp.com/signup", JSON.stringify(users), {
+        axios.post("https://noticeboardserverr.herokuapp.com/signup", JSON.stringify(users), {
             headers: {
                 "Content-Type": `application/json`,
             },
