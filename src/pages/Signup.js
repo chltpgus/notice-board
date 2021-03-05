@@ -37,7 +37,15 @@ function Signup() {
         };
 
 
+        fetch('https://mapleing.herokuapp.com/api/user') //fetch로 서버에게 요청하고 테스트한 사용자 인원수를 가져와 출력한다.
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (res) {
+                console.log(res);
 
+
+            });
 
         
         axios.post("https://noticeboardserverr.herokuapp.com/signup", JSON.stringify(users), {
