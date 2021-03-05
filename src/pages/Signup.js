@@ -38,10 +38,10 @@ function Signup() {
         };
 
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)){
-            setEmailError(true);
+            setEmailError(false);
         }
         else{
-            setEmailError(false);
+            setEmailError(true);
         }
 
         if(passInput !== pass2Input){
@@ -71,8 +71,7 @@ function Signup() {
                     }
                 }
 
-                
-                
+
                 console.log(emailError);
                 console.log(emailoverlapError);
                 console.log(passwordError);
