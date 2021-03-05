@@ -35,23 +35,13 @@ function Signup() {
             nickname: nicknameInput
 
         };
-/*
-            fetch("https://noticeboardserverr.herokuapp.com/signup", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email: emailInput,
-                    password: passInput,
-                    nickname: nicknameInput
-                }),
-              })
-              .then(res => res.json())
-           
-*/
 
-        axios.post("https://noticeboardserverr.herokuapp.com/signup", JSON.stringify(users), {
+
+
+
+
+        
+        axios.get("https://noticeboardserverr.herokuapp.com/signup", JSON.stringify(users), {
             headers: {
                 "Content-Type": `application/json`,
             },
