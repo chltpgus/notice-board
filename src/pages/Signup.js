@@ -10,12 +10,10 @@ function Signup() {
     const [pass2Input, pass2InputChange] = useState('');
     const [nicknameInput, nicknameInputChange] = useState('');
 
-    const [emailError, setEmailError] = useState(true);
-    const [emailoverlapError, setEmailoverlapError] = useState(true);
-    const [passwordError, setPasswordError] = useState(true);
-    const [nicknameError, setNicknameError] = useState(true);
-
-    const [signupcomplete, setSignupcomplete] = useState("");
+    const [emailError, setEmailError] = useState(false);
+    const [emailoverlapError, setEmailoverlapError] = useState(false);
+    const [passwordError, setPasswordError] = useState(false);
+    const [nicknameError, setNicknameError] = useState(false);
 
     const emailonChange = (e) => {
         emailInputChange(e.target.value);
@@ -85,6 +83,7 @@ function Signup() {
                     }
 
                 });
+                console.log(users);
         }
 
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
@@ -106,9 +105,7 @@ function Signup() {
         }
 
 
-    }
-
-        if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
+        if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
 
             fetch("https://noticeboardserverr.herokuapp.com/signup", {
                 method: "POST",
@@ -124,10 +121,20 @@ function Signup() {
                 .then(res => res.json())
 
             alert("회원가입 성공");
-            setSignupcomplete("/")
 
         }
-        
+/*
+        console.log("emailError : " + emailError);
+        console.log("emailoverlapError : " + emailoverlapError);
+        console.log("passwordError : " + passwordError);
+        console.log("nicknameError : " + nicknameError);
+        console.log("emailError02 : " + emailError02);
+        console.log("emailoverlapError02 : " + emailoverlapError02);
+        console.log("passwordError02 : " + passwordError02);
+        console.log("nicknameError02 : " + nicknameError02);
+*/
+    }
+   
 
     return (
         <div className="Signuppage">
@@ -152,7 +159,7 @@ function Signup() {
                 {nicknameError && <p style={{ color: 'red' }}>이미 있는 계정 이름 입니다.</p>}
             </div>
             <div className="logbtndiv">
-                <Link className="loginbtn" onClick={handleClick} to={signupcomplete} >게시판 회원가입</Link>
+                <Link className="loginbtn" onClick={handleClick} >게시판 회원가입</Link>
             </div>
             <div className="logsign">
                 <Link className="loginbtn2" to="/login">로그인</Link>
