@@ -83,7 +83,7 @@ function Signup() {
                 });*/
 
                 let EEE = Emailoutput(users);
-                console.log(EEE);
+                console.log(Emailoutput(users));
         }
 
 
