@@ -28,13 +28,7 @@ function Signup() {
         nicknameInputChange(e.target.value);
     }
 
-    const errorprint = () => {
-        setTimeout(function(){}, 5000);
-        console.log("emailError02 : " + emailError02);
-        console.log("emailoverlapError02 : " + emailoverlapError02);
-        console.log("passwordError02 : " + passwordError02);
-        console.log("nicknameError02 : " + nicknameError02);
-    }
+
 
     const handleClick = () => {
 
@@ -50,6 +44,14 @@ function Signup() {
             nickname: nicknameInput
 
         };
+        
+        const errorprint = () => {
+            setTimeout(function(){}, 5000);
+            console.log("emailError02 : " + emailError02);
+            console.log("emailoverlapError02 : " + emailoverlapError02);
+            console.log("passwordError02 : " + passwordError02);
+            console.log("nicknameError02 : " + nicknameError02);
+        }
 /*
         console.log("emailError : " + emailError);
         console.log("emailoverlapError : " + emailoverlapError);
