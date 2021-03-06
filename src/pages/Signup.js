@@ -37,7 +37,7 @@ function Signup() {
 
         };
         
-/*
+
         fetch('https://noticeboardserverr.herokuapp.com/signup/email='+users.email) 
             .then(function (res) {
                 return res.json();
@@ -45,7 +45,7 @@ function Signup() {
             .then(function (res) {
                 let user = res;
                 console.log(res[0].email);
-                    if (users.email === res[0].email){
+                    if (users.email === user[0].email){
                         setEmailoverlapError(true);
                     }
                     else{
@@ -61,14 +61,14 @@ function Signup() {
             .then(function (res) {
                 let user = res;
               
-                    if (users.nickname === res[0].nickname){
-                        setNicknameError(true);
-                    }
-                    else{
-                        setNicknameError(false);
-                    }
-          
-            });*/
+                if (users.nickname === user[0].nickname) {
+                    setNicknameError(true);
+                }
+                else {
+                    setNicknameError(false);
+                }
+
+            });
 
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
                 setEmailError(false);
