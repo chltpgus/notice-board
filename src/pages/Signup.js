@@ -97,6 +97,8 @@ function Signup() {
                 })
                     .then(res => res.json())
 
+                alert("회원가입 성공");
+
             }
 
         console.log(emailError + " emailError");
