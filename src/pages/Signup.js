@@ -37,8 +37,6 @@ function Signup() {
 
         };
         
-    
-        
 
         fetch('https://noticeboardserverr.herokuapp.com/signup') 
             .then(function (res) {
@@ -74,7 +72,7 @@ function Signup() {
                 }
                 else { setPasswordError(false); }
 
-                if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && users.email !== ""&& users.password !== ""&& users.nickname !== "") {
+                if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && emailInput !== ""&& passInput !== ""&& nicknameInput !== "") {
 
                     fetch("https://noticeboardserverr.herokuapp.com/signup", {
                         method: "POST",
@@ -93,10 +91,10 @@ function Signup() {
 
                 
             });
-            console.log(emailError+ " emailError");
-                console.log(emailoverlapError+ " emailoverlapError");
-                console.log(passwordError+ " passwordError");
-                console.log(nicknameError+ " nicknameError");
+        console.log(emailError + " emailError");
+        console.log(emailoverlapError + " emailoverlapError");
+        console.log(passwordError + " passwordError");
+        console.log(nicknameError + " nicknameError");
 
     }
     
