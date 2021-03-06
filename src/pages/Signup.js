@@ -37,7 +37,7 @@ function Signup() {
 
         };
         
-
+/*
         fetch('https://noticeboardserverr.herokuapp.com/signup/email='+users.email) 
             .then(function (res) {
                 return res.json();
@@ -68,7 +68,7 @@ function Signup() {
                         setNicknameError(false);
                     }
           
-            });
+            });*/
 
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
                 setEmailError(false);
