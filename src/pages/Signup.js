@@ -44,14 +44,14 @@ function Signup() {
             })
             .then(function (res) {
                 let user = res;
-                console.log(res[0].email);
-                    if (users.email === user[0].email){
-                        setEmailoverlapError(true);
-                    }
-                    else{
-                        setEmailoverlapError(false);
-                    }
-                      
+
+                if (users.email === user.email) {
+                    setEmailoverlapError(true);
+                }
+                else {
+                    setEmailoverlapError(false);
+                }
+        
             });
 
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname'+users.nickname) 
@@ -61,7 +61,7 @@ function Signup() {
             .then(function (res) {
                 let user = res;
               
-                if (users.nickname === user[0].nickname) {
+                if (users.nickname === user.nickname) {
                     setNicknameError(true);
                 }
                 else {
