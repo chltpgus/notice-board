@@ -3,6 +3,16 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 
+function Emailoutput(E){
+    fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + E.email)
+                .then(function (res) {
+                    return res.json();
+                })
+                .then(function (res) {
+                    let user = res;
+                    return user;
+                });
+}
 
 function Signup() {
     const [emailInput, emailInputChange] = useState('');
@@ -43,7 +53,7 @@ function Signup() {
             nickname: nicknameInput
 
         };
-
+/*
         console.log("emailError : " + emailError);
         console.log("emailoverlapError : " + emailoverlapError);
         console.log("passwordError : " + passwordError);
@@ -52,8 +62,8 @@ function Signup() {
         console.log("emailoverlapError02 : " + emailoverlapError02);
         console.log("passwordError02 : " + passwordError02);
         console.log("nicknameError02 : " + nicknameError02);
-
-        if (users.email != "") {
+*/
+        if (users.email != "") {/*
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
                 .then(function (res) {
                     return res.json();
@@ -70,12 +80,15 @@ function Signup() {
                         emailoverlapError02 = false;
                     }
 
-                });
+                });*/
+
+                let EEE = Emailoutput(users);
+                console.log(EEE);
         }
 
-        let user = {};
+
         if (users.nickname != "") {
-            
+            let user = {};
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname, user)
                 .then(function (res) {
                     return res.json();
