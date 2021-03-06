@@ -36,17 +36,24 @@ function Signup() {
             nickname: nicknameInput
 
         };
+
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
             setEmailError(false);
+            console.log(emailError+ " emailError");
         }
         else {
             setEmailError(true);
+            console.log(emailError+ " emailError");
         }
 
         if (passInput !== pass2Input) {
             setPasswordError(true);
+            console.log(passwordError+ " passwordError");
         }
-        else { setPasswordError(false); }
+        else { 
+            setPasswordError(false); 
+            console.log(passwordError+ " passwordError");
+        }
         
 
         fetch('https://noticeboardserverr.herokuapp.com/signup') 
@@ -58,26 +65,30 @@ function Signup() {
                 for(let a = 0; a < user.length; a++){
                     if (users.email === res[a].email){
                         setEmailoverlapError(true);
+                        console.log(emailoverlapError+ " emailoverlapError");
                     }
                     else{
                         setEmailoverlapError(false);
+                        console.log(emailoverlapError+ " emailoverlapError");
                     }
 
                     if (users.nickname === res[a].nickname){
                         setNicknameError(true);
+                        console.log(nicknameError+ " nicknameError");
                     }
                     else{
                         setNicknameError(false);
+                        console.log(nicknameError+ " nicknameError");
                     }
                 }
                
 
-
+/*
                 console.log(emailError+ " emailError");
                 console.log(emailoverlapError+ " emailoverlapError");
                 console.log(passwordError+ " passwordError");
                 console.log(nicknameError+ " nicknameError");
-
+*/
                 if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && users.email !== ""&& users.password !== ""&& users.nickname !== "") {
 
                     fetch("https://noticeboardserverr.herokuapp.com/signup", {
