@@ -48,7 +48,7 @@ function Signup() {
                 if (users.email === user.email) {
                     setEmailoverlapError(true);
                 }
-                else {
+                else if(users.email === "Email was not found"){
                     setEmailoverlapError(false);
                 }
         
@@ -64,7 +64,7 @@ function Signup() {
                 if (users.nickname === user.nickname) {
                     setNicknameError(true);
                 }
-                else {
+                else if(user.nickname === "Nickname was not found"){
                     setNicknameError(false);
                 }
 
