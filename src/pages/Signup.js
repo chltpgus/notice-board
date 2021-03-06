@@ -29,6 +29,7 @@ function Signup() {
 
    
 
+
         let users={
 
             email: emailInput,
@@ -82,6 +83,8 @@ function Signup() {
             }
             else { setPasswordError(false); }
 
+            const handleClick = () => {
+
             if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && emailInput !== ""&& passInput !== ""&& nicknameInput !== "") {
 
                 fetch("https://noticeboardserverr.herokuapp.com/signup", {
@@ -100,6 +103,7 @@ function Signup() {
                 alert("회원가입 성공");
 
             }
+        }
 
         console.log(emailError + " emailError");
         console.log(emailoverlapError + " emailoverlapError");
