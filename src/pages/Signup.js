@@ -10,10 +10,10 @@ function Signup() {
     const [pass2Input, pass2InputChange] = useState('');
     const [nicknameInput, nicknameInputChange] = useState('');
 
-    const [emailError, setEmailError] = useState(false);
-    const [emailoverlapError, setEmailoverlapError] = useState(false);
-    const [passwordError, setPasswordError] = useState(false);
-    const [nicknameError, setNicknameError] = useState(false);
+    const [emailError, setEmailError] = useState("");
+    const [emailoverlapError, setEmailoverlapError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
+    const [nicknameError, setNicknameError] = useState("");
 
     const [signupcomplete, setSignupcomplete] = useState("");
 
