@@ -123,7 +123,8 @@ function Signup() {
 
         }
 
-        console.log("emailError : " + emailError);
+    }
+    console.log("emailError : " + emailError);
         console.log("emailoverlapError : " + emailoverlapError);
         console.log("passwordError : " + passwordError);
         console.log("nicknameError : " + nicknameError);
@@ -131,8 +132,6 @@ function Signup() {
         console.log("emailoverlapError02 : " + emailoverlapError02);
         console.log("passwordError02 : " + passwordError02);
         console.log("nicknameError02 : " + nicknameError02);
-
-    }
 
     return (
         <div className="Signuppage">
