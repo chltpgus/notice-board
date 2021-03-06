@@ -84,7 +84,7 @@ function Signup() {
                     }
 
                 });
-                console.log(users);
+                console.log(user);
         }
 
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
