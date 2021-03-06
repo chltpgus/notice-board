@@ -27,8 +27,13 @@ function Signup() {
     }
     
 
-   
+    const handleClick = () => {
 
+
+        const [emailError02, setEmailError02] = useState(emailError);
+        const [emailoverlapError02, setEmailoverlapError02] = useState(emailoverlapError);
+        const [passwordError02, setPasswordError02] = useState(passwordError);
+        const [nicknameError02, setNicknameError02] = useState(nicknameError);
 
         let users={
 
@@ -48,9 +53,12 @@ function Signup() {
 
                 if (users.email === user.email) {
                     setEmailoverlapError(true);
+                    setEmailoverlapError02(true);
                 }
                 else if(user.email === "Email was not found"){
                     setEmailoverlapError(false);
+                    setEmailoverlapError02(false);
+                }
                 }
         
             });
@@ -64,28 +72,36 @@ function Signup() {
               
                 if (users.nickname === user.nickname) {
                     setNicknameError(true);
+                    setNicknameError02(true);
                 }
                 else if(user.nickname === "Nickname was not found"){
                     setNicknameError(false);
+                    setNicknameError02(false);
                 }
 
             });
 
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
                 setEmailError(false);
+                setEmailError02(false);
             }
             else {
                 setEmailError(true);
+                setEmailError02(true);
             }
     
             if (passInput !== pass2Input) {
                 setPasswordError(true);
+                setPasswordError02(true);
             }
-            else { setPasswordError(false); }
+            else 
+            { 
+                setPasswordError(false); 
+                setPasswordError02(false); 
+            }
 
-            const handleClick = () => {
 
-            if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && emailInput !== ""&& passInput !== ""&& nicknameInput !== "") {
+            if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== ""&& passInput !== ""&& nicknameInput !== "") {
 
                 fetch("https://noticeboardserverr.herokuapp.com/signup", {
                     method: "POST",
@@ -103,14 +119,13 @@ function Signup() {
                 alert("회원가입 성공");
 
             }
-        }
 
-        console.log(emailError + " emailError");
-        console.log(emailoverlapError + " emailoverlapError");
-        console.log(passwordError + " passwordError");
-        console.log(nicknameError + " nicknameError");
+        console.log(emailError02 + " emailError");
+        console.log(emailoverlapError02 + " emailoverlapError");
+        console.log(passwordError02 + " passwordError");
+        console.log(nicknameError02 + " nicknameError");
 
-    
+    }
     
     return (
         <div className = "Signuppage">
