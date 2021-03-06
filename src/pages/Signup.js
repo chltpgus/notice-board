@@ -45,7 +45,7 @@ function Signup() {
         };
 
         if (users.email != "") {
-            let user = res;
+            let user={};
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
                 .then(function (res) {
                     return res.json();
@@ -65,7 +65,7 @@ function Signup() {
 
 
         if (users.nickname != "") {
-            let user;
+            let user={};
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
                 .then(function (res) {
                     return res.json();
