@@ -38,59 +38,66 @@ function Signup() {
         };
         
 
-        fetch('https://noticeboardserverr.herokuapp.com/signup') 
+        fetch('https://noticeboardserverr.herokuapp.com/signup/email='+users.email) 
             .then(function (res) {
                 return res.json();
             })
             .then(function (res) {
                 let user = res;
-                for(let a = 0; a < user.length; a++){
-                    if (users.email === res[a].email){
+                    if (users.email === res[0].email){
                         setEmailoverlapError(true);
                     }
                     else{
                         setEmailoverlapError(false);
                     }
+                      
+            });
 
-                    if (users.nickname === res[a].nickname){
+            fetch('https://noticeboardserverr.herokuapp.com/signup/nickname'+users.nickname) 
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (res) {
+                let user = res;
+              
+                    if (users.nickname === res[0].nickname){
                         setNicknameError(true);
                     }
                     else{
                         setNicknameError(false);
                     }
-                }
-               
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
-                    setEmailError(false);
-                }
-                else {
-                    setEmailError(true);
-                }
-        
-                if (passInput !== pass2Input) {
-                    setPasswordError(true);
-                }
-                else { setPasswordError(false); }
-
-                if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && emailInput !== ""&& passInput !== ""&& nicknameInput !== "") {
-
-                    fetch("https://noticeboardserverr.herokuapp.com/signup", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                            email: emailInput,
-                            password: passInput,
-                            nickname: nicknameInput
-                        }),
-                    })
-                        .then(res => res.json())
-
-                }
-
-                
+          
             });
+
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
+                setEmailError(false);
+            }
+            else {
+                setEmailError(true);
+            }
+    
+            if (passInput !== pass2Input) {
+                setPasswordError(true);
+            }
+            else { setPasswordError(false); }
+
+            if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && emailInput !== ""&& passInput !== ""&& nicknameInput !== "") {
+
+                fetch("https://noticeboardserverr.herokuapp.com/signup", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        email: emailInput,
+                        password: passInput,
+                        nickname: nicknameInput
+                    }),
+                })
+                    .then(res => res.json())
+
+            }
+
         console.log(emailError + " emailError");
         console.log(emailoverlapError + " emailoverlapError");
         console.log(passwordError + " passwordError");
