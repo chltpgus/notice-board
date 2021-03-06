@@ -67,12 +67,12 @@ function Signup() {
 
         if (users.nickname != "") {
             let user = {};
-            fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
+            fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname, user)
                 .then(function (res) {
                     return res.json();
                 })
                 .then(function (res) {
-                    tist.user = res;
+                    user = res;
 
                     if (users.nickname === user.nickname) {
                         setNicknameError(true);
