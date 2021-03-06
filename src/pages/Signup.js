@@ -29,11 +29,11 @@ function Signup() {
 
     const handleClick = () => {
 
-        
-        const [emailError02,setEmailError02] = useState(emailError);
-        const [emailoverlapError02,setEmailoverlapError02] = useState(emailoverlapError);
-        const [passwordError02,setPasswordError02] = useState(passwordError);
-        const [nicknameError02,setNicknameError02] = useState(nicknameError);
+
+        const [emailError02,setEmailError02] = emailError;
+        const [emailoverlapError02,setEmailoverlapError02] = emailoverlapError;
+        const [passwordError02,setPasswordError02] = passwordError;
+        const [nicknameError02,setNicknameError02] = nicknameError;
 
         let users={
 
