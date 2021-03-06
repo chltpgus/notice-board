@@ -54,10 +54,10 @@ function Signup() {
                     }
 
                     if (users.nickname === res[a].nickname){
-                        setEmailoverlapError(true);
+                        setNicknameError(true);
                     }
                     else{
-                        setEmailoverlapError(false);
+                        setNicknameError(false);
                     }
                 }
                 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
