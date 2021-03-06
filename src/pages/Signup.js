@@ -44,6 +44,7 @@ function Signup() {
             })
             .then(function (res) {
                 let user = res;
+                console.log(res[0].email);
                     if (users.email === res[0].email){
                         setEmailoverlapError(true);
                     }
