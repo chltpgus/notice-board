@@ -48,7 +48,7 @@ function Signup() {
                 if (users.email === user.email) {
                     setEmailoverlapError(true);
                 }
-                else if(users.email === "Email was not found"){
+                else if(user.email === "Email was not found"){
                     setEmailoverlapError(false);
                 }
         
