@@ -29,7 +29,7 @@ function Signup() {
         nicknameInputChange(e.target.value);
     }
 
-    const Emailoutput = (E) =>
+    const Emailoutput = (E) =>{
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + E.email)
                     .then(function (res) {
                         return res.json();
