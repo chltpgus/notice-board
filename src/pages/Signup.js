@@ -77,7 +77,7 @@ function Signup() {
                 console.log(passwordError+ "passwordError");
                 console.log(nicknameError+ "nicknameError");
 
-                if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false) {
+                if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && users.email !== ""&& users.password !== ""&& users.nickname !== "") {
 
                     fetch("https://noticeboardserverr.herokuapp.com/signup", {
                         method: "POST",
