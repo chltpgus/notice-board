@@ -44,7 +44,7 @@ function Signup() {
             nickname: nicknameInput
 
         };
-        
+
         const errorprint = () => {
             setTimeout(function(){}, 5000);
             console.log("emailError02 : " + emailError02);
@@ -84,7 +84,7 @@ function Signup() {
 
 
         if (users.nickname != "") {
-            fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname, user)
+            fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
                 .then(function (res) {
                     return res.json();
                 })
