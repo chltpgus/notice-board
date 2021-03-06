@@ -33,11 +33,11 @@ function Signup() {
         const [emailoverlapError02,setEmailoverlapError02] = emailoverlapError;
         const [passwordError02,setPasswordError02] = passwordError;
         const [nicknameError02,setNicknameError02] = nicknameError;
-        
-        console.log(emailError02 + " emailError");
-        console.log(emailoverlapError02 + " emailoverlapError");
-        console.log(passwordError02 + " passwordError");
-        console.log(nicknameError02 + " nicknameError");
+
+        console.log(emailError02);
+        console.log(emailoverlapError02);
+        console.log(passwordError02);
+        console.log(nicknameError02);
 
         let users={
 
