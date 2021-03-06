@@ -73,9 +73,9 @@ function Signup() {
                 });
         }
 
-
+        let user = {};
         if (users.nickname != "") {
-            var user = {};
+            
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname, user)
                 .then(function (res) {
                     return res.json();
