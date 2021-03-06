@@ -3,16 +3,7 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 
-function Emailoutput(E){
-    fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + E.email)
-                .then(function (res) {
-                    return res.json();
-                })
-                .then(function (res) {
-                    let user = res;
-                    return user;
-                });
-}
+
 
 function Signup() {
     const [emailInput, emailInputChange] = useState('');
@@ -38,6 +29,16 @@ function Signup() {
         nicknameInputChange(e.target.value);
     }
 
+    const Emailoutput = (E) =>
+            fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + E.email)
+                    .then(function (res) {
+                        return res.json();
+                    })
+                    .then(function (res) {
+                        let user = res;
+                        return user;
+                    });
+    }
 
     const handleClick = () => {
 
@@ -63,7 +64,8 @@ function Signup() {
         console.log("passwordError02 : " + passwordError02);
         console.log("nicknameError02 : " + nicknameError02);
 */
-        if (users.email != "") {/*
+        if (users.email != "") {
+            /*
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
                 .then(function (res) {
                     return res.json();
@@ -81,9 +83,8 @@ function Signup() {
                     }
 
                 });*/
-
                 let EEE = Emailoutput(users);
-                console.log(Emailoutput(users));
+                console.log(EEE);
         }
 
 
