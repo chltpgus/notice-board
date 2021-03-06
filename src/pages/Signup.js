@@ -72,7 +72,7 @@ function Signup() {
                     return res.json();
                 })
                 .then(function (res) {
-                    user = res;
+                    tist.user = res;
 
                     if (users.nickname === user.nickname) {
                         setNicknameError(true);
