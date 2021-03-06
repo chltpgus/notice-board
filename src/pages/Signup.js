@@ -45,45 +45,45 @@ function Signup() {
         };
 
         if (users.email != "") {
+            let user = res;
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
                 .then(function (res) {
                     return res.json();
                 })
                 .then(function (res) {
-                    let user = res;
-
-                    if (users.email === user.email) {
-                        setEmailoverlapError(true);
-                        emailoverlapError02 = true;
-                    }
-                    else if (user.email === "Email was not found") {
-                        setEmailoverlapError(false);
-                        emailoverlapError02 = false;
-                    }
-
+                    user = res;
                 });
+                if (users.email === user.email) {
+                    setEmailoverlapError(true);
+                    emailoverlapError02 = true;
+                }
+                else if (user.email === "Email was not found") {
+                    setEmailoverlapError(false);
+                    emailoverlapError02 = false;
+                }
         }
 
 
         if (users.nickname != "") {
+            let user;
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
                 .then(function (res) {
                     return res.json();
                 })
                 .then(function (res) {
-                    let user = res;
-
-                    if (users.nickname === user.nickname) {
-                        setNicknameError(true);
-                        nicknameError02 = true;
-                    }
-                    else if (user.nickname === "Nickname was not found") {
-                        setNicknameError(false);
-                        nicknameError02 = false;
-                    }
-
+                    user = res;
                 });
+                if (users.nickname === user.nickname) {
+                    setNicknameError(true);
+                    nicknameError02 = true;
+                }
+                else if (user.nickname === "Nickname was not found") {
+                    setNicknameError(false);
+                    nicknameError02 = false;
+                }
         }
+
+        
 
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
             setEmailError(false);
