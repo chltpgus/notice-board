@@ -77,10 +77,12 @@ function Signup() {
                     if (users.nickname === user.nickname) {
                         setNicknameError(true);
                         nicknameError02 = true;
+                        return user;
                     }
                     else if (user.nickname === "Nickname was not found") {
                         setNicknameError(false);
                         nicknameError02 = false;
+                        return user;
                     }
 
                 });
