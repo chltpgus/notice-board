@@ -4,7 +4,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 
 
-
 function Signup() {
     const [emailInput, emailInputChange] = useState('');
     const [passInput, passInputChange] = useState('');
@@ -29,15 +28,12 @@ function Signup() {
         nicknameInputChange(e.target.value);
     }
 
-    const Emailoutput = (E) =>{
-            fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + E.email)
-                    .then(function (res) {
-                        return res.json();
-                    })
-                    .then(function (res) {
-                        let user = res;
-                        return user;
-                    });
+    const errorprint = () => {
+        setTimeout(function(){}, 5000);
+        console.log("emailError02 : " + emailError02);
+        console.log("emailoverlapError02 : " + emailoverlapError02);
+        console.log("passwordError02 : " + passwordError02);
+        console.log("nicknameError02 : " + nicknameError02);
     }
 
     const handleClick = () => {
@@ -65,7 +61,6 @@ function Signup() {
         console.log("nicknameError02 : " + nicknameError02);
 */
         if (users.email != "") {
-            /*
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
                 .then(function (res) {
                     return res.json();
@@ -82,57 +77,55 @@ function Signup() {
                         emailoverlapError02 = false;
                     }
 
-                });*/
-                let EEE = Emailoutput(users);
-                console.log(EEE);
+                });
         }
 
 
         if (users.nickname != "") {
-            let user = {};
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname, user)
                 .then(function (res) {
                     return res.json();
                 })
                 .then(function (res) {
-                    user = res;
+                    let user = res;
 
                     if (users.nickname === user.nickname) {
                         setNicknameError(true);
                         nicknameError02 = true;
-                        console.log(user);
                     }
                     else if (user.nickname === "Nickname was not found") {
                         setNicknameError(false);
                         nicknameError02 = false;
-                        console.log(user);
                     }
 
-                });
-                console.log(user);
+                }); 
         }
 
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
+            setTimeout(function(){}, 5000);
             setEmailError(false);
             emailError02 = false;
         }
         else {
+            setTimeout(function(){}, 5000);
             setEmailError(true);
             emailError02 = true;
         }
 
         if (passInput !== pass2Input) {
+            setTimeout(function(){}, 5000);
             setPasswordError(true);
             passwordError02 = true;
         }
         else {
+            setTimeout(function(){}, 5000);
             setPasswordError(false);
             passwordError02 = false;
         }
 
 
         if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
-
+            setTimeout(function(){}, 8000);
             fetch("https://noticeboardserverr.herokuapp.com/signup", {
                 method: "POST",
                 headers: {
@@ -150,6 +143,7 @@ function Signup() {
 
         }
 
+        errorprint();
 
 
     }
