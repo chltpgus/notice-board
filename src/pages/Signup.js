@@ -53,13 +53,10 @@ function Signup() {
 
                 if (users.email === user.email) {
                     setEmailoverlapError(true);
-                    setEmailoverlapError02(true);
                 }
                 else if(user.email === "Email was not found"){
                     setEmailoverlapError(false);
-                    setEmailoverlapError02(false);
                 }
-                
         
             });
 
@@ -72,36 +69,27 @@ function Signup() {
               
                 if (users.nickname === user.nickname) {
                     setNicknameError(true);
-                    setNicknameError02(true);
                 }
                 else if(user.nickname === "Nickname was not found"){
                     setNicknameError(false);
-                    setNicknameError02(false);
                 }
 
             });
 
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
                 setEmailError(false);
-                setEmailError02(false);
             }
             else {
                 setEmailError(true);
-                setEmailError02(true);
             }
     
             if (passInput !== pass2Input) {
                 setPasswordError(true);
-                setPasswordError02(true);
             }
-            else 
-            { 
-                setPasswordError(false); 
-                setPasswordError02(false); 
-            }
+            else { setPasswordError(false); }
 
 
-            if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== ""&& passInput !== ""&& nicknameInput !== "") {
+            if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && emailInput !== ""&& passInput !== ""&& nicknameInput !== "") {
 
                 fetch("https://noticeboardserverr.herokuapp.com/signup", {
                     method: "POST",
@@ -120,10 +108,10 @@ function Signup() {
 
             }
 
-        console.log(emailError02 + " emailError");
-        console.log(emailoverlapError02 + " emailoverlapError");
-        console.log(passwordError02 + " passwordError");
-        console.log(nicknameError02 + " nicknameError");
+        console.log(emailError + " emailError");
+        console.log(emailoverlapError + " emailoverlapError");
+        console.log(passwordError + " passwordError");
+        console.log(nicknameError + " nicknameError");
 
     }
     
