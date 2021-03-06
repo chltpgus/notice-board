@@ -3,12 +3,7 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 function Signup() {
-    
-    
-
-    const handleClick = () => {
-
-        const [emailInput, emailInputChange] = useState('');
+    const [emailInput, emailInputChange] = useState('');
     const [passInput, passInputChange] = useState('');
     const [pass2Input, pass2InputChange] = useState('');
     const [nicknameInput, nicknameInputChange] = useState('');
@@ -30,6 +25,9 @@ function Signup() {
     const nicknamonChange = (e) =>{
         nicknameInputChange(e.target.value);
     }
+    
+
+   
 
         let users={
 
@@ -108,7 +106,7 @@ function Signup() {
         console.log(passwordError + " passwordError");
         console.log(nicknameError + " nicknameError");
 
-    }
+    
     
     return (
         <div className = "Signuppage">
