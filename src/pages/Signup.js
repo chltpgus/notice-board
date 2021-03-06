@@ -15,6 +15,8 @@ function Signup() {
     const [passwordError, setPasswordError] = useState(false);
     const [nicknameError, setNicknameError] = useState(false);
 
+    const [signupcomplete, setSignupcomplete] = useState("");
+
     const emailonChange = (e) => {
         emailInputChange(e.target.value);
     }
@@ -104,7 +106,9 @@ function Signup() {
         }
 
 
-        if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
+    }
+
+        if (emailError === false && emailoverlapError === false && passwordError === false && nicknameError === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
 
             fetch("https://noticeboardserverr.herokuapp.com/signup", {
                 method: "POST",
@@ -120,16 +124,9 @@ function Signup() {
                 .then(res => res.json())
 
             alert("회원가입 성공");
+            setSignupcomplete("/")
 
         }
-
-   
-
-    }
-    console.log("emailError : " + emailError);
-        console.log("emailoverlapError : " + emailoverlapError);
-        console.log("passwordError : " + passwordError);
-        console.log("nicknameError : " + nicknameError);
         
 
     return (
@@ -155,7 +152,7 @@ function Signup() {
                 {nicknameError && <p style={{ color: 'red' }}>이미 있는 계정 이름 입니다.</p>}
             </div>
             <div className="logbtndiv">
-                <Link className="loginbtn" onClick={handleClick} >게시판 회원가입</Link>
+                <Link className="loginbtn" onClick={handleClick} to={signupcomplete} >게시판 회원가입</Link>
             </div>
             <div className="logsign">
                 <Link className="loginbtn2" to="/login">로그인</Link>
