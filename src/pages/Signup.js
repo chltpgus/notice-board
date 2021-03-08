@@ -15,7 +15,7 @@ function Signup() {
     const [passwordError, setPasswordError] = useState(false);
     const [nicknameError, setNicknameError] = useState(false);
 
-    const [signupto, setSignupto] = useState("");
+    const [signupto, setSignupto] = useState("/singup");
 
 
     
