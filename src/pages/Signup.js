@@ -28,7 +28,32 @@ function Signup() {
         nicknameInputChange(e.target.value);
     }
 
+function emailoverlapwarning(){
+    if (emailInput != "") {
+        fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + emailInput)
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (res) {
+                let user = res;
 
+                if (emailInput === user.email) {
+                    setEmailoverlapError(true);
+                    coppy(emailoverlapError02, true);
+                   
+                }
+                else if (user.email === "Email was not found") {
+                    setEmailoverlapError(false);
+                    coppy(emailoverlapError02, false);
+                }
+
+            });
+    }
+}
+
+function emailoverlapwarning(){
+
+}
 
     const handleClick = () => {
 
@@ -44,36 +69,10 @@ function Signup() {
             nickname: nicknameInput
 
         };
-
   
-        
-
-       
 
 
-function coppy(a, b){
-    a= b;
-}
-        if (users.email != "") {
-            fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
-                .then(function (res) {
-                    return res.json();
-                })
-                .then(function (res) {
-                    let user = res;
-
-                    if (users.email === user.email) {
-                        setEmailoverlapError(true);
-                        coppy(emailoverlapError02, true);
-                       
-                    }
-                    else if (user.email === "Email was not found") {
-                        setEmailoverlapError(false);
-                        coppy(emailoverlapError02, false);
-                    }
-
-                });
-        }
+        emailoverlapwarning();
 
         if (users.nickname != "") {
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
