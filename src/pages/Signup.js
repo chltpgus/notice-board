@@ -28,34 +28,9 @@ function Signup() {
         nicknameInputChange(e.target.value);
     }
 
-function emailoverlapwarning(){
-    if (emailInput != "") {
-        fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + emailInput)
-            .then(function (res) {
-                return res.json();
-            })
-            .then(function (res) {
-                let user = res;
 
-                if (emailInput === user.email) {
-                    setEmailoverlapError(true);
-                    //emailoverlapError02 = true;
-                   
-                }
-                else if (user.email === "Email was not found") {
-                    setEmailoverlapError(false);
-                   // emailoverlapError02 = false;
-                }
 
-            });
-    }
-}
-
-function emailoverlapwarning(){
-
-}
-
-    const handleClick = () => {
+    const handleClick = (emailInput, passInput, pass2Input, nicknameInput) => {
 
         let emailError02 = emailError;
         let emailoverlapError02 = emailoverlapError;
@@ -69,10 +44,41 @@ function emailoverlapwarning(){
             nickname: nicknameInput
 
         };
+
   
+        
+
+        console.log("emailError : " + emailError);
+        console.log("emailoverlapError : " + emailoverlapError);
+        console.log("passwordError : " + passwordError);
+        console.log("nicknameError : " + nicknameError);
+        console.log("emailError02 : " + emailError02);
+        console.log("emailoverlapError02 : " + emailoverlapError02);
+        console.log("passwordError02 : " + passwordError02);
+        console.log("nicknameError02 : " + nicknameError02);
 
 
-        emailoverlapwarning();
+
+        if (users.email != "") {
+            fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
+                .then(function (res) {
+                    return res.json();
+                })
+                .then(function (res) {
+                    let user = res;
+
+                    if (emailInput === user.email) {
+                        setEmailoverlapError(true);
+                        emailoverlapError02 = true;
+                       
+                    }
+                    else if (user.email === "Email was not found") {
+                        setEmailoverlapError(false);
+                        emailoverlapError02 = false;
+                    }
+
+                });
+        }
 
         if (users.nickname != "") {
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
@@ -111,15 +117,6 @@ function emailoverlapwarning(){
             setPasswordError(false);
             passwordError02 = false;
         }
-
-        console.log("emailError : " + emailError);
-        console.log("emailoverlapError : " + emailoverlapError);
-        console.log("passwordError : " + passwordError);
-        console.log("nicknameError : " + nicknameError);
-        console.log("emailError02 : " + emailError02);
-        console.log("emailoverlapError02 : " + emailoverlapError02);
-        console.log("passwordError02 : " + passwordError02);
-        console.log("nicknameError02 : " + nicknameError02);
 
 
         if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
