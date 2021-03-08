@@ -30,7 +30,7 @@ function Signup() {
 
 
 
-    const handleClick = (emailInput, passInput, pass2Input, nicknameInput) => {
+    const handleClick = () => {
 
         let emailError02 = emailError;
         let emailoverlapError02 = emailoverlapError;
@@ -68,31 +68,31 @@ function Signup() {
                     let user = res;
 
                     if (emailInput === user.email) {
-                        setEmailoverlapError(true);
-                        emailoverlapError02 = true;
-                       
-                    }
-                    else if (user.email === "Email was not found") {
-                        setEmailoverlapError(false);
-                        emailoverlapError02 = false;
-                    }
+                    setEmailoverlapError(true);
+                    emailoverlapError02 = true;
+                   
+                }
+                else if (user.email === "Email was not found") {
+                    setEmailoverlapError(false);
+                    emailoverlapError02 = false;
+                }
 
                 });
         }
 
         if (users.nickname != "") {
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
-                .then(function (res) {
+                .then(function (res2) {
                     return res.json();
                 })
-                .then(function (res) {
-                    let user = res;
+                .then(function (res2) {
+                    let user2 = res2;
 
-                    if (users.nickname === user.nickname) {
+                    if (users.nickname === user2.nickname) {
                         setNicknameError(true);
                         nicknameError02 = true;
                     }
-                    else if (user.nickname === "Nickname was not found") {
+                    else if (user2.nickname === "Nickname was not found") {
                         setNicknameError(false);
                         nicknameError02 = false;
                     }
