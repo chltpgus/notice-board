@@ -93,6 +93,24 @@ function Signup() {
                                     setNicknameError(false);
                                     nicknameError02 = false;
                                 }
+
+                                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
+                                    setEmailError(false);
+                                    emailError02 = false;
+                                }
+                                else {
+                                    setEmailError(true);
+                                    emailError02 = true;
+                                }
+                        
+                                if (passInput !== pass2Input) {
+                                    setPasswordError(true);
+                                    passwordError02 = true;
+                                }
+                                else {
+                                    setPasswordError(false);
+                                    passwordError02 = false;
+                                }
             
                             }); 
                     
@@ -102,24 +120,6 @@ function Signup() {
         }
 
       
-
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
-            setEmailError(false);
-            emailError02 = false;
-        }
-        else {
-            setEmailError(true);
-            emailError02 = true;
-        }
-
-        if (passInput !== pass2Input) {
-            setPasswordError(true);
-            passwordError02 = true;
-        }
-        else {
-            setPasswordError(false);
-            passwordError02 = false;
-        }
 
 
         if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
