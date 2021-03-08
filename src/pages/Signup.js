@@ -107,6 +107,24 @@ function Signup() {
                                 console.log("emailoverlapError02 : " + emailoverlapError02);
                                 console.log("passwordError02 : " + passwordError02);
                                 console.log("nicknameError02 : " + nicknameError02);
+
+                                if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
+                                    fetch("https://noticeboardserverr.herokuapp.com/signup", {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        },
+                                        body: JSON.stringify({
+                                            email: emailInput,
+                                            password: passInput,
+                                            nickname: nicknameInput
+                                        }),
+                                    })
+                                        .then(res => res.json())
+                        
+                                    alert("회원가입 성공");
+                        
+                                }
             
                             }); 
                     
@@ -117,24 +135,6 @@ function Signup() {
 
       
 
-
-        if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
-            fetch("https://noticeboardserverr.herokuapp.com/signup", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email: emailInput,
-                    password: passInput,
-                    nickname: nicknameInput
-                }),
-            })
-                .then(res => res.json())
-
-            alert("회원가입 성공");
-
-        }
 
        
 
