@@ -83,7 +83,7 @@ function Signup() {
         if (users.nickname != "") {
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
                 .then(function (res2) {
-                    return res.json();
+                    return res2.json();
                 })
                 .then(function (res2) {
                     let user2 = res2;
