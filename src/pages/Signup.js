@@ -48,14 +48,7 @@ function Signup() {
   
         
 
-        console.log("emailError : " + emailError);
-        console.log("emailoverlapError : " + emailoverlapError);
-        console.log("passwordError : " + passwordError);
-        console.log("nicknameError : " + nicknameError);
-        console.log("emailError02 : " + emailError02);
-        console.log("emailoverlapError02 : " + emailoverlapError02);
-        console.log("passwordError02 : " + passwordError02);
-        console.log("nicknameError02 : " + nicknameError02);
+       
 
 
 function coppy(a, b){
@@ -119,6 +112,15 @@ function coppy(a, b){
             setPasswordError(false);
             passwordError02 = false;
         }
+
+        console.log("emailError : " + emailError);
+        console.log("emailoverlapError : " + emailoverlapError);
+        console.log("passwordError : " + passwordError);
+        console.log("nicknameError : " + nicknameError);
+        console.log("emailError02 : " + emailError02);
+        console.log("emailoverlapError02 : " + emailoverlapError02);
+        console.log("passwordError02 : " + passwordError02);
+        console.log("nicknameError02 : " + nicknameError02);
 
 
         if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
