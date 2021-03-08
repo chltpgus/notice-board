@@ -59,7 +59,7 @@ function Signup() {
 
 
 
-        if (users.email != "") {
+        if (users.email != "" && users.nickname != "") {
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
                 .then(function (res) {
                     return res.json();
@@ -67,38 +67,41 @@ function Signup() {
                 .then(function (res) {
                     let user = res;
 
-                    if (emailInput === user.email) {
-                    setEmailoverlapError(true);
-                    emailoverlapError02 = true;
-                   
-                }
-                else if (user.email === "Email was not found") {
-                    setEmailoverlapError(false);
-                    emailoverlapError02 = false;
-                }
+    
+                        fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
+                            .then(function (res2) {
+                                return res2.json();
+                            })
+                            .then(function (res2) {
+                                let user2 = res2;
+            
+                                if (emailInput === user.email) {
+                                    setEmailoverlapError(true);
+                                    emailoverlapError02 = true;
+                                   
+                                }
+                                else if (user.email === "Email was not found") {
+                                    setEmailoverlapError(false);
+                                    emailoverlapError02 = false;
+                                }
+
+                                if (users.nickname === user2.nickname) {
+                                    setNicknameError(true);
+                                    nicknameError02 = true;
+                                }
+                                else if (user2.nickname === "Nickname was not found") {
+                                    setNicknameError(false);
+                                    nicknameError02 = false;
+                                }
+            
+                            }); 
+                    
+                    
 
                 });
         }
 
-        if (users.nickname != "") {
-            fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
-                .then(function (res2) {
-                    return res2.json();
-                })
-                .then(function (res2) {
-                    let user2 = res2;
-
-                    if (users.nickname === user2.nickname) {
-                        setNicknameError(true);
-                        nicknameError02 = true;
-                    }
-                    else if (user2.nickname === "Nickname was not found") {
-                        setNicknameError(false);
-                        nicknameError02 = false;
-                    }
-
-                }); 
-        }
+      
 
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
             setEmailError(false);
