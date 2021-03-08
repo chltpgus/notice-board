@@ -39,12 +39,12 @@ function emailoverlapwarning(){
 
                 if (emailInput === user.email) {
                     setEmailoverlapError(true);
-                    coppy(emailoverlapError02, true);
+                    emailoverlapError02 = true;
                    
                 }
                 else if (user.email === "Email was not found") {
                     setEmailoverlapError(false);
-                    coppy(emailoverlapError02, false);
+                    emailoverlapError02 = false;
                 }
 
             });
