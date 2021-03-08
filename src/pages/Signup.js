@@ -127,6 +127,12 @@ function Signup() {
                                         .then(res => res.json())
                         
                                     alert("회원가입 성공");
+                            
+                                        emailInputChange('');
+                                        passInputChange('');
+                                        pass2InputChange('');
+                                        nicknameInputChange('');
+                                    
                         
                                 }
             
