@@ -45,14 +45,9 @@ function Signup() {
 
         };
 
-        const errorprint = () => {
-            setTimeout(function(){}, 5000);
-            console.log("emailError02 : " + emailError02);
-            console.log("emailoverlapError02 : " + emailoverlapError02);
-            console.log("passwordError02 : " + passwordError02);
-            console.log("nicknameError02 : " + nicknameError02);
-        }
-/*
+  
+        
+
         console.log("emailError : " + emailError);
         console.log("emailoverlapError : " + emailoverlapError);
         console.log("passwordError : " + passwordError);
@@ -61,7 +56,11 @@ function Signup() {
         console.log("emailoverlapError02 : " + emailoverlapError02);
         console.log("passwordError02 : " + passwordError02);
         console.log("nicknameError02 : " + nicknameError02);
-*/
+
+
+function coppy(a, b){
+    a= b;
+}
         if (users.email != "") {
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
                 .then(function (res) {
@@ -72,16 +71,16 @@ function Signup() {
 
                     if (users.email === user.email) {
                         setEmailoverlapError(true);
-                        emailoverlapError02 = true;
+                        coppy(emailoverlapError02, true);
+                       
                     }
                     else if (user.email === "Email was not found") {
                         setEmailoverlapError(false);
-                        emailoverlapError02 = false;
+                        coppy(emailoverlapError02, false);
                     }
 
                 });
         }
-
 
         if (users.nickname != "") {
             fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
@@ -104,30 +103,25 @@ function Signup() {
         }
 
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
-            setTimeout(function(){}, 5000);
             setEmailError(false);
             emailError02 = false;
         }
         else {
-            setTimeout(function(){}, 5000);
             setEmailError(true);
             emailError02 = true;
         }
 
         if (passInput !== pass2Input) {
-            setTimeout(function(){}, 5000);
             setPasswordError(true);
             passwordError02 = true;
         }
         else {
-            setTimeout(function(){}, 5000);
             setPasswordError(false);
             passwordError02 = false;
         }
 
 
         if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
-            setTimeout(function(){}, 8000);
             fetch("https://noticeboardserverr.herokuapp.com/signup", {
                 method: "POST",
                 headers: {
@@ -145,7 +139,7 @@ function Signup() {
 
         }
 
-        errorprint();
+       
 
 
     }

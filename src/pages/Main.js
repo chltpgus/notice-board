@@ -6,7 +6,7 @@ function Postsprint({id, date, title, string}){
     return( 
         <div className="contents-2">
             <p>제목 : {title}</p>
-            <p>글쓴이 : {id} 날짜 : date</p>
+            <p>글쓴이 : {id} 날짜 : {date}</p>
             <p>{string}</p>
         </div>
         );
