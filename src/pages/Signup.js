@@ -45,11 +45,7 @@ function Signup() {
 
         };
 
-  
-        
-
-
-
+ 
 
         if (users.email != "" && users.nickname != "") {
             fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
