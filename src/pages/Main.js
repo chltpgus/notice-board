@@ -40,7 +40,7 @@ function Main() {
     //console.log(글제목);
     if(user === NULL){
     let user = JSON.parse(sessionStorage.getItem('USER')); }
-   console.log(user.id);
+   console.log(user);
    // localStorage.removeItem('USER');
 
     return (
