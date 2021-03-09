@@ -54,6 +54,7 @@ function Login() {
                 setPasswordError(false);
                 sessionStorage.setItem('USER', JSON.stringify(user));  
                 alert("로그인 성공");
+                setMovestring('/');
             }
             else {
                 setPasswordError(true);
