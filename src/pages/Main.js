@@ -43,9 +43,9 @@ function Main() {
 
 
     
-    let user = sessionStorage.getItem('USER');
+    //let user = JSON.parse.user(sessionStorage.getItem('USER'));
     
-    console.log(JSON.parse.user);
+    console.log(JSON.parse.user(sessionStorage.getItem('USER')));
 
     return (
         <div className="contents">
