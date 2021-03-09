@@ -39,8 +39,8 @@ function Main() {
     let [글제목, 글제목변경] = useState(users);
     //console.log(글제목);
 
-    let user = JSON.parse(sessionStorage.getItem('USER'));
-    console.log(user);
+    //let user = JSON.parse(sessionStorage.getItem('USER'));
+    //console.log(user);
 
     return (
         <div className="contents">
