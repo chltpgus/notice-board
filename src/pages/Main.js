@@ -12,9 +12,6 @@ function Postsprint({id, date, title, string}){
         );
 }
 
-function ObjectChange(){
-    return JSON.parse.sessionStorage.getItem('USER');
-}
 
 
 function Main() {   
@@ -47,7 +44,7 @@ function Main() {
 
     
     //user = sessionStorage.getItem('USER');
-    let user = ObjectChange();
+    let user = JSON.parse.sessionStorage.getItem('USER');
     console.log(user);
 
     return (
