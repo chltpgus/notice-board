@@ -11,6 +11,10 @@ function Login() {
     const [emailError2, setEmailError2] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
+    const [movestring, setMovestring] = useState(null);
+
+    
+
     const emailonChange = (e) => {
         emailInputChange(e.target.value);
     }
@@ -47,9 +51,9 @@ function Login() {
             }
 
             if (passInput === user.password && emailError02 === false) {
-                alert("로그인 성공");
                 setPasswordError(false);
                 sessionStorage.setItem('USER', JSON.stringify(user));  
+                alert("로그인 성공");
             }
             else {
                 setPasswordError(true);
@@ -77,7 +81,7 @@ function Login() {
                 {passwordError && <p style={{ color: 'red' }}>비밀번호가 일치하지 않습니다.</p>}
             </div>
             <div className="logbtndiv">
-                <Link className="loginbtn" onClick={handleClick}>게시판 로그인</Link>
+                <Link className="loginbtn" onClick={handleClick} to={movestring} >게시판 로그인</Link>
             </div>
             <div className="logsign">
                 <Link className="loginbtn2" to="/signup">회원가입</Link>
