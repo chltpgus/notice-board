@@ -3,8 +3,7 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 
 
 function Header() {
-    //const [loginout, setLoginout] = useState(false);
-    //let user = JSON.parse(sessionStorage.getItem('USER'));
+    const [loginout, setLoginout] = useState(false);
 
     if(user === null){
         setLoginout(false);
