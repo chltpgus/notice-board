@@ -43,7 +43,7 @@ function Main() {
 
 
     
-    user = sessionStorage.getItem('USER');
+    let user = sessionStorage.getItem('USER');
     
     console.log(user);
 
