@@ -34,7 +34,7 @@ button{
   padding: 10px 8px;
 }
 
-.login, .signup{
+.login, .signup, .logout{
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.199);
   margin: 10px;

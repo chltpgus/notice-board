@@ -14,8 +14,7 @@ function Header() {
         <div className="nav-2">
             <Link  className="login" to="/login" >Log in</Link>
             <Link className="signup" to="/signup" >sign up</Link>
-            { <Link  className="logout"  >Log in</Link>}
-            {loginout && <p style={{ color: 'red' }}>이미 있는 계정 이름 입니다.</p>}
+            { loginout && <Link  className="logout"  >Log in</Link>}
         </div>
     </header>
     );
