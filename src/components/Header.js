@@ -16,16 +16,7 @@ function Header() {
     }
     const [loginout, setLoginout] = useState(state);
     
-    function Setstate(){
-        if(user === null){
-            setLoginout(false);
-        }
-        else if(user !== null){
-            setLoginout(true);
-        }
-    }
-
-    Setstate();
+    
 
     const handleClick = () => {
         sessionStorage.setItem('USER', null);  
