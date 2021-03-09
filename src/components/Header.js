@@ -14,7 +14,7 @@ function Header() {
     else{
         state = true;
     }
-    const [loginout, setLoginout] = useState(state);
+    //const [loginout, setLoginout] = useState(state);
     
     
 
@@ -48,9 +48,9 @@ function Header() {
             <Link className="logo" to="/" onClick={handleClick2}>자유 게시판</Link>
         </div>
         <div className="nav-2">
-            {!loginout && <Link  className="login" to="/login" >Log in</Link>}
-          {!loginout && <Link className="signup" to="/signup" >sign up</Link>}
-            { loginout && <Link  className="logout" onClick={handleClick} >Log out</Link>}
+            {!state && <Link  className="login" to="/login" >Log in</Link>}
+          {!state && <Link className="signup" to="/signup" >sign up</Link>}
+            { state && <Link  className="logout" onClick={handleClick} >Log out</Link>}
         </div>
     </header>
     );
