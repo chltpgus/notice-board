@@ -40,10 +40,10 @@ function Login() {
             }
 
             if(user.email === "Email was not found"){
-                setPasswordError(false);
+                setPasswordError2(true);
             }
             else{
-                setPasswordError(true);
+                setPasswordError2(false);
             }
 
             if (passInput === user.password && emailError02 === false) {
