@@ -23,20 +23,20 @@ function Header() {
         let user = JSON.parse(sessionStorage.getItem('USER'));
 
         if(user === null){
-            setLoginout(false);
+          //  setLoginout(false);
         }
         else{
-            setLoginout(true);
+           // setLoginout(true);
         }
         console.log(user);
     }
     const handleClick2 = () => {
         let user = JSON.parse(sessionStorage.getItem('USER'));
         if(user === null){
-            setLoginout(false);
+           // setLoginout(false);
         }
         else{
-            setLoginout(true);
+            //setLoginout(true);
         }
         console.log(user);
     }
