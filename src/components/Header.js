@@ -20,7 +20,7 @@ function Header() {
         if(user === null){
             setLoginout(false);
         }
-        else{
+        else (user !== null){
             setLoginout(true);
         }
     }
