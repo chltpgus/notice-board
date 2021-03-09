@@ -5,6 +5,12 @@ import Signup from './Signup';
 
 function Login() {
    
+    const handleClick = () => {
+
+        localStorage.setItem(ID, chltpgus);
+
+    }
+
     return (
         <div className="loginpage">
             <div>
@@ -18,7 +24,7 @@ function Login() {
                 <input type="password" className="INPUT01" placeholder="비밀번호를 입력해주세요." />
             </div>
             <div className="logbtndiv">
-                <Link className="loginbtn">게시판 로그인</Link>
+                <Link className="loginbtn" onClick={handleClick}>게시판 로그인</Link>
             </div>
             <div className="logsign">
                 <Link className="loginbtn2" to="/signup">회원가입</Link>

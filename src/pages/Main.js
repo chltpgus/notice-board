@@ -33,9 +33,13 @@ function Main() {
             title: "인천 월미도",
             string: "월미도 바이킹 재밌네 여자친구랑도 가야지 물론 여자친구 만저 사겨야지함"
         }
+
+        
 ]
     let [글제목, 글제목변경] = useState(users);
-    console.log(글제목);
+    //console.log(글제목);
+
+    console.log(localStorage.getItem(ID));
     return (
         <div className="contents">
             <div className="contents-1">
