@@ -40,7 +40,6 @@ function Main() {
     //console.log(글제목);
 
     let user = JSON.parse(sessionStorage.getItem('USER'));
-    
     console.log(user);
 
     return (

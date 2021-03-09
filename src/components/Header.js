@@ -3,8 +3,19 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 
 
 function Header() {
-    const [loginout, setLoginout] = useState(true);
+    const [loginout, setLoginout] = useState(false);
+    let user = JSON.parse(sessionStorage.getItem('USER'));
 
+    if(user === null){
+        setLoginout(false);
+    }
+    else{
+        setLoginout(true);
+    }
+
+    const handleClick = () => {
+        sessionStorage.setItem('USER', null);  
+    }
     return (
         <header className="nav">
         <div className="nav-1">
@@ -12,9 +23,9 @@ function Header() {
             <Link className="logo" to="/">자유 게시판</Link>
         </div>
         <div className="nav-2">
-            <Link  className="login" to="/login" >Log in</Link>
-            <Link className="signup" to="/signup" >sign up</Link>
-            { loginout && <Link  className="logout"  >Log in</Link>}
+            {loginout && <Link  className="login" to="/login" >Log in</Link>}
+          {loginout && <Link className="signup" to="/signup" >sign up</Link>}
+            { loginout && <Link  className="logout" onClick={handleClick} >Log out</Link>}
         </div>
     </header>
     );
