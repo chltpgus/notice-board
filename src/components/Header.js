@@ -6,6 +6,10 @@ function Header() {
     let user = JSON.parse(sessionStorage.getItem('USER'));
     let state;
     
+    function sleep(ms) {
+        const wakeUpTime = Date.now() + ms
+        while (Date.now() < wakeUpTime) {}
+      }
 
     if(user === null){
         state = false;
@@ -17,11 +21,11 @@ function Header() {
     
     
         if (user === null) {
-            setTimeout(() => console.log("after"), 3000);
+            sleep(3000);
             setLoginout(false);
         }
         else {
-            setTimeout(() => console.log("after"), 3000);
+            sleep(3000);
             setLoginout(true);
         }
     
