@@ -8,7 +8,7 @@ function Login() {
     const [passInput, passInputChange] = useState('');
 
     const [emailError, setEmailError] = useState(false);
-    const [emailError2, setEmailError] = useState(false);
+    const [emailError2, setEmailError2] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
     const emailonChange = (e) => {
