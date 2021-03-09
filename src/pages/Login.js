@@ -6,6 +6,9 @@ import Signup from './Signup';
 function Login() {
     const [emailInput, emailInputChange] = useState('');
     const [passInput, passInputChange] = useState('');
+    
+    const [emailError, setEmailError] = useState(false);
+    const [passwordError, setPasswordError] = useState(false);
 
     const emailonChange = (e) => {
         emailInputChange(e.target.value);
@@ -46,9 +49,11 @@ function Login() {
             </div>
             <div className="ID">
                 <input type="text" onChange={emailonChange} value={emailInput} className="INPUT01" placeholder="아이디를 입력해주세요." />
+                {emailError && <p style={{ color: 'red' }}>이메일 형식이 아닙니다.</p>}
             </div>
             <div className="PASS">
                 <input type="password" onChange={passonChange} value={passInput} className="INPUT01" placeholder="비밀번호를 입력해주세요." />
+                {passwordError && <p style={{ color: 'red' }}>비밀번호가 일치하지 않습니다.</p>}
             </div>
             <div className="logbtndiv">
                 <Link className="loginbtn" onClick={handleClick}>게시판 로그인</Link>
