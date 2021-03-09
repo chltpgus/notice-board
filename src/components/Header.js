@@ -8,9 +8,11 @@ function Header() {
 
     if(user === null){
         state = false;
+        setLoginout(false);
     }
     else{
         state = true;
+        setLoginout(true);
     }
     const [loginout, setLoginout] = useState(state);
     
