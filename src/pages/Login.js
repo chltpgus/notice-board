@@ -51,8 +51,7 @@ function Login() {
             if (passInput === user.password && emailError02 === false) {
                 setPasswordError(false);
                 sessionStorage.setItem('USER', JSON.stringify(user));  
-                history.push('/');
-                history.push('location.reload()');
+                history.push('');
                 alert("로그인 성공");
             }
             else {
