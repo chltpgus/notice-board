@@ -12,9 +12,8 @@ function Postsprint({id, date, title, string}){
         );
 }
 
-function ObjectChange(user){
-    user = sessionStorage.getItem('USER');
-    user = JSON.parse.user;
+function ObjectChange(){
+    return JSON.parse.sessionStorage.getItem('USER');
 }
 
 
@@ -41,14 +40,14 @@ function Main() {
 
         
 ]
-    let user;
+   
     let [글제목, 글제목변경] = useState(users);
     //console.log(글제목);
 
 
     
     //user = sessionStorage.getItem('USER');
-    ObjectChange(user);
+    let user = ObjectChange();
     console.log(user);
 
     return (
