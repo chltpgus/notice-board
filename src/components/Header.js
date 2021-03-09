@@ -17,11 +17,11 @@ function Header() {
     
     
         if (user === null) {
-            setTimeout(() => console.log("after"), 3000)
+            setTimeout(() => console.log("after"), 3000);
             setLoginout(false);
         }
         else {
-            setTimeout(() => console.log("after"), 3000)
+            setTimeout(() => console.log("after"), 3000);
             setLoginout(true);
         }
     
