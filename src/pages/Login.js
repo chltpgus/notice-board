@@ -11,7 +11,7 @@ function Login() {
     const [emailError2, setEmailError2] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
-    const [movestring, setMovestring] = useState(null);
+  
 
     
 
@@ -54,7 +54,7 @@ function Login() {
                 setPasswordError(false);
                 sessionStorage.setItem('USER', JSON.stringify(user));  
                 alert("로그인 성공");
-                setMovestring('/');
+                history.push('/');
             }
             else {
                 setPasswordError(true);
