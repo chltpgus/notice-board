@@ -39,8 +39,8 @@ function Main() {
     let user;
     let [글제목, 글제목변경] = useState(users);
     //console.log(글제목);
-
-    if (JSON.parse(sessionStorage.getItem('USER')) === "NULL") {
+    console.log(JSON.parse(sessionStorage.getItem('USER')));
+    if (JSON.parse(sessionStorage.getItem('USER')) === NULL) {
         user = JSON.parse(sessionStorage.getItem('USER'));
     }
     console.log(user);
