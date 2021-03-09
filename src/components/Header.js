@@ -5,14 +5,14 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 function Header() {
     const [loginout, setLoginout] = useState(false);
     let user = JSON.parse(sessionStorage.getItem('USER'));
-
+/*
     if(user === null){
         setLoginout(false);
     }
     else{
         setLoginout(true);
     }
-
+*/
     const handleClick = () => {
         sessionStorage.setItem('USER', null);  
     }
