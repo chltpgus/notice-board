@@ -24,9 +24,11 @@ function Header() {
 
         if(user === null){
           //  setLoginout(false);
+          state = false;
         }
         else{
            // setLoginout(true);
+           state = true;
         }
         console.log(user);
     }
@@ -34,9 +36,11 @@ function Header() {
         let user = JSON.parse(sessionStorage.getItem('USER'));
         if(user === null){
            // setLoginout(false);
+           state = false;
         }
         else{
             //setLoginout(true);
+            state = true;
         }
         console.log(user);
     }
