@@ -12,6 +12,11 @@ function Postsprint({id, date, title, string}){
         );
 }
 
+function ObjectChange(user){
+    user = sessionStorage.getItem('USER');
+    user = JSON.parse.user;
+}
+
 
 function Main() {   
     let users =[
@@ -39,12 +44,12 @@ function Main() {
     let user;
     let [글제목, 글제목변경] = useState(users);
     //console.log(글제목);
-    console.log(JSON.parse(sessionStorage.getItem('USER')));
-    if (JSON.parse(sessionStorage.getItem('USER')) === 'NULL') {
-        user = JSON.parse(sessionStorage.getItem('USER'));
-    }
+
+
+    
+    //user = sessionStorage.getItem('USER');
+    ObjectChange(user);
     console.log(user);
-   // localStorage.removeItem('USER');
 
     return (
         <div className="contents">
