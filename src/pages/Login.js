@@ -49,22 +49,13 @@ function Login() {
             if (passInput === user.password && emailError02 === false) {
                 alert("로그인 성공");
                 setPasswordError(false);
+                localStorage.setItem('USER', user);  
             }
             else {
                 setPasswordError(true);
             }
 
-    /*
-            if (passInput === user.password) {
-                alert("로그인 성공");
-               
-            }
-            else if (user.email === "Email was not found") {
-                alert("없는 아이디 입니다.")
-            }else{
-                alert("비밀번호가 틀렸습니다.")
-            }
-*/
+    
         }); 
         //localStorage.setItem('ID', 'chltpgus');
 
