@@ -49,7 +49,7 @@ function Login() {
             if (passInput === user.password && emailError02 === false) {
                 alert("로그인 성공");
                 setPasswordError(false);
-                localStorage.setItem('USER', user);  
+                sessionStorage.setItem('USER', user);  
             }
             else {
                 setPasswordError(true);
