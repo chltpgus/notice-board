@@ -7,7 +7,7 @@ function Login() {
    
     const handleClick = () => {
 
-        localStorage.setItem(ID, chltpgus);
+        localStorage.setItem('ID', 'chltpgus');
 
     }
 

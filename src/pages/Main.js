@@ -39,7 +39,7 @@ function Main() {
     let [글제목, 글제목변경] = useState(users);
     //console.log(글제목);
 
-    console.log(localStorage.getItem(ID));
+    console.log(localStorage.getItem('ID'));
     return (
         <div className="contents">
             <div className="contents-1">
