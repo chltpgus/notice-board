@@ -22,7 +22,7 @@ function Header() {
         <header className="nav">
         <div className="nav-1">
             <i className="fas fa-frog"></i>
-            <Link className="logo" to="/" onClick={handleClick2}>자유 게시판</Link>
+            <Link className="logo" to="/" >자유 게시판</Link>
         </div>
         <div className="nav-2">
             {!loginout && <Link  className="login" to="/login" >Log in</Link>}
