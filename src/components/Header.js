@@ -4,9 +4,10 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 
 function Header() {
     const [loginout, setLoginout] = useState(false);
-    let user = JSON.parse(sessionStorage.getItem('USER'));
+    
 
     const handleClick = () => {
+        let user = JSON.parse(sessionStorage.getItem('USER'));
         sessionStorage.setItem('USER', null);  
 
         if(user === null){
@@ -18,6 +19,7 @@ function Header() {
         console.log(user);
     }
     const handleClick2 = () => {
+        let user = JSON.parse(sessionStorage.getItem('USER'));
         if(user === null){
             setLoginout(false);
         }
