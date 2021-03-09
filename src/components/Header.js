@@ -7,8 +7,8 @@ function Header() {
     
 
     const handleClick = () => {
-        let user = JSON.parse(sessionStorage.getItem('USER'));
         sessionStorage.setItem('USER', null);  
+        let user = JSON.parse(sessionStorage.getItem('USER'));
 
         if(user === null){
             setLoginout(false);
