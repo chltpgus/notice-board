@@ -6,8 +6,9 @@ import Signup from './Signup';
 function Login() {
     const [emailInput, emailInputChange] = useState('');
     const [passInput, passInputChange] = useState('');
-    
+
     const [emailError, setEmailError] = useState(false);
+    const [emailError2, setEmailError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
     const emailonChange = (e) => {
@@ -19,7 +20,9 @@ function Login() {
 
     const handleClick = () => {
 
-        
+        let emailError02 = emailError;
+        let passwordError02 = passwordError;
+  
         fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + emailInput)
         .then(function (res) {
             return res.json();
@@ -28,12 +31,23 @@ function Login() {
             console.log(res);
             let user = res;
 
-            if (emailInput === user.email && passInput === user.password) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput)) {
+                setEmailError(false);
+                emailError02 = false;
+            }
+            else {
+                setEmailError(true);
+                emailError02 = true;
+            }
+
+            if (passInput === user.password) {
                 alert("로그인 성공");
                
             }
             else if (user.email === "Email was not found") {
-                alert("로그인 실패")
+                alert("없는 아이디 입니다.")
+            }else{
+                alert("비밀번호가 틀렸습니다.")
             }
 
         }); 
@@ -50,6 +64,7 @@ function Login() {
             <div className="ID">
                 <input type="text" onChange={emailonChange} value={emailInput} className="INPUT01" placeholder="아이디를 입력해주세요." />
                 {emailError && <p style={{ color: 'red' }}>이메일 형식이 아닙니다.</p>}
+                {emailError2 && <p style={{ color: 'red' }}>이메일 형식이 아닙니다.</p>}
             </div>
             <div className="PASS">
                 <input type="password" onChange={passonChange} value={passInput} className="INPUT01" placeholder="비밀번호를 입력해주세요." />
