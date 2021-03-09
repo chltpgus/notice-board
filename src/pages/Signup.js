@@ -16,8 +16,6 @@ function Signup() {
     const [nicknameError, setNicknameError] = useState(false);
 
 
-
-
     
     const emailonChange = (e) => {
         emailInputChange(e.target.value);
@@ -31,7 +29,6 @@ function Signup() {
     const nicknamonChange = (e) => {
         nicknameInputChange(e.target.value);
     }
-
 
 
     const handleClick = () => {
@@ -103,14 +100,7 @@ function Signup() {
                                     setPasswordError(false);
                                     passwordError02 = false;
                                 }
-                                console.log("emailError : " + emailError);
-                                console.log("emailoverlapError : " + emailoverlapError);
-                                console.log("passwordError : " + passwordError);
-                                console.log("nicknameError : " + nicknameError);
-                                console.log("emailError02 : " + emailError02);
-                                console.log("emailoverlapError02 : " + emailoverlapError02);
-                                console.log("passwordError02 : " + passwordError02);
-                                console.log("nicknameError02 : " + nicknameError02);
+                        
 
                                 if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
                                     fetch("https://noticeboardserverr.herokuapp.com/signup", {
@@ -142,11 +132,6 @@ function Signup() {
 
                 });
         }
-
-      
-
-
-       
 
 
     }
