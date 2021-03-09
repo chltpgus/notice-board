@@ -10,7 +10,7 @@ function Header() {
         const wakeUpTime = Date.now() + ms
         while (Date.now() < wakeUpTime) {}
       }
-
+      
     if(user === null){
         state = false;
     }
@@ -21,11 +21,9 @@ function Header() {
     
     
         if (user === null) {
-            sleep(3000);
             setLoginout(false);
         }
         else {
-            sleep(3000);
             setLoginout(true);
         }
     
