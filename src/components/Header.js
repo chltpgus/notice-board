@@ -13,6 +13,7 @@ function Header() {
         else{
             setLoginout(true);
         }
+        console.log(user);
         sessionStorage.setItem('USER', null);  
     }
     const handleClick2 = () => {
@@ -22,6 +23,7 @@ function Header() {
         else{
             setLoginout(true);
         }
+        console.log(user);
     }
 
     return (
