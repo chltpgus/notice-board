@@ -5,6 +5,7 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 function Header() {
     let user = JSON.parse(sessionStorage.getItem('USER'));
     let state;
+    let count;
     
     function sleep(ms) {
         const wakeUpTime = Date.now() + ms
@@ -19,14 +20,18 @@ function Header() {
     }
     const [loginout, setLoginout] = useState(state);
     
-    
+    for(count=0; count<100; count++){
+        if(count == 100){
         if (user === null) {
             setLoginout(false);
+            count =0;
         }
         else {
             setLoginout(true);
+            count =0;
         }
-    
+      }
+    }
 
     const handleClick = () => {
         sessionStorage.setItem('USER', null);  
