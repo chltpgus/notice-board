@@ -43,9 +43,9 @@ function Main() {
 
 
     
-    //user = sessionStorage.getItem('USER');
+    user = sessionStorage.getItem('USER');
     
-    console.log(sessionStorage.getItem('USER'));
+    console.log(user);
 
     return (
         <div className="contents">
