@@ -14,7 +14,7 @@ function Header() {
     else{
         state = true;
     }
-    //const [loginout, setLoginout] = useState(state);
+    const [loginout, setLoginout] = useState(state);
     
     
 
@@ -23,24 +23,20 @@ function Header() {
         let user = JSON.parse(sessionStorage.getItem('USER'));
 
         if(user === null){
-          //  setLoginout(false);
-          state = false;
+            setLoginout(false);
         }
         else{
-           // setLoginout(true);
-           state = true;
+            setLoginout(true);
         }
         console.log(user);
     }
     const handleClick2 = () => {
         let user = JSON.parse(sessionStorage.getItem('USER'));
         if(user === null){
-           // setLoginout(false);
-           state = false;
+            setLoginout(false);
         }
         else{
-            //setLoginout(true);
-            state = true;
+            setLoginout(true);
         }
         console.log(user);
     }
@@ -52,9 +48,9 @@ function Header() {
             <Link className="logo" to="/" onClick={handleClick2}>자유 게시판</Link>
         </div>
         <div className="nav-2">
-            {!state && <Link  className="login" to="/login" >Log in</Link>}
-          {!state && <Link className="signup" to="/signup" >sign up</Link>}
-            { state && <Link  className="logout" onClick={handleClick} >Log out</Link>}
+            {!loginout && <Link  className="login" to="/login" >Log in</Link>}
+          {!loginout && <Link className="signup" to="/signup" >sign up</Link>}
+            { loginout && <Link  className="logout" onClick={handleClick} >Log out</Link>}
         </div>
     </header>
     );

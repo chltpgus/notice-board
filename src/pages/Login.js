@@ -53,6 +53,7 @@ function Login() {
                 sessionStorage.setItem('USER', JSON.stringify(user));  
                 history.push('');
                 alert("로그인 성공");
+                window.location.reload();
             }
             else {
                 setPasswordError(true);
