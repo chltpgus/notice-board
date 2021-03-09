@@ -15,7 +15,7 @@ function Header() {
         }
         sessionStorage.setItem('USER', null);  
     }
-    const handleClick2 = () => {}
+    const handleClick2 = () => {
         if(user === null){
             setLoginout(false);
         }
