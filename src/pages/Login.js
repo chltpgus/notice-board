@@ -21,7 +21,6 @@ function Login() {
     const handleClick = () => {
 
         let emailError02 = emailError;
-        let passwordError02 = passwordError;
   
         fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + emailInput)
         .then(function (res) {
@@ -40,6 +39,22 @@ function Login() {
                 emailError02 = true;
             }
 
+            if(user.email === "Email was not found"){
+                setPasswordError(true);
+            }
+            else{
+                setPasswordError(false);
+            }
+
+            if (passInput === user.password && emailError02 === false) {
+                alert("로그인 성공");
+                setPasswordError(false);
+            }
+            else {
+                setPasswordError(true);
+            }
+
+    /*
             if (passInput === user.password) {
                 alert("로그인 성공");
                
@@ -49,7 +64,7 @@ function Login() {
             }else{
                 alert("비밀번호가 틀렸습니다.")
             }
-
+*/
         }); 
         //localStorage.setItem('ID', 'chltpgus');
 
@@ -64,7 +79,7 @@ function Login() {
             <div className="ID">
                 <input type="text" onChange={emailonChange} value={emailInput} className="INPUT01" placeholder="아이디를 입력해주세요." />
                 {emailError && <p style={{ color: 'red' }}>이메일 형식이 아닙니다.</p>}
-                {emailError2 && <p style={{ color: 'red' }}>이메일 형식이 아닙니다.</p>}
+                {emailError2 && <p style={{ color: 'red' }}>없는 이메일 입니다.</p>}
             </div>
             <div className="PASS">
                 <input type="password" onChange={passonChange} value={passInput} className="INPUT01" placeholder="비밀번호를 입력해주세요." />
