@@ -58,6 +58,24 @@ button{
   background: rgba(230, 188, 0, 0.541);
   text-decoration: none;
 }
+.inputdiv{
+  vertical-align:middle;
+}
+.Writebtn{
+  padding: 30px;
+}
+.savebtn, .cancelbtn{
+  border-radius: 8px;
+  background-color:  rgb(230, 187, 0);
+  padding: 20px 135px;
+}
+.savebtn:hover,.cancelbtn:hover {
+  color: #ffffff;
+  border-radius: 20px;
+  background: rgba(230, 188, 0, 0.541);
+  text-decoration: none;
+}
+
 .logsign{
   padding: 30px;
 }

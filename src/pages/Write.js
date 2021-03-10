@@ -15,8 +15,9 @@ function Write() {
                 <input type="text" id="name" className="INPUT03" placeholder="제목" />
                 <input type="text" id="name" className="INPUT03" placeholder="본문 내용" />
             </div>
-            <div className="logbtndiv">
-                <Link className="loginbtn"   >게시판 회원가입</Link>
+            <div className="Writebtn">
+                <Link className="savebtn">저장</Link>
+                <Link className="cancelbtn">취소</Link>
             </div>
         </div>
     );
