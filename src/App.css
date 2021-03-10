@@ -254,7 +254,7 @@ button{
   border-radius: 8px;
   display: flex;
   margin: 5px;
-background-color: rgb(216, 216, 216);
+background-color: rgb(255, 255, 255);
 padding: 20px;
 }
 
@@ -263,7 +263,7 @@ padding: 20px;
   border-color: black;
   border-radius: 8px;
   margin: 5px;
-  background-color:rgb(216, 216, 216);
+  background-color:rgb(255, 255, 255);
   padding: 20px;
 }
 .App-link {
