@@ -69,6 +69,7 @@ button{
   margin: 10px;
 }
 .savebtn:hover,.cancelbtn:hover {
+  
   color: #ffffff;
   border-radius: 20px;
   background: rgba(230, 188, 0, 0.541);
