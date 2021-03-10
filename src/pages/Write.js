@@ -35,6 +35,27 @@ function Write() {
             setMaintextError(false);
         }
 
+        if(titleInput !== "" && maintextInput !== ""){
+            let user = JSON.parse(sessionStorage.getItem('USER'));
+            let year = today.getFullYear(); // 년도
+            let month = today.getMonth() + 1;  // 월
+            let nal = today.getDate();
+
+            fetch("https://noticeboardserverr.herokuapp.com/written", {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        },
+                                        body: JSON.stringify({
+                                            nickname: user.nickname,
+                                            title: titleInput,
+                                            date: (year+"-"+month+"-"+nal),
+                                            maintext: maintextInput
+                                        }),
+                                    })
+                                        .then(res => res.json())
+        }
+
 
     }
     return (
