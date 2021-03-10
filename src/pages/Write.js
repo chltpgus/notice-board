@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Write() {   
  
     return (
-        <div className="writepage">
+        <div className="Writepage">
           sdf
         </div>
     );
