@@ -264,6 +264,7 @@ padding: 20px;
 }
 
 .contents-2{
+  text-align: left;
   border: 2px solid;
   border-color: black;
   border-radius: 8px;
