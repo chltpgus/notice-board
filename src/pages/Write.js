@@ -11,10 +11,10 @@ function Write() {
     const [titleInput, titleInputChange] = useState('');
     const [maintextInput, maintextInputChange] = useState('');
 
-    const emailonChange = (e) => {
+    const titleonChange = (e) => {
         titleInputChange(e.target.value);
     }
-    const passonChange = (e) => {
+    const maintextonChange = (e) => {
         maintextInputChange(e.target.value);
     }
     
@@ -28,10 +28,10 @@ function Write() {
                 <p className="writetext">새로운 글을 작성합니다. </p>
             </div>
             <div className="inputdiv">
-                <input type="text" onChange={titleInputChange} value={titleInput} id="name" className="INPUT03" placeholder="제목" />
+                <input type="text" onChange={titleonChange} value={titleInput} id="name" className="INPUT03" placeholder="제목" />
             </div>
             <div className="inputdiv2">
-                <textarea type="text" onChange={maintextInputChange} value={maintextInput} id="name" className="INPUT04" placeholder="본문 내용" />
+                <textarea type="text" onChange={maintextonChange} value={maintextInput} id="name" className="INPUT04" placeholder="본문 내용" />
             </div>
             <div className="Writebtn">
                 <Link className="savebtn" onClick={handleClick}>저장</Link>
