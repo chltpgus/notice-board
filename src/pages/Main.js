@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 function Postsprint({id, date, title, string}){
     return( 
         <div className="contents-2">
-            <h1>제목 : {title}</h1>
-            <p>글쓴이 : {id} 날짜 : {date}</p>
+            <h3>{title}</h3>
+            <p>{id}  {date}</p>
             <p>{string}</p>
         </div>
         );
