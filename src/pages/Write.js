@@ -14,7 +14,7 @@ function Write() {
             <div>
                 <input type="text" id="name" className="INPUT03" placeholder="제목" />
                 <input type="text" id="name" className="INPUT03" placeholder="본문 내용" />
-                <Lick>sdf</Lick>
+                <Link>sdf</Link>
             </div>
             <div>
             
