@@ -46,7 +46,6 @@ function Main() {
         <div className="contents" >
             <div className="contents-1">
                 <div className="postlist">
-                    <Link className="mainbtn" >전체 글 목록</Link>
                     <Link className="mainbtn" >내가 쓴 글 목록</Link>
                 </div>
                 <div className="newpost">
