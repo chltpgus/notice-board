@@ -11,6 +11,9 @@ function Write() {
     const [titleInput, titleInputChange] = useState('');
     const [maintextInput, maintextInputChange] = useState('');
 
+    const [titleError, setTitleError] = useState(false);
+    const [maintextError, setMaintextError] = useState(false);
+    
     const titleonChange = (e) => {
         titleInputChange(e.target.value);
     }
@@ -19,8 +22,10 @@ function Write() {
     }
     
     const handleClick = () => {
-        console.log(titleInput);
-        console.log(maintextInput);
+        setTitleError(true);
+        setMaintextError(true);
+
+
     }
     return (
         <div className="Writepage">
@@ -29,9 +34,11 @@ function Write() {
             </div>
             <div className="inputdiv">
                 <input type="text" onChange={titleonChange} value={titleInput} id="name" className="INPUT03" placeholder="제목" />
+                {titleError && <p style={{ color: 'red' }}>제목을 입력하세요.</p>}
             </div>
             <div className="inputdiv2">
                 <textarea type="text" onChange={maintextonChange} value={maintextInput} id="name" className="INPUT04" placeholder="본문 내용" />
+                {maintextError && <p style={{ color: 'red' }}>본문 내용을 입력하세요.</p>}
             </div>
             <div className="Writebtn">
                 <Link className="savebtn" onClick={handleClick}>저장</Link>
