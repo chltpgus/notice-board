@@ -48,10 +48,15 @@ function Header() {
             <Link className="logo" to="/" onClick={handleClick2}>자유 게시판</Link>
         </div>
         <div className="nav-2">
-            {!loginout && <Link  className="login" to="/login" >Log in</Link>}
-          {!loginout && <Link className="signup" to="/signup" >sign up</Link>}
-          { loginout && <p> {user.nickname}님  </p> }
-            { loginout && <Link  className="logout" onClick={handleClick} >Log out</Link>}
+                {!loginout && <div>
+                    <Link className="login" to="/login" >Log in</Link>
+                    <Link className="signup" to="/signup" >sign up</Link>
+                </div>}
+                {loginout && <div>
+                    <p> {user.nickname}님  </p>
+                    <Link className="logout" onClick={handleClick} >Log out</Link>
+                </div>}
+          
         </div>
     </header>
     );
