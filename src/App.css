@@ -114,7 +114,7 @@ button{
 }
 
 .nav-2{
-  display: flex;
+  display: block;
   margin: 0px;
   padding: 10px;
   color: aliceblue;
