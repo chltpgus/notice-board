@@ -19,7 +19,8 @@ function Write() {
     }
     
     const handleClick = () => {
-
+        console.log(titleInput);
+        console.log(maintextInput);
     }
     return (
         <div className="Writepage">
