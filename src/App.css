@@ -58,9 +58,7 @@ button{
   background: rgba(230, 188, 0, 0.541);
   text-decoration: none;
 }
-.inputdiv{
-  vertical-align:middle;
-}
+
 .Writebtn{
   padding: 30px;
 }
@@ -212,6 +210,9 @@ button{
 
 .INPUT03{
   display: block;
+}
+.inputdiv{
+  position: absolute;
 }
 
 .ID, .PASS, .NICKNAME, .PASS2{
