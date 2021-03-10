@@ -43,7 +43,7 @@ function Main() {
    // console.log(user);
 
     return (
-        <div className="contents" >
+        <div className="contents" id = "asd" >
             <div className="contents-1">
                 <div className="postlist">
                     <Link >전체 글 목록</Link>

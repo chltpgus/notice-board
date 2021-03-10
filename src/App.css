@@ -189,7 +189,9 @@ button{
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
 }
-
+#asd{
+  border: 2px black;
+}
 .INPUT01:hover {
   color: #000000d5;
   background: rgba(245, 245, 245, 0.664);
@@ -249,14 +251,15 @@ button{
   background-color:rgb(255, 255, 255);
   justify-content: space-between;
 }
+
 .contents-1{
   border-radius: 8px;
   display: flex;
   margin: 5px;
 background-color: rgb(216, 216, 216);
 padding: 20px;
-
 }
+
 .contents-2{
   border-radius: 8px;
   margin: 5px;
