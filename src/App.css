@@ -69,7 +69,7 @@ button{
   margin: 10px;
 }
 .savebtn:hover,.cancelbtn:hover {
-  
+
   color: #ffffff;
   border-radius: 20px;
   background: rgba(230, 188, 0, 0.541);
@@ -210,12 +210,8 @@ button{
   text-decoration: none;
 }
 
-.INPUT03{
-  display: block;
-}
-.inputdiv{
-  
-}
+
+
 
 .ID, .PASS, .NICKNAME, .PASS2{
   margin-block-end: 5px;

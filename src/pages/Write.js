@@ -13,6 +13,8 @@ function Write() {
         <div className="Writepage">
             <div className="inputdiv">
                 <input type="text" id="name" className="INPUT03" placeholder="제목" />
+            </div>
+            <div className="inputdiv2">
                 <input type="text" id="name" className="INPUT03" placeholder="본문 내용" />
             </div>
             <div className="Writebtn">
