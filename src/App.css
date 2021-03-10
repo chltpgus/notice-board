@@ -153,11 +153,13 @@ button{
 
 .postlist{
   display: flex;
+  color: #000;
   flex:1
 }
 
 .newpost{
   display: flex;
+  color: #000;
 
 }
 
