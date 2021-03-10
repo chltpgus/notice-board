@@ -50,7 +50,7 @@ function Main() {
                     <Link >내가 쓴 글 목록</Link>
                 </div>
                 <div className="newpost">
-                    <Link >새로운 글 작성</Link>
+                    <Link to="/write">새로운 글 작성</Link>
                 </div>
             </div>
             {users.map(posts => <Postsprint id={posts.id} date={posts.date} title={posts.title} string={posts.string} />)}

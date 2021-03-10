@@ -10,7 +10,7 @@ function Write() {
  
     return (
         <div className="writepage">
-          
+          sdf
         </div>
     );
 
