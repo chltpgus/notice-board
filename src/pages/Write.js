@@ -22,8 +22,12 @@ function Write() {
     }
     
     const handleClick = () => {
-        setTitleError(true);
-        setMaintextError(true);
+
+        if(titleInput === ""){
+            setTitleError(true);
+        }else if(maintextInput === ""){
+            setMaintextError(true);
+        }
 
 
     }
