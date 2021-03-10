@@ -215,8 +215,9 @@ button{
   text-decoration: none;
 }
 
-
-
+.inputdiv, inputdiv2{
+  padding: 10px;
+}
 
 .ID, .PASS, .NICKNAME, .PASS2{
   margin-block-end: 5px;
