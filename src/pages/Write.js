@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, RouteComponentProps } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 
 
@@ -13,7 +14,7 @@ function Write() {
             <div>
                 <input type="text" id="name" className="INPUT03" placeholder="제목" />
                 <input type="text" id="name" className="INPUT03" placeholder="본문 내용" />
-                <p>sdf</p>
+                <Lick>sdf</Lick>
             </div>
             <div>
             
