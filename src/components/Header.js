@@ -50,8 +50,8 @@ function Header() {
         <div className="nav-2">
             {!loginout && <Link  className="login" to="/login" >Log in</Link>}
           {!loginout && <Link className="signup" to="/signup" >sign up</Link>}
+          { loginout && <p> {user.nickname}님  </p> }
             { loginout && <Link  className="logout" onClick={handleClick} >Log out</Link>}
-            { loginout && <p> {user.nickname}님  </p> }
         </div>
     </header>
     );
