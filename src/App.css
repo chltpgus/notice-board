@@ -189,7 +189,7 @@ button{
   height: 25px;
   font-size: 15px;
   color: rgb(0, 0, 0);;
-  background-color:rgba(243, 243, 243, 0.021);;
+  background-color:rgb(255, 255, 255);;
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
 }
@@ -208,7 +208,7 @@ button{
   height: 25px;
   font-size: 15px;
   color: rgb(0, 0, 0);;
-  background-color:rgba(243, 243, 243, 0.021);;
+  background-color:rgb(255, 255, 255);;
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
 }
@@ -226,7 +226,7 @@ button{
   height: 150px;
   font-size: 15px;
   color: rgb(0, 0, 0);;
-  background-color:rgba(243, 243, 243, 0.021);;
+  background-color:rgb(243, 243, 243);;
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
 }
@@ -265,7 +265,7 @@ padding: 20px;
 
 .contents-2{
   text-align: left;
-  border: 2px solid;
+  border: 2px solid #bebebe;
   border-color: black;
   border-radius: 8px;
   margin: 5px;
