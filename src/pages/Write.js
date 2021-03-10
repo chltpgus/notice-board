@@ -25,8 +25,14 @@ function Write() {
 
         if(titleInput === ""){
             setTitleError(true);
-        }else if(maintextInput === ""){
+        }else{
+            setTitleError(false);
+        }
+        
+        if(maintextInput === ""){
             setMaintextError(true);
+        }else{
+            setMaintextError(false);
         }
 
 
