@@ -173,7 +173,7 @@ button{
   text-decoration: none;
 }
 
-.INPUT02{
+.INPUT02, .INPUT03{
   height: auto; 
   line-height: normal; 
   padding: .8em .5em; 
@@ -186,13 +186,15 @@ button{
   border-color: rgba(0, 0, 0, 0.24);
 }
 
-.INPUT02:hover{
+.INPUT02:hover, .INPUT03:hover{
   color: #000000d5;
   background: rgba(245, 245, 245, 0.664);
   text-decoration: none;
 }
 
-
+.INPUT03{
+  display: block;
+}
 
 .ID, .PASS, .NICKNAME, .PASS2{
   margin-block-end: 5px;
