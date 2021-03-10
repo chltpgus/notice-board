@@ -208,12 +208,27 @@ button{
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
 }
-element.style {
-  height: 334px;
-  margin: 0px;
-  width: 477px;
-}
+
 .INPUT02:hover, .INPUT03:hover{
+  color: #000000d5;
+  background: rgba(245, 245, 245, 0.664);
+  text-decoration: none;
+}
+
+.INPUT04{
+  height: auto; 
+  line-height: normal; 
+  padding: .8em .5em; 
+  width: 400px;
+  height: 50px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);;
+  background-color:rgba(243, 243, 243, 0.021);;
+  outline-color: rgb(230, 187, 0);
+  border-color: rgba(0, 0, 0, 0.24);
+}
+
+.INPUT04:hover{
   color: #000000d5;
   background: rgba(245, 245, 245, 0.664);
   text-decoration: none;

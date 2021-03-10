@@ -18,7 +18,7 @@ function Write() {
                 <input type="text" id="name" className="INPUT03" placeholder="제목" />
             </div>
             <div className="inputdiv2">
-                <textarea type="text" id="name" className="INPUT03" placeholder="본문 내용" />
+                <textarea type="text" id="name" className="INPUT04" placeholder="본문 내용" />
             </div>
             <div className="Writebtn">
                 <Link className="savebtn">저장</Link>
