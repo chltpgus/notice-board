@@ -245,6 +245,8 @@ button{
 
 .contents{
   display: block;
+  border: 2px solid;
+  border-color: black;
   padding: 10px;
   background-color:rgb(255, 255, 255);
   justify-content: space-between;
@@ -259,12 +261,9 @@ padding: 20px;
 
 .contents-2{
   border-radius: 8px;
-  border: 2px;
-  border-color: black;
   margin: 5px;
-  
+  background-color:rgb(216, 216, 216);
   padding: 20px;
- 
 }
 .App-link {
   color: #61dafb;
