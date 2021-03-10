@@ -46,11 +46,11 @@ function Main() {
         <div className="contents" >
             <div className="contents-1">
                 <div className="postlist">
-                    <Link  >전체 글 목록</Link>
-                    <Link  >내가 쓴 글 목록</Link>
+                    <Link className="mainbtn" >전체 글 목록</Link>
+                    <Link className="mainbtn" >내가 쓴 글 목록</Link>
                 </div>
                 <div className="newpost">
-                    <Link to="/write" >새로운 글 작성</Link>
+                    <Link to="/write" className="mainbtn">새로운 글 작성</Link>
                 </div>
             </div>
             {users.map(posts => <Postsprint id={posts.id} date={posts.date} title={posts.title} string={posts.string} />)}

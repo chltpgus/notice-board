@@ -25,6 +25,10 @@ a{
   padding: 10px 8px;
 }
 
+.mainbtn{
+  color: black;
+}
+
 button{
   font-family: 'Godo', sans-serif;
   text-decoration: none;
