@@ -14,10 +14,9 @@ function Write() {
             <div>
                 <input type="text" id="name" className="INPUT03" placeholder="제목" />
                 <input type="text" id="name" className="INPUT03" placeholder="본문 내용" />
-                <Link>sdf</Link>
             </div>
-            <div>
-            
+            <div className="logbtndiv">
+                <Link className="loginbtn"   >게시판 회원가입</Link>
             </div>
         </div>
     );
