@@ -265,8 +265,8 @@ padding: 20px;
 
 .contents-2{
   text-align: left;
-  border: 2px solid #bebebe;
-  border-color: black;
+  border: 2px solid;
+  border-color: #bebebe;
   border-radius: 8px;
   margin: 5px;
   background-color:rgb(255, 255, 255);
