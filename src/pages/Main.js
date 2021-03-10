@@ -43,7 +43,7 @@ function Main() {
    // console.log(user);
 
     return (
-        <div className="contents" style = "border: '1px solid black'">
+        <div className="contents" >
             <div className="contents-1">
                 <div className="postlist">
                     <Link >전체 글 목록</Link>
