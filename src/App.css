@@ -65,7 +65,8 @@ button{
 .savebtn, .cancelbtn{
   border-radius: 8px;
   background-color:  rgb(230, 187, 0);
-  padding: 20px 135px;
+  padding: 15px 15px;
+  margin: 10px;
 }
 .savebtn:hover,.cancelbtn:hover {
   color: #ffffff;
