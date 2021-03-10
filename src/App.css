@@ -250,12 +250,12 @@ button{
 .contents{
   display: block;
   padding: 10px;
-  background-color:#bebebe;
+  background-color:#fffcf1;
   justify-content: space-between;
 }
 .contents-1{
   border: 2px solid;
-  border-color: black;
+  border-color: #fffcf1;
   border-radius: 8px;
   display: flex;
   margin: 5px;
