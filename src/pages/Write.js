@@ -8,6 +8,7 @@ import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 
 
 function Write() {   
+    const history = useHistory();
     const [titleInput, titleInputChange] = useState('');
     const [maintextInput, maintextInputChange] = useState('');
 
@@ -38,7 +39,6 @@ function Write() {
         if (titleInput !== "" && maintextInput !== "") {
             let user = JSON.parse(sessionStorage.getItem('USER'));
             let today = new Date();
-            const history = useHistory();
             let year = today.getFullYear(); // 년도
             let month = today.getMonth() + 1;  // 월
             let nal = today.getDate();
