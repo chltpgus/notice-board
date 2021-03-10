@@ -11,6 +11,9 @@ function Write() {
  
     return (
         <div className="Writepage">
+            <div>
+                <p className="writetext">새로운 글을 작성합니다. </p>
+            </div>
             <div className="inputdiv">
                 <input type="text" id="name" className="INPUT03" placeholder="제목" />
             </div>

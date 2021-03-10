@@ -118,6 +118,11 @@ button{
   color:  rgb(78, 78, 78);;
 }
 
+.writetext{
+  color:  rgb(78, 78, 78);;
+  margin: 20px;
+}
+
 .App {
   text-align: center;
   background-color: #837261;
