@@ -250,12 +250,9 @@ button{
   justify-content: space-between;
 }
 .contents-1{
-  border-radius: 8px;
+ 
   border: 2px  rgb(0, 0, 0);;
-  display: flex;
-  margin: 5px;
-background-color: rgb(216, 216, 216);
-padding: 20px;
+ 
 
 }
 .contents-2{
