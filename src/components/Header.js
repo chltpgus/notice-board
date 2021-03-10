@@ -53,7 +53,7 @@ function Header() {
                     <Link className="signup" to="/signup" >sign up</Link>
                 </div>}
                 {loginout && <div>
-                    <Link className="logout" > {user.nickname}님  </Link>
+                    <Link className="logouttext" > {user.nickname}님  </Link>
                     <Link className="logout" onClick={handleClick} >Log out</Link>
                 </div>}
           
