@@ -41,7 +41,7 @@ function Mytext() {
 
     let user = JSON.parse(sessionStorage.getItem('USER'));
    // console.log(user);
-
+/*
    fetch('https://noticeboardserverr.herokuapp.com/written')
    .then(function (res) {
        return res.json();
@@ -53,10 +53,10 @@ function Mytext() {
             users.push(res[a]);
         }
     }
-    
+
        users2change(users);
    });
-
+*/
 
     return (
         <div className="contents" >
