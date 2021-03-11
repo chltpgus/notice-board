@@ -37,10 +37,8 @@ function Main() {
     ]
 
     let [users2, users2change] = useState(users);
-    //console.log(글제목);
-
     let user = JSON.parse(sessionStorage.getItem('USER'));
-   // console.log(user);
+ 
 
    fetch('https://noticeboardserverr.herokuapp.com/written')
    .then(function (res) {
