@@ -15,7 +15,7 @@ function Postsprint({id, date, title, string}){
 
 
 function Main() {   
-    let users = [
+    let users = [/*
         {
             id: "chltpgus@naver.com",
             date: "2021-10-21",
@@ -33,7 +33,7 @@ function Main() {
             date: "2021-05-18",
             title: "인천 월미도",
             string: "월미도 바이킹 재밌네 여자친구랑도 가야지 물론 여자친구 만저 사겨야지함"
-        }
+        }*/
     ]
 
     let [글제목, 글제목변경] = useState(users);
