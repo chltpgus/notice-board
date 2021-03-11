@@ -39,14 +39,14 @@ function Main() {
     let [users2, users2change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
+
    fetch('https://noticeboardserverr.herokuapp.com/written')
    .then(function (res) {
        return res.json();
-       
    })
    .then(function (res) {
-       //users = res;
-      // users2change(users);
+       users = res;
+       users2change(users);
    });
 
 
@@ -54,7 +54,7 @@ function Main() {
         <div className="contents" >
             <div className="contents-1">
                 <div className="postlist">
-                    <Link className="mainbtn" >내가 쓴 글 목록</Link>
+                    <Link  className="mainbtn" >내가 쓴 글 목록</Link>
                 </div>
                 <div className="newpost">
                     <Link to="/write" className="mainbtn">새로운 글 작성</Link>

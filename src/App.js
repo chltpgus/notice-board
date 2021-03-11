@@ -16,10 +16,12 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
+        
         <Route path="/" exact component={Main}/>
         <Route path="/login" exact component={Login}/>
         <Route path="/signup" exact component={Signup}/>
         <Route path="/write" exact component={Write}/>
+       
         <Footer/>
       </div>
     </BrowserRouter>
