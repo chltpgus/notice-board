@@ -34,6 +34,8 @@ function Mytext() {
             maintext: "월미도 바이킹 재밌네 여자친구랑도 가야지 물론 여자친구 만저 사겨야지함"
         }*/
     ]
+    let [users01, users01change] = useState(users);
+    let user = JSON.parse(sessionStorage.getItem('USER'));
 
     fetch('https://noticeboardserverr.herokuapp.com/written')
    .then(function (res) {
@@ -41,7 +43,12 @@ function Mytext() {
    })
    .then(function (res) {
        users = res;
-       console.log(users);
+       for(let a=0; a < users.lenth; a++){
+           if(users[a].nickname === user.nickname){
+               console.log("sd");
+
+           }
+       }
    });
 
     return (
