@@ -36,7 +36,7 @@ function Main() {
         }*/
     ]
 
-    let [글제목, 글제목변경] = useState(users);
+    let [users2, users2change] = useState(users);
     //console.log(글제목);
 
     let user = JSON.parse(sessionStorage.getItem('USER'));
@@ -48,9 +48,9 @@ function Main() {
    })
    .then(function (res) {
        users = res;
-       console.log(users);
-  
+       users2change(users);
    });
+
 
     return (
         <div className="contents" >
@@ -62,7 +62,7 @@ function Main() {
                     <Link to="/write" className="mainbtn">새로운 글 작성</Link>
                 </div>
             </div>
-            {users.map(posts => <Postsprint id={posts.id} date={posts.date} title={posts.title} string={posts.string} />)}
+            {users2.map(posts => <Postsprint id={posts.id} date={posts.date} title={posts.title} string={posts.string} />)}
         </div>
     );
 
