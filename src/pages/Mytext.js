@@ -15,7 +15,7 @@ function Postsprint({nickname, title, date, maintext}){
 
 function Mytext() {
     let users = [
-        {
+        /*{
             nickname: "chltpgus@naver.com",
             title: "2021-10-21",
             date: "점심",
@@ -23,7 +23,7 @@ function Mytext() {
         },
         {
             nickname: "tjdbsdk@naver.com",
-            date: "2021-09-03",
+            title: "2021-09-03",
             date: "아 배아프다",
             maintext: "님덜 똥마려운데 회사째고 집으로 똥싸러 갈까요?"
         },
@@ -32,7 +32,7 @@ function Mytext() {
             title: "2021-05-18",
             date: "인천 월미도",
             maintext: "월미도 바이킹 재밌네 여자친구랑도 가야지 물론 여자친구 만저 사겨야지함"
-        }
+        }*/
     ]
 
     return (
