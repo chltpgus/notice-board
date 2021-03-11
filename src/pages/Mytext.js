@@ -43,12 +43,14 @@ function Mytext() {
    })
    .then(function (res) {
        users = res;
+       console.log(users.lenth);
+       /*
        for(let a=0; a < users.lenth; a++){
            if(users[a].nickname === user.nickname){
                console.log("sd");
 
            }
-       }
+       }*/
    });
 
     return (
