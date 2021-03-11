@@ -36,23 +36,21 @@ function Mytext() {
     ]
     let [users01, users01change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
-
+/*
     fetch('https://noticeboardserverr.herokuapp.com/written')
    .then(function (res) {
        return res.json();
    })
    .then(function (res) {
        users = res;
-       console.log(res.lenth);
-       /*
        for(let a=0; a < users.lenth; a++){
            if(users[a].nickname === user.nickname){
                console.log("sd");
 
            }
-       }*/
+       }
    });
-
+*/
     return (
         <div className="contents" >
             <div className="contents-1">

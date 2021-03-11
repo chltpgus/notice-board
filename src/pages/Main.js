@@ -39,7 +39,7 @@ function Main() {
     let [users2, users2change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
-
+/*
    fetch('https://noticeboardserverr.herokuapp.com/written')
    .then(function (res) {
        return res.json();
@@ -48,7 +48,7 @@ function Main() {
        users = res;
        users2change(users);
    });
-
+*/
 
     return (
         <div className="contents" >
