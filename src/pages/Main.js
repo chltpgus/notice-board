@@ -42,6 +42,7 @@ function Main() {
    fetch('https://noticeboardserverr.herokuapp.com/written')
    .then(function (res) {
        return res.json();
+       
    })
    .then(function (res) {
        //users = res;
