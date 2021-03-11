@@ -14,7 +14,7 @@ function Postsprint({nickname, title, date, maintext}){
 
 
 
-function Main() {   
+function Mytext() {   
     let users = [/*
         {
             id: "chltpgus@naver.com",
@@ -47,7 +47,13 @@ function Main() {
        return res.json();
    })
    .then(function (res) {
-       users = res;
+       
+    for(let a=0; a<res.length; a++){
+        if(user.nickname === res[a].nickname){
+            users.push(res[a]);
+        }
+    }
+    
        users2change(users);
    });
 
@@ -56,7 +62,7 @@ function Main() {
         <div className="contents" >
             <div className="contents-1">
                 <div className="postlist">
-                    <Link to="/mytext" className="mainbtn" >내가 쓴 글 목록</Link>
+                    <Link to= "/" className="mainbtn" >모든 글 목록</Link>
                 </div>
                 <div className="newpost">
                     <Link to="/write" className="mainbtn">새로운 글 작성</Link>
@@ -68,4 +74,4 @@ function Main() {
 
   }
 
-export default Main;
+export default Mytext;
