@@ -48,6 +48,7 @@ function Main() {
    })
    .then(function (res) {
        users = res;
+       console.log(users);
   
    });
 
