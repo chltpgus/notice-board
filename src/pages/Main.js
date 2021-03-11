@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Postsprint({id, date, title, string}){
+function Postsprint({nickname, title, date, maintext}){
     return( 
         <div className="contents-2">
             <h3>{title}</h3>
-            <p>{id}  {date}</p>
-            <p>{string}</p>
+            <p>{nickname}  {date}</p>
+            <p>{maintext}</p>
         </div>
         );
 }
@@ -62,7 +62,7 @@ function Main() {
                     <Link to="/write" className="mainbtn">새로운 글 작성</Link>
                 </div>
             </div>
-            {users2.map(posts => <Postsprint id={posts.id} date={posts.date} title={posts.title} string={posts.string} />)}
+            {users2.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
         </div>
     );
 
