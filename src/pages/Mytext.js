@@ -3,7 +3,7 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 import Signup from './Signup';
 
-function Login() {
+function Mytext() {
     
 
     return (
@@ -14,4 +14,4 @@ function Login() {
   
   }
 
-export default Login;
+export default Mytext;
