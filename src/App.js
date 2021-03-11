@@ -7,7 +7,7 @@ import Main from './pages/Main';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Write from './pages/Write';
-import Mytext from './pages/Mytext';
+//import Mytext from './pages/Mytext';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route path="/login" exact component={Login}/>
         <Route path="/signup" exact component={Signup}/>
         <Route path="/write" exact component={Write}/>
-        <Route path="/mytext" exact component={Mytext}/>
+       
         <Footer/>
       </div>
     </BrowserRouter>
