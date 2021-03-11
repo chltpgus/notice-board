@@ -44,8 +44,8 @@ function Main() {
        return res.json();
    })
    .then(function (res) {
-       users = res;
-       users2change(users);
+       //users = res;
+      // users2change(users);
    });
 
 
