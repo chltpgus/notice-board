@@ -42,6 +42,15 @@ function Main() {
     let user = JSON.parse(sessionStorage.getItem('USER'));
    // console.log(user);
 
+   fetch('https://noticeboardserverr.herokuapp.com/written')
+   .then(function (res) {
+       return res.json();
+   })
+   .then(function (res) {
+       users = res;
+  
+   });
+
     return (
         <div className="contents" >
             <div className="contents-1">
