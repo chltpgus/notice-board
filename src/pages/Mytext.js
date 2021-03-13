@@ -47,7 +47,7 @@ function Mytext() {
                 
                 for (let a = 0; a < res.length; a++) {
                     if(user.nickname === res[a].nickname){
-                        console.log("sd");
+                        users.push(res[a]);
                     }
                 }
                 
