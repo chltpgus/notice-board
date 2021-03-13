@@ -45,7 +45,7 @@ function Mytext() {
             .then(function (res) {
                 users = res;
                
-                for (let a = 0; a < res.lenth; a++) {
+                for (let a = 0; a < 3; a++) {
                     console.log("dk");
                 }
                 
