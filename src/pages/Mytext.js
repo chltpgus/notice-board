@@ -15,7 +15,7 @@ function Postsprint({nickname, title, date, maintext}){
 
 function Mytext() {
     
-    let [users01, users01change] = useState(users);
+    let [users01, users01change] = useState("");
     let user = JSON.parse(sessionStorage.getItem('USER'));
 
     function datafetch() {
@@ -37,7 +37,7 @@ function Mytext() {
     }
 
     setInterval(datafetch, 1000);
-    console.log(users01);
+
     return (
         <div className="contents" >
             <div className="contents-1">
