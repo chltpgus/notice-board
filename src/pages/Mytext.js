@@ -29,9 +29,9 @@ function Mytext() {
                     if(user.nickname === res[a].nickname){
                         users.push(res[a]);
                     }
-                    users01change(users);
+                   
                 }
-    
+                users01change(users);
             });
     }
    
