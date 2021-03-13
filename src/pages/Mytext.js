@@ -35,7 +35,8 @@ function Mytext() {
     }
 
     setTimeout(datafetch, 0);
-
+    users01change(users);
+    
     return (
         <div className="contents" >
             <div className="contents-1">
