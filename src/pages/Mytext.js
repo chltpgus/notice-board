@@ -15,12 +15,12 @@ function Postsprint({nickname, title, date, maintext}){
 
 function Mytext() {
     let users = [
-        {
+        /*{
             nickname: "chltpgus@naver.com",
             title: "2021-10-21",
             date: "점심",
             maintext: "오늘은 맛있는 밥을 먹었다 맛있었다 암냠냠"
-        }/*,
+        },
         {
             nickname: "tjdbsdk@naver.com",
             title: "2021-09-03",
@@ -47,6 +47,7 @@ function Mytext() {
                 for (let a = 0; a < res.length; a++) {
                     if(user.nickname === res[a].nickname){
                         users.push(res[a]);
+                        users01change(users);
                     }
                 }
                 console.log(users);
@@ -65,7 +66,7 @@ function Mytext() {
                     <Link to="/write" className="mainbtn">새로운 글 작성</Link>
                 </div>
             </div>
-            {setTimeout(users.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />),500)}
+            {users01.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
         </div>
     );
   
