@@ -14,8 +14,8 @@ function Postsprint({nickname, title, date, maintext}){
 }
 
 function Mytext() {
-    
-    let [users01, users01change] = useState("");
+    let users = [];
+    let [users01, users01change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
 
     function datafetch() {
@@ -26,7 +26,7 @@ function Mytext() {
             .then(function (res) {
                 
                 for (let a = 0; a < res.length; a++) {
-                    let users = [];
+                    users = [];
                     if(user.nickname === res[a].nickname){
                         users.push(res[a]);
                         users01change(users);
