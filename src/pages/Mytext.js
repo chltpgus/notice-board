@@ -24,13 +24,13 @@ function Mytext() {
                 return res.json();
             })
             .then(function (res) {
-                
+                users = [];
                 for (let a = 0; a < res.length; a++) {
-                    users = [];
                     if(user.nickname === res[a].nickname){
                         users.push(res[a]);
                     }
                 }
+                
                 users01change(users);
             });
     }
