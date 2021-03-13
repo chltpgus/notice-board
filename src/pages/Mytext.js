@@ -47,10 +47,6 @@ function Mytext() {
                
                 for (let a = 0; a < res.lenth; a++) {
                     console.log("dk");
-                    if (users[a].nickname === user.nickname) {
-                        console.log("sd");
-
-                    }
                 }
                 
             });
