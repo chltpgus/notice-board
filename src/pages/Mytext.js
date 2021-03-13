@@ -44,17 +44,20 @@ function Mytext() {
             })
             .then(function (res) {
                 users = res;
+                console.log(res.length);
+                /*
                 for (let a = 0; a < users.lenth; a++) {
                     if (users[a].nickname === user.nickname) {
                         console.log("sd");
 
                     }
                 }
+                */
             });
     }
 
     setTimeout(datafetch, 500);
-    
+
     return (
         <div className="contents" >
             <div className="contents-1">
