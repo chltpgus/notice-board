@@ -53,7 +53,7 @@ function Mytext() {
             });
     }
 
-    setTimeout(datafetch, 500);
+    setTimeout(datafetch, 1);
 
     return (
         <div className="contents" >
