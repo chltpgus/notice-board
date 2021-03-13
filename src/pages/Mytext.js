@@ -44,15 +44,14 @@ function Mytext() {
             })
             .then(function (res) {
                 users = res;
-                console.log(res.length);
-                /*
-                for (let a = 0; a < users.lenth; a++) {
+               
+                for (let a = 0; a < res.lenth; a++) {
                     if (users[a].nickname === user.nickname) {
                         console.log("sd");
 
                     }
                 }
-                */
+                
             });
     }
 
