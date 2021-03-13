@@ -49,7 +49,7 @@ function Mytext() {
                         users.push(res[a]);
                     }
                 }
-                
+                console.log(users);
             });
     }
 
