@@ -29,14 +29,13 @@ function Mytext() {
                     users = [];
                     if(user.nickname === res[a].nickname){
                         users.push(res[a]);
-                        users01change(users);
                     }
                 }
-                console.log(users01);
+                users01change(users);
             });
     }
 
-    setInterval(datafetch, 1000);
+    setInterval(datafetch, 2000);
 
     return (
         <div className="contents" >
