@@ -59,7 +59,7 @@ function Main() {
             });
     }
 
-    setTimeout(sayHi, 500);
+    setTimeout(datafetch, 500);
 
     return (
         <div className="contents" >
