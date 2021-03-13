@@ -65,7 +65,7 @@ function Mytext() {
                     <Link to="/write" className="mainbtn">새로운 글 작성</Link>
                 </div>
             </div>
-            {users.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
+            {setTimeout(users.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />),500)}
         </div>
     );
   
