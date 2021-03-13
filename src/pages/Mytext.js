@@ -19,20 +19,20 @@ function Mytext() {
     let user = JSON.parse(sessionStorage.getItem('USER'));
 
     function datafetch() {
+        users = [];
         fetch('https://noticeboardserverr.herokuapp.com/written')
             .then(function (res) {
                 return res.json();
             })
             .then(function (res) {
-                users = [];
                 for (let a = 0; a < res.length; a++) {
                     if(user.nickname === res[a].nickname){
                         users.push(res[a]);
                     }
 
                 }
-                users01change(users);
             });
+            users01change(users);
     }
    
     setTimeout(datafetch, 0);
