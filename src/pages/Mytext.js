@@ -50,7 +50,7 @@ function Mytext() {
                         users01change(users);
                     }
                 }
-                console.log(users);
+                console.log(users01);
             });
     }
 
