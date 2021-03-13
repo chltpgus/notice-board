@@ -35,7 +35,7 @@ function Mytext() {
             });
     }
 
-    setInterval(datafetch, 2000);
+    setTimeout(datafetch, 2000);
 
     return (
         <div className="contents" >
