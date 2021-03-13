@@ -39,16 +39,27 @@ function Main() {
     let [users2, users2change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
-/*
-   fetch('https://noticeboardserverr.herokuapp.com/written')
-   .then(function (res) {
-       return res.json();
-   })
-   .then(function (res) {
-       users = res;
-       users2change(users);
-   });
-*/
+    __.once = function(func){
+        let flag, result;
+        return function(){
+            if(flag){return result};
+            flag = true;
+            return result = func.apply(this, arguments);
+        }
+    }
+
+    function datafetch() {
+        fetch('https://noticeboardserverr.herokuapp.com/written')
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (res) {
+                users = res;
+                users2change(users);
+            });
+    }
+
+    setTimeout(sayHi, 500);
 
     return (
         <div className="contents" >
