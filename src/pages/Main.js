@@ -40,7 +40,6 @@ function Main() {
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
 
-
     function datafetch() {
         fetch('https://noticeboardserverr.herokuapp.com/written')
             .then(function (res) {
