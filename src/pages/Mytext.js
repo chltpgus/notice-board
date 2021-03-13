@@ -43,7 +43,6 @@ function Mytext() {
                 return res.json();
             })
             .then(function (res) {
-                users = res;
                 
                 for (let a = 0; a < res.length; a++) {
                     if(user.nickname === res[a].nickname){
