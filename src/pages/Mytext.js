@@ -29,13 +29,13 @@ function Mytext() {
                     if(user.nickname === res[a].nickname){
                         users.push(res[a]);
                     }
-                    
+
                 }
                 users01change(users);
             });
     }
    
-    setTimeout(datafetch, 5000);
+    setTimeout(datafetch, 0);
 
     return (
         <div className="contents" >
