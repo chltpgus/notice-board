@@ -15,12 +15,12 @@ function Postsprint({nickname, title, date, maintext}){
 
 function Mytext() {
     let users = [
-        /*{
+        {
             nickname: "chltpgus@naver.com",
             title: "2021-10-21",
             date: "점심",
             maintext: "오늘은 맛있는 밥을 먹었다 맛있었다 암냠냠"
-        },
+        }/*,
         {
             nickname: "tjdbsdk@naver.com",
             title: "2021-09-03",
