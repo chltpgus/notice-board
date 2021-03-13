@@ -30,12 +30,11 @@ function Mytext() {
                         users.push(res[a]);
                     }
                 }
-                
                 users01change(users);
             });
     }
-    let timerfetch = setInterval(() => datafetch, 2000);
-    setTimeout({clearInterval(timerfetch);}, 5000);
+   
+    setTimeout(datafetch, 5000);
 
     return (
         <div className="contents" >
