@@ -30,12 +30,12 @@ function Mytext() {
                         users.push(res[a]);
                     }
                 }
-                users01change(users);
             });
+            users01change(users);
     }
 
     setTimeout(datafetch, 0);
-    setTimeout(users01change(users), 500);
+    
     
 
     return (
