@@ -6,7 +6,7 @@ import Signup from './Signup';
 function Postsprint({nickname01, title01, date01, maintext01}){
     const handleClick = () => {
         
-        fetch("https://noticeboardserverr.herokuapp.com/write/delete", {
+        fetch("https://noticeboardserverr.herokuapp.com/written/delete", {
                                         method: "POST",
                                         headers: {
                                             "Content-Type": "application/json",
