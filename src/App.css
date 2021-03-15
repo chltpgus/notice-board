@@ -246,7 +246,10 @@ button{
   height: auto; 
   margin: 20px;
 }
-
+.titlediv{
+  display: flex;
+  justify-content: space-between;
+}
 .contents{
   display: block;
   padding: 10px;
