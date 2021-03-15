@@ -27,6 +27,7 @@ function Main() {
         })
         .then(function (res) {
             users = res;
+            users.reverse();
             users2change(users);
         });
       }, []);
