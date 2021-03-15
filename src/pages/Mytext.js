@@ -26,14 +26,14 @@ function Postsprint({nickname01, title01, date01, maintext01}){
     return( 
         <div className="contents-2">
             <div className="titlediv">
-                <h3>{title}</h3>
+                <h3>{title01}</h3>
                 <div>
                 <Link className="mainbtn">수정</Link>
                 <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
             </div>
-            <p>{nickname}  {date}</p>
-            <p>{maintext}</p>
+            <p>{nickname01}  {date01}</p>
+            <p>{maintext01}</p>
         </div>
         );
 }
