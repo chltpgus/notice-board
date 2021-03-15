@@ -4,13 +4,7 @@ import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 import Signup from './Signup';
 
 
-const Update = () => {
-    return (
-        <div>
-            sdf
-        </div>
-    );
-}
+
 
 function Postsprint({nickname01, title01, date01, maintext01}){
     const history = useHistory();
@@ -40,7 +34,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
             <div className="titlediv">
                 <h3>{title01}</h3>
                 <div>
-                <Link to ="/update" className="mainbtn" component={Update}>수정</Link>
+                <Link to ="/update" className="mainbtn">수정</Link>
                 <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
             </div>

@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Write from './pages/Write';
 import Mytext from './pages/Mytext';
+import Update from './pages/Update';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/signup" exact component={Signup}/>
         <Route path="/write" exact component={Write}/>
         <Route path="/mytext" exact component={Mytext}/>
+        <Route path="/update" exact component={Update}/>
        
         <Footer/>
       </div>
