@@ -4,8 +4,9 @@ import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 import Signup from './Signup';
 
 function Postsprint({nickname01, title01, date01, maintext01}){
+    const history = useHistory();
     const handleClick = () => {
-        const history = useHistory();
+        
         fetch("https://noticeboardserverr.herokuapp.com/written/delete", {
                                         method: "POST",
                                         headers: {
