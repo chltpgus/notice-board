@@ -34,7 +34,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
             <div className="titlediv">
                 <h3>{title01}</h3>
                 <div>
-                <Link name1 = "naver" to ="/update" className="mainbtn">수정</Link>
+                <Link name1 = {nickname01} to ="/update" className="mainbtn">수정</Link>
                 <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
             </div>
