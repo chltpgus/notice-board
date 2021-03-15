@@ -3,9 +3,9 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 import Signup from './Signup';
 
-function Postsprint({nickname, title, date, maintext}){
+function Postsprint({nickname01, title01, date01, maintext01}){
     const handleClick = () => {
-        let nickname01 = nickname, title01= title, date01=date, maintext01=maintext;
+        
         fetch("https://noticeboardserverr.herokuapp.com/write/delete", {
                                         method: "POST",
                                         headers: {
@@ -74,7 +74,7 @@ function Mytext() {
                     <Link to="/write" className="mainbtn">새로운 글 작성</Link>
                 </div>
             </div>
-            {users01.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
+            {users01.map(posts => <Postsprint nickname01={posts.nickname} title01={posts.title} date01={posts.date} maintext01={posts.maintext} />)}
         </div>
     );
   
