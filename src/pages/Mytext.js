@@ -9,6 +9,7 @@ import Update from './Update';
 
 function Postsprint({nickname01, title01, date01, maintext01}){
     const history = useHistory();
+    let key1 = "sdf";
     const handleClick = () => {
         
         fetch("https://noticeboardserverr.herokuapp.com/written/delete", {
@@ -35,8 +36,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
             <div className="titlediv">
                 <h3>{title01}</h3>
                 <div>
-                <Update name="ddd" />
-                <Link to ="/update" className="mainbtn">수정</Link>
+                <Link to ="/update/:key1" className="mainbtn">수정</Link>
                 <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
             </div>

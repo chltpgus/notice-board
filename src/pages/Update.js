@@ -11,7 +11,7 @@ function Update(props) {
    
     return (
         <div className="Writepage">
-           <p>{props.name}</p>
+           <p>{props.key1}</p>
         </div>
     );
 
