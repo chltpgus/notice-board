@@ -5,17 +5,17 @@ import Signup from './Signup';
 
 function Postsprint({nickname, title, date, maintext}){
     const handleClick = () => {
-
+        let nickname01 = nickname, title01= title, date01=date, maintext01=maintext;
         fetch("https://noticeboardserverr.herokuapp.com/write/delete", {
                                         method: "POST",
                                         headers: {
                                             "Content-Type": "application/json",
                                         },
                                         body: JSON.stringify({
-                                            nickname: nickname,
-                                            title: title,
-                                            date: date,
-                                            maintext: maintext
+                                            nickname: nickname01,
+                                            title: title01,
+                                            date: date01,
+                                            maintext: maintext01
                                         }),
                                     })
                                         .then(res => res.json())
