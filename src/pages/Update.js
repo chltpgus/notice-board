@@ -8,11 +8,11 @@ import { BrowserRouter, Route, useHistory,   } from 'react-router-dom';
 
 
 function Update() {   
-   const getParms = this.props.location.state.detail;
+   const getParms = locationq.state;
 
     return (
         <div className="Writepage">
-           <p></p>
+        <p>{getParms}</p>
         </div>
     );
 
