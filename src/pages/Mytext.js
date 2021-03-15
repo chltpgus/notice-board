@@ -32,7 +32,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
 
     const handleClick2 = () => {
         
-        this.props.history.push({
+        history.push({
             pathname: '/update',
             state: {  detail: nickname01}
         });
