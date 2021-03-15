@@ -7,7 +7,11 @@ function Postsprint({nickname, title, date, maintext}){
     console.log(title);
     return( 
         <div className="contents-2">
-            <h3>{title}</h3>
+            <div className="titlediv">
+                <h3>{title}</h3>
+                <Link className="mainbtn">수정</Link>
+                <Link  className="mainbtn">삭제</Link>
+            </div>
             <p>{nickname}  {date}</p>
             <p>{maintext}</p>
         </div>
