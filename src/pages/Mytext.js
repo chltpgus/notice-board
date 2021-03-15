@@ -9,7 +9,6 @@ import Update from './Update';
 
 function Postsprint({nickname01, title01, date01, maintext01}){
     const history = useHistory();
-    let key1 = "sdf";
     const handleClick = () => {
         
         fetch("https://noticeboardserverr.herokuapp.com/written/delete", {
@@ -30,13 +29,22 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                                         alert("삭제 완료");
 
     }
+
+    const handleClick2 = () => {
+        
+        this.props.history.push({
+            pathname: '/update',
+            state: {  detail: nickname01}
+        });
+
+    }
     
     return( 
         <div className="contents-2">
             <div className="titlediv">
                 <h3>{title01}</h3>
                 <div>
-                <Link to ="/update/:key1" className="mainbtn">수정</Link>
+                <Link onClick={handleClick2} className="mainbtn">수정</Link>
                 <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
             </div>
