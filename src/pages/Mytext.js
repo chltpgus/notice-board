@@ -4,14 +4,32 @@ import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 import Signup from './Signup';
 
 function Postsprint({nickname, title, date, maintext}){
-    console.log(title);
+    const handleClick = () => {
+
+        fetch("https://noticeboardserverr.herokuapp.com/write/delete", {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        },
+                                        body: JSON.stringify({
+                                            nickname: nickname,
+                                            title: title,
+                                            date: date,
+                                            maintext: maintext
+                                        }),
+                                    })
+                                        .then(res => res.json())
+
+
+    }
+    
     return( 
         <div className="contents-2">
             <div className="titlediv">
                 <h3>{title}</h3>
                 <div>
                 <Link className="mainbtn">수정</Link>
-                <Link  className="mainbtn">삭제</Link>
+                <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
             </div>
             <p>{nickname}  {date}</p>
