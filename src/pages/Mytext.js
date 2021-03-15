@@ -4,6 +4,7 @@ import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 import Signup from './Signup';
 
 function Postsprint({nickname, title, date, maintext}){
+    console.log(nickname);
     return( 
         <div className="contents-2">
             <h3>{title}</h3>
