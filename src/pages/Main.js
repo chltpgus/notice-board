@@ -20,19 +20,18 @@ function Main() {
     let [users2, users2change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
-
-    function datafetch() {
+    useEffect(() => {
         fetch('https://noticeboardserverr.herokuapp.com/written')
-            .then(function (res) {
-                return res.json();
-            })
-            .then(function (res) {
-                users = res;
-                users2change(users);
-            });
-    }
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (res) {
+            users = res;
+            users2change(users);
+        });
+      }, []);
 
-    setTimeout(datafetch, 0);
+   
 
     const writehandleClick = () => {
         if(user === null){
