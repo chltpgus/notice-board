@@ -34,7 +34,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
         
         history.push({
             pathname: '/update',
-            state: {  detail: nickname01}
+            state: {  userCell: nickname01}
         });
 
     }
