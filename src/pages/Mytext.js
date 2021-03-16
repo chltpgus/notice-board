@@ -83,7 +83,7 @@ function Mytext() {
             users.reverse();
             users01change(users);
         });
-      }, []);
+      }, [users]);
 
   
 

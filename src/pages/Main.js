@@ -30,7 +30,7 @@ function Main() {
             users.reverse();
             users2change(users);
         });
-      }, []);
+      }, [users2]);
 
    
 
