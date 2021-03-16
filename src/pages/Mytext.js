@@ -48,7 +48,12 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                     <Link to={{
                         pathname: '/update',
                         search: '?query=abc',
-                        state: { detail: nickname01}
+                        state: {
+                            nickname: nickname01,
+                            title: title01,
+                            date: date01,
+                            maintext: maintext01
+                        }
                     }} className="mainbtn">수정</Link>
                 <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
