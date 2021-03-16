@@ -9,12 +9,12 @@ import {useLocation} from "react-router";
 
 function Update(props) {   
   const location = useLocation();
-  user = location.state;
+  let user = location.state;
   
 
   const history = useHistory();
-  const [titleInput, titleInputChange] = useState('');
-  const [maintextInput, maintextInputChange] = useState('');
+  const [titleInput, titleInputChange] = useState(user.title);
+  const [maintextInput, maintextInputChange] = useState(user.maintext);
 
   const [titleError, setTitleError] = useState(false);
   const [maintextError, setMaintextError] = useState(false);
