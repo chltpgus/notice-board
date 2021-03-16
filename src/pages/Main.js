@@ -37,7 +37,7 @@ function Main() {
             users = res;
             users.reverse();
             users2change(users);
-            console.log((users2.length)/5);
+            //console.log((users2.length)/5);
         });
       }, [users2]);
 
