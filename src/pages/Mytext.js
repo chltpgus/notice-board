@@ -31,22 +31,11 @@ function Postsprint({nickname01, title01, date01, maintext01}){
     }
 
     const handleClick2 = () => {
-
-        fetch('./Update', {
-                                        method: "POST",
-                                        headers: {
-                                            "Content-Type": "application/json",
-                                        },
-                                        body: JSON.stringify({
-                                            nickname: nickname01,
-                                            title: title01,
-                                            date: date01,
-                                            maintext: maintext01
-                                        }),
-                                    })
-
-
-        history.push('/');
+        
+        history.push({
+            pathname: '/update',
+            state: {  detail: nickname01}
+        });
 
     }
     

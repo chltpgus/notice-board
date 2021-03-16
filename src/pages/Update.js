@@ -7,12 +7,12 @@ import { BrowserRouter, Route, useHistory,   } from 'react-router-dom';
 
 
 
-function Update() {   
+function Update(props) {   
 
 
     return (
         <div className="Writepage">
-        <p></p>
+        <p>{props.detail}</p>
         </div>
     );
 
