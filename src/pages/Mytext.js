@@ -31,11 +31,11 @@ function Postsprint({nickname01, title01, date01, maintext01}){
     }
 
     const handleClick2 = () => {
-        
+        /*
         history.push({
             pathname: '/update',
             state: {userCell: userCell}
-        });
+        });*/
 
     }
     
