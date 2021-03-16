@@ -9,8 +9,8 @@ import {useLocation} from "react-router";
 
 function Update(props) {   
   const location = useLocation();
-  const detail = location.state.detail;
-  console.log(detail);
+  //const detail = location.state.detail;
+  console.log(location.state.detail);
   
 
     return (
