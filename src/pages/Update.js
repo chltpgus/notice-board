@@ -10,7 +10,7 @@ import { BrowserRouter, Route, useHistory,   } from 'react-router-dom';
 function Update(props) {   
 
   console.log(props);
-  console.log(props.state);
+  console.log(props.location.state);
 
     return (
         <div className="Writepage">
