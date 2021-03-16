@@ -57,7 +57,7 @@ function Update(props) {
           </div>
           <div className="Writebtn">
               <Link className="savebtn" onClick={handleClick}>저장</Link>
-              <Link className="cancelbtn" to = "/">취소</Link>
+              <Link className="cancelbtn" to = "/mytext">취소</Link>
           </div>
       </div>
   );
