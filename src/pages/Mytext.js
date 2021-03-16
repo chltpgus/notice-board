@@ -47,7 +47,6 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                 <div>
                     <Link to={{
                         pathname: '/update',
-                        search: '?query=abc',
                         state: {
                             nickname: nickname01,
                             title: title01,
