@@ -27,18 +27,11 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                                         
                                         history.push('/mytext');
                                         alert("삭제 완료");
-                                        window.location.reload("/mytext");
+                                       
 
     }
 
-    const handleClick2 = () => {
-        /*
-        history.push({
-            pathname: '/update',
-            state: {userCell: userCell}
-        });*/
-
-    }
+   
     
     return( 
         <div className="contents-2">
