@@ -27,6 +27,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                                         
                                         history.push('/mytext');
                                         alert("삭제 완료");
+                                        window.location.reload();
 
     }
 
