@@ -45,7 +45,6 @@ function Postsprint({nickname01, title01, date01, maintext01}){
             <div className="titlediv">
                 <h3>{title01}</h3>
                 <div>
-                <Update detail= {nickname01}/>
                 <Link onClick={handleClick2} className="mainbtn">수정</Link>
                 <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
