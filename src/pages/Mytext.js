@@ -46,7 +46,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                 <h3>{title01}</h3>
                 <div>
                     <Link to={{
-                        pathname: '/template',
+                        pathname: '/update',
                         search: '?query=abc',
                         state: { detail: nickname01}
                     }} className="mainbtn">수정</Link>
