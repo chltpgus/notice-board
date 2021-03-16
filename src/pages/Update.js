@@ -10,7 +10,8 @@ import {useLocation} from "react-router";
 function Update(props) {   
   const location = useLocation();
   //const detail = location.state.detail;
-  console.log(location.state.userCell);
+  //console.log(location.state.userCell);
+  console.log(location);
   
 
     return (
