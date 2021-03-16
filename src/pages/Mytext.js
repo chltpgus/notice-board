@@ -34,7 +34,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
         
         history.push({
             pathname: '/update',
-            state: {  userCell: nickname01}
+            state: {userCell: userCell}
         });
 
     }
@@ -46,7 +46,11 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                 <h3>{title01}</h3>
                 <div>
                 <Link onClick={handleClick2} className="mainbtn">수정</Link>
-                <Link onClick={handleClick}  className="mainbtn">삭제</Link>
+                    <Link to={{
+                        pathname: '/update',
+                        search: '?query=abc',
+                        state: { detail: nickname01 }
+                    }} className="mainbtn">삭제</Link>
                 </div>
             </div>
             <p>{nickname01}  {date01}</p>
