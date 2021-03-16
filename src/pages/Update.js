@@ -38,6 +38,29 @@ function Update(props) {
       }else{
           setMaintextError(false);
       }
+      
+      if (titleInput !== "" && maintextInput !== "") {
+
+        fetch("https://noticeboardserverr.herokuapp.com/written/update", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                nickname: user.nickname,
+                title: user.title,
+                date: user.date,
+                maintext: user.maintext,
+                titile2: titleInput,
+                maintext2: maintextInput
+            }),
+        })
+            .then(res => res.json())
+
+        history.push('/mytext');
+        alert("글 수정 완료");
+      
+    }
 
       
   }
