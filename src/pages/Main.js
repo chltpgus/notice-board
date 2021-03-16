@@ -41,7 +41,7 @@ function Main() {
         });
       }, [users2]);
 
-   console.log((6)/5);
+
 
     const writehandleClick = () => {
         if(user === null){
