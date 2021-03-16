@@ -37,11 +37,11 @@ function Main() {
             users = res;
             users.reverse();
             users2change(users);
-            //console.log((users2.length)/5);
+            
         });
       }, [users2]);
 
-   
+   console.log((6)/5);
 
     const writehandleClick = () => {
         if(user === null){
