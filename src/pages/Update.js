@@ -9,9 +9,8 @@ import {useLocation} from "react-router";
 
 function Update(props) {   
   const location = useLocation();
-  //let user = location.state;
   const [user, userInputChange] = useState(location.state);
-console.log(user);
+
   const history = useHistory();
   const [titleInput, titleInputChange] = useState(user.title);
   const [maintextInput, maintextInputChange] = useState(user.maintext);
@@ -27,7 +26,7 @@ console.log(user);
   }
   
   const handleClick = () => {
-/*
+
       if(titleInput === ""){
           setTitleError(true);
       }else{
@@ -39,7 +38,7 @@ console.log(user);
       }else{
           setMaintextError(false);
       }
-*/
+
       
   }
   return (
@@ -56,7 +55,7 @@ console.log(user);
               {maintextError && <p style={{ color: 'red' }}>본문 내용을 입력하세요.</p>}
           </div>
           <div className="Writebtn">
-              <Link className="savebtn" >저장</Link>
+              <Link className="savebtn" onClick={handleClick} >저장</Link>
               <Link className="cancelbtn" to = "/mytext">취소</Link>
           </div>
       </div>
