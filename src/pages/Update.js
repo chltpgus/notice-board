@@ -45,7 +45,7 @@ function Update(props) {
   return (
       <div className="Writepage">
           <div>
-              <p className="writetext">새로운 글을 작성합니다. </p>
+              <p className="writetext">글을 수정합니다. </p>
           </div>
           <div className="inputdiv">
               <input type="text" onChange={titleonChange} value={titleInput} id="name" className="INPUT03" placeholder="제목" />
