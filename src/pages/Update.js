@@ -51,7 +51,7 @@ function Update(props) {
                 title: user.title,
                 date: user.date,
                 maintext: user.maintext,
-                titile2: titleInput,
+                title2: titleInput,
                 maintext2: maintextInput
             }),
         })
