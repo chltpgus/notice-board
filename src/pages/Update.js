@@ -27,7 +27,7 @@ function Update(props) {
   }
   
   const handleClick = () => {
-
+/*
       if(titleInput === ""){
           setTitleError(true);
       }else{
@@ -39,7 +39,7 @@ function Update(props) {
       }else{
           setMaintextError(false);
       }
-
+*/
       
   }
   return (
