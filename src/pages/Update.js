@@ -11,7 +11,7 @@ function Update(props) {
   const location = useLocation();
   let user = location.state;
   
-
+console.log(user);
   const history = useHistory();
   const [titleInput, titleInputChange] = useState(user.title);
   const [maintextInput, maintextInputChange] = useState(user.maintext);
@@ -56,7 +56,7 @@ function Update(props) {
               {maintextError && <p style={{ color: 'red' }}>본문 내용을 입력하세요.</p>}
           </div>
           <div className="Writebtn">
-              <Link className="savebtn" onClick={handleClick}>저장</Link>
+              <Link className="savebtn" >저장</Link>
               <Link className="cancelbtn" to = "/mytext">취소</Link>
           </div>
       </div>
