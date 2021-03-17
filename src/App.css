@@ -315,7 +315,7 @@ padding: 20px;
 
 .foo{
   padding: 25px;
-  background-color: rgb(235, 233, 233);
+  background-color: #fffcf1;
   display: flex;
 }
 
