@@ -36,7 +36,7 @@ function Main() {
             users = res;
             users.reverse();
             users2change(users);
-            setTotalCount(users2.legth); 
+            setTotalCount(users.legth); 
         });
       }, []);
 
