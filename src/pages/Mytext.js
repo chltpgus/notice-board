@@ -24,8 +24,8 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                                         }),
                                     })
                                         .then(res => res.json())
-                                    
                                         alert("삭제 완료");
+                                        history.push('/mytext');
                                       
                                        
 
@@ -48,7 +48,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                             maintext: maintext01
                         }
                     }} className="mainbtn">수정</Link>
-                <Link onClick={handleClick}  className="mainbtn">삭제</Link>
+                <Link onClick={handleClick} to="/" className="mainbtn">삭제</Link>
                 </div>
             </div>
             <p>{nickname01}  {date01}</p>
