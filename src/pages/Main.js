@@ -24,7 +24,7 @@ function Main() {
  
     const [pageSize, setPageSize] = useState(10);
     const [totalCount, setTotalCount] = useState(115);
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(2);
 
     useEffect(() => {
         fetch('https://noticeboardserverr.herokuapp.com/written')
