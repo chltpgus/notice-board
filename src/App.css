@@ -298,11 +298,11 @@ padding: 20px;
   padding: 20px;
 }
 .contentss{
-  background-color: rgb(230, 187, 0);
+  background-color: #00000059;
+  border-radius: 8px;
 }
 .App-link {
   color: #61dafb;
-  border-radius: 8px;
 }
 
 .nav{
