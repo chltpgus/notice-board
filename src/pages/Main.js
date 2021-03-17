@@ -43,14 +43,15 @@ function Main() {
         
         });
       }, []);
-      pageingchange(Math.ceil((users2.length)/5));
+
       useEffect(() => {
+        pageingchange(Math.ceil((users2.length)/5));
         for(let a=0; a<pageing; a++){
             pages.push(a+1);
         }
         pagechange(pages);
         console.log(page);
-      }, [pageing]);
+      }, [users]);
 
      
 
