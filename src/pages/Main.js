@@ -90,7 +90,7 @@ function Main() {
                 </div>
                 {users3.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
 
-                <div className="contents-2">
+                <div className="contents-3">
                     <Pagination total={totalCount} current={currentPage} pageSize={pageSize} onChange={(page) => setCurrentPage(page)} />
                 </div>
             </div>
