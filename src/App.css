@@ -261,6 +261,7 @@ button{
   height: auto;
   min-height: 760px;
   padding: 10px;
+  background-image: url(./img/background.jpg);
   background-color:#fffcf1;
   justify-content: center;
 }
