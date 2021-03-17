@@ -251,7 +251,7 @@ button{
   justify-content: space-between;
 }
 .contents{
-  display: block;
+  display: flex;
   padding: 10px;
   background-color:#fffcf1;
   justify-content: space-between;
@@ -266,9 +266,7 @@ button{
 background-color: #efefef;
 padding: 20px;
 }
-.contentss{
-  display: flex;
-}
+
 .contents-2{
   text-align: left;
   border: 2px solid;
