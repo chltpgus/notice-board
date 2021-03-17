@@ -24,7 +24,7 @@ function Main() {
  
     const [pageSize, setPageSize] = useState(10);
     const [totalCount, setTotalCount] = useState(115);
-    const [currentPage, setCurrentPage] = useState(2);
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
         fetch('https://noticeboardserverr.herokuapp.com/written')
@@ -70,7 +70,7 @@ function Main() {
             {users2.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
 
             <div className="contents-2">
-                <Pagination>total={totalCount} current={currentPage} pageSize={pageSize}</Pagination>
+                <Pagination total={totalCount} current={currentPage} pageSize={pageSize} onChange={(page) => setCurrentPage(page)}/>
             </div>
         </div>
     );
