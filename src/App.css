@@ -269,6 +269,17 @@ padding: 20px;
 
 .contents-2{
   text-align: left;
+  border: 1px solid;
+  border-color: #bebebe;
+  border-radius: 8px;
+  margin: 5px;
+  width: 680px;
+  background-color:rgb(255, 255, 255);
+  padding: 20px;
+}
+.contents-2{
+  
+  text-align: left;
   border: 2px solid;
   border-color: #bebebe;
   border-radius: 8px;
