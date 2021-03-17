@@ -12,13 +12,7 @@ function Postsprint({nickname, title, date, maintext}){
         );
 }
 
-function Pagenation({pages01}){
-    return (
 
-        <ul>{pages01}</ul>
-
-    );
-}
 
 
 function Main() {   
