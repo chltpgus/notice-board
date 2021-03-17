@@ -25,9 +25,9 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                                     })
                                         .then(res => res.json())
                                         
-                                        history.push('/mytext');
                                         alert("삭제 완료");
-                                        window.location.reload();
+                                        history.push('/');
+                                        history.push('/mytext');
 
     }
 
