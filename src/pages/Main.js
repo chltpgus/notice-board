@@ -88,7 +88,7 @@ function Main() {
                         <Link onClick={writehandleClick} className="mainbtn">새로운 글 작성</Link>
                     </div>
                 </div>
-               
+                {users3.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
 
                 <div className="contents-3">
                     <Pagination total={totalCount} current={currentPage} pageSize={pageSize} onChange={(page) => setCurrentPage(page)} />
@@ -98,5 +98,5 @@ function Main() {
     );
 
   }
- // {users3.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
+
 export default Main;
