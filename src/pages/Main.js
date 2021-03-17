@@ -41,7 +41,7 @@ function Main() {
         });
       }, [users]);
 
-      console.log(((users2)/5));
+      console.log(Math.ceil((users2.length)/5));
 
     const writehandleClick = () => {
         if(user === null){
