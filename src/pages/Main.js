@@ -39,11 +39,11 @@ function Main() {
             users = res;
             users.reverse();
             users2change(users);
-            pageingchange(Math.ceil((users2.length)/5));
+           
         
         });
       }, []);
-
+      pageingchange(Math.ceil((users2.length)/5));
       useEffect(() => {
         for(let a=0; a<pageing; a++){
             pages.push(a+1);
