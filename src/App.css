@@ -252,7 +252,8 @@ button{
 }
 .contents{
   display: flex;
-  height: 760px;
+  height: auto;
+  min-height: 760px;
   padding: 10px;
   background-color:#fffcf1;
   justify-content: center;
