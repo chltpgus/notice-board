@@ -47,6 +47,7 @@ function Main() {
       }, []);
 
       useEffect(() => {
+          console.log(users2[currentPage]);
           /*
         let t=[];
         for(let a= pageSize*currentPage-4; a <pageSize*currentPage-1; a++){
