@@ -12,12 +12,12 @@ function Postsprint({nickname, title, date, maintext}){
         );
 }
 
-function Pagenation({pageing}){
-    return( 
-        <div className="contents-2">
-            <ul></ul>
-        </div>
-        );
+function Pagenation({pages01}){
+    return (
+
+        <ul>{pages01}</ul>
+
+    );
 }
 
 
@@ -25,7 +25,8 @@ function Main() {
     let users = []
     const history = useHistory();
     let [users2, users2change] = useState(users);
-    let [pageing, pageingchange] = useState(1);
+    let [pageing, pageingchange] = useState(0);
+    let [page, pagechange] = useState('');
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
     useEffect(() => {
@@ -37,9 +38,13 @@ function Main() {
             users = res;
             users.reverse();
             users2change(users);
-            console.log(Math.ceil((users2.length)/5));
+            pageingchange(Math.ceil((users2.length)/5));
+            for(let a=0; a<pageing; a++){
+                page.push(a+1);
+            }
+
         });
-      }, [users]);
+      }, []);
 
      
 
@@ -69,7 +74,10 @@ function Main() {
                 </div>
             </div>
             {users2.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
-            {Pagenation}
+
+            <div className="contents-2">
+                {page.map(pages => <Pagenation pages01={pages} />)}
+            </div>
         </div>
     );
 
