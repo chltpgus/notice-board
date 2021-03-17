@@ -81,7 +81,10 @@ function Mytext() {
                
             }
             users.reverse();
+            if(users01!==users){
             users01change(users);
+            }
+
             console.log(users01);
         
         });
