@@ -254,7 +254,7 @@ button{
   display: flex;
   padding: 10px;
   background-color:#fffcf1;
-  justify-content: space-between;
+  justify-content: center;
 }
 .contents-1{
   border: 2px solid;
