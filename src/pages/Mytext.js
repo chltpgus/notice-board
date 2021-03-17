@@ -64,7 +64,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
 function Mytext() {
     let users = [];
     let [users01, users01change] = useState(users);
-    let [users02, users02change] = useState(users);
+   // let [users02, users02change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
 
 
@@ -85,7 +85,7 @@ function Mytext() {
             users01change(users);
         
         });
-      }, [users02]);
+      }, []);
 
   
 
