@@ -34,7 +34,8 @@ function Main() {
         .then(function (res) {
             users = res;
             users.reverse();
-            setTotalCount(users.legth); 
+            users2change(users);
+            setTotalCount(users.length); 
         });
       }, []);
 
