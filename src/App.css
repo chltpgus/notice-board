@@ -275,15 +275,15 @@ padding: 20px;
   margin: 5px;
   width: 680px;
   background-color:rgb(255, 255, 255);
-  padding: 8px 20%;
+  padding: 20px;
 }
 .App-link {
   color: #61dafb;
 }
 
 .nav{
-  border: 0.5px solid;
-  border-color: #000000;
+  border: 1px solid;
+  border-color: #a4a4a4;
   background-color: rgb(230, 187, 0);
   justify-content: space-between;
   display: flex;
