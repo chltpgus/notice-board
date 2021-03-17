@@ -3,7 +3,6 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 import Signup from './Signup';
 import Update from './Update';
-import {useLocation} from "react-router";
 
 
 
@@ -28,7 +27,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                                         
                                         history.push('/mytext');
                                         alert("삭제 완료");
-                                       
+                                        window.location.reload();
 
     }
 
@@ -49,12 +48,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                             maintext: maintext01
                         }
                     }} className="mainbtn">수정</Link>
-                <Link onClick={handleClick} to={{
-                        
-                        state: {
-                            change: 1
-                        }
-                    }}  className="mainbtn">삭제</Link>
+                <Link onClick={handleClick}  className="mainbtn">삭제</Link>
                 </div>
             </div>
             <p>{nickname01}  {date01}</p>
@@ -70,10 +64,8 @@ function Postsprint({nickname01, title01, date01, maintext01}){
 function Mytext() {
     let users = [];
     let [users01, users01change] = useState(users);
-   // let [users02, users02change] = useState(users);
+    let [users02, users02change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
-    const location = useLocation();
-    const [change01, change01Change] = useState(location.state);
 
 
     useEffect(() => {
@@ -94,8 +86,6 @@ function Mytext() {
         
         });
       }, []);
-
-      console.log(change01);
 
   
 
