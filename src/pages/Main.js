@@ -47,9 +47,10 @@ function Main() {
         for(let a=0; a<pageing; a++){
             pages.push(a+1);
         }
-        pagechange(pages);
-        console.log(page);
+       
       }, [users2]);
+      pagechange(pages);
+      console.log(page);
 
      
 
