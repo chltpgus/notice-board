@@ -7,7 +7,7 @@ import Update from './Update';
 
 
 
-function Postsprint({nickname01, title01, date01, maintext01}){
+function Postsprint({nickname01, title01, date01, maintext01, users02}){
     const history = useHistory();
     const handleClick = () => {
         
@@ -27,6 +27,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                                         
                                         history.push('/mytext');
                                         alert("삭제 완료");
+                                        users02change(3);
                                        
 
     }
@@ -64,7 +65,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
 function Mytext() {
     let users = [];
     let [users01, users01change] = useState(users);
-   // let [users02, users02change] = useState(users);
+    let [users02, users02change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
 
 
@@ -100,7 +101,7 @@ function Mytext() {
                         <Link to="/write" className="mainbtn">새로운 글 작성</Link>
                     </div>
                 </div>
-                {users01.map(posts => <Postsprint nickname01={posts.nickname} title01={posts.title} date01={posts.date} maintext01={posts.maintext} />)}
+                {users01.map(posts => <Postsprint nickname01={posts.nickname} title01={posts.title} date01={posts.date} maintext01={posts.maintext} users02={users02}/>)}
             </div>
         </div>
     );
