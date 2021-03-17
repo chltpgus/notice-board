@@ -19,7 +19,6 @@ function Main() {
     let users = []
     const history = useHistory();
     let [users2, users2change] = useState(users);
-    let [users3, users3change] = useState(users);
 
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
@@ -35,7 +34,6 @@ function Main() {
         .then(function (res) {
             users = res;
             users.reverse();
-            users2change(users);
             setTotalCount(users.legth); 
         });
       }, []);
@@ -43,7 +41,7 @@ function Main() {
       useEffect(() => {
       
        
-        users3change(users2);
+        users2change(users);
       }, [currentPage]);
 
 
@@ -76,7 +74,7 @@ function Main() {
                     <Link onClick={writehandleClick} className="mainbtn">새로운 글 작성</Link>
                 </div>
             </div>
-            {users3.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
+            {users2.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
 
             <div className="contents-2">
                 <Pagination total={totalCount} current={currentPage} pageSize={pageSize} onChange={(page) => setCurrentPage(page)}/>
