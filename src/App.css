@@ -226,7 +226,7 @@ button{
   height: 150px;
   font-size: 15px;
   color: rgb(0, 0, 0);;
-  background-color:rgb(243, 243, 243);;
+  background-color:rgb(243, 243, 243);
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
 }
@@ -277,7 +277,7 @@ padding: 20px;
   background-color:rgb(255, 255, 255);
   padding: 20px;
 }
-.contents-2{
+.contents-3{
   
   text-align: left;
   border: 2px solid;
