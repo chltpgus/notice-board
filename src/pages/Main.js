@@ -49,11 +49,13 @@ function Main() {
       useEffect(() => {
          
         let t=[];
-        for(let a= (pageSize*currentPage-4); a <(pageSize*currentPage-1); a++){
-            t.push(users2[a]);
-        }
-        //users3change(t);
-        console.log(t);
+          for (let a = (pageSize * currentPage - 4); a < (pageSize * currentPage - 1); a++) {
+              t.push(users2[a]);
+          }
+          if (t[0] !== undefined) {
+              users3change(t);
+          }
+
       }, [currentPage]);
 
 
