@@ -15,7 +15,7 @@
 body {
   font-family: 'Godo', sans-serif;
   font-size: 16px;
-  margin: 2cm;
+  margin: 0;
   background-color: rgb(245, 244, 244);
 }
 
@@ -265,7 +265,9 @@ button{
 background-color: #efefef;
 padding: 20px;
 }
-
+.contentss{
+  display: flex;
+}
 .contents-2{
   text-align: left;
   border: 2px solid;
