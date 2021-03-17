@@ -3,11 +3,12 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 import Signup from './Signup';
 import Update from './Update';
+import {useLocation} from "react-router";
 
 
 
 
-function Postsprint({nickname01, title01, date01, maintext01, users02}){
+function Postsprint({nickname01, title01, date01, maintext01}){
     const history = useHistory();
     const handleClick = () => {
         
@@ -27,7 +28,6 @@ function Postsprint({nickname01, title01, date01, maintext01, users02}){
                                         
                                         history.push('/mytext');
                                         alert("삭제 완료");
-                                        users02change(3);
                                        
 
     }
@@ -49,7 +49,12 @@ function Postsprint({nickname01, title01, date01, maintext01, users02}){
                             maintext: maintext01
                         }
                     }} className="mainbtn">수정</Link>
-                <Link onClick={handleClick} to="/mytext" className="mainbtn">삭제</Link>
+                <Link onClick={handleClick} to={{
+                        pathname: '/update',
+                        state: {
+                            change: 1
+                        }
+                    }}  className="mainbtn">삭제</Link>
                 </div>
             </div>
             <p>{nickname01}  {date01}</p>
@@ -65,8 +70,10 @@ function Postsprint({nickname01, title01, date01, maintext01, users02}){
 function Mytext() {
     let users = [];
     let [users01, users01change] = useState(users);
-    let [users02, users02change] = useState(users);
+   // let [users02, users02change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
+    const location = useLocation();
+    const [change01, change01Change] = useState(location.state);
 
 
     useEffect(() => {
@@ -88,6 +95,8 @@ function Mytext() {
         });
       }, []);
 
+      console.log(change01);
+
   
 
     return (
@@ -101,7 +110,7 @@ function Mytext() {
                         <Link to="/write" className="mainbtn">새로운 글 작성</Link>
                     </div>
                 </div>
-                {users01.map(posts => <Postsprint nickname01={posts.nickname} title01={posts.title} date01={posts.date} maintext01={posts.maintext} users02={users02}/>)}
+                {users01.map(posts => <Postsprint nickname01={posts.nickname} title01={posts.title} date01={posts.date} maintext01={posts.maintext} />)}
             </div>
         </div>
     );
