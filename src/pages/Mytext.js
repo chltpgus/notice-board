@@ -50,7 +50,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                         }
                     }} className="mainbtn">수정</Link>
                 <Link onClick={handleClick} to={{
-                        pathname: '/update',
+                        
                         state: {
                             change: 1
                         }
