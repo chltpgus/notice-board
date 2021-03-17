@@ -49,7 +49,7 @@ function Main() {
       useEffect(() => {
          
         let t=[];
-          for (let a = (pageSize * currentPage - 4); a < (pageSize * currentPage - 1); a++) {
+          for (let a = (pageSize * currentPage - 4); a < (pageSize * currentPage ); a++) {
               t.push(users2[a]);
           }
           if (t[0] !== undefined) {
