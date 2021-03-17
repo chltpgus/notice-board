@@ -26,6 +26,7 @@ function Main() {
     const history = useHistory();
     let [users2, users2change] = useState(users);
     let [pageing, pageingchange] = useState(0);
+    let pages = [];
     let [page, pagechange] = useState('');
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
@@ -40,9 +41,9 @@ function Main() {
             users2change(users);
             pageingchange(Math.ceil((users2.length)/5));
             for(let a=0; a<pageing; a++){
-                page.push(a+1);
+                pages.push(a+1);
             }
-
+            pagechange(pages);
         });
       }, []);
 
