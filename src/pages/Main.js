@@ -38,7 +38,7 @@ function Main() {
             users = res;
             users.reverse();
             for(let a=0; a <pageSize; a++){
-                t.push(users[a]);
+                if(users[a]!==undefined){   t.push(users[a]);}
             }
             users2change(users);
            users3change(t);
