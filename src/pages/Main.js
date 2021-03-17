@@ -22,7 +22,7 @@ function Main() {
 
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
-    const [pageSize, setPageSize] = useState(10);
+    const [pageSize, setPageSize] = useState(5);
     const [totalCount, setTotalCount] = useState(115);
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -34,10 +34,17 @@ function Main() {
         .then(function (res) {
             users = res;
             users.reverse();
-            users2change(users);
-            
+            setTotalCount(users.legth); 
         });
       }, []);
+
+      useEffect(() => {
+      
+       
+        users2change(users);
+      }, [currentPage]);
+
+
 
     
      
