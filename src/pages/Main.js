@@ -27,7 +27,7 @@ function Main() {
     let [users2, users2change] = useState(users);
     let [pageing, pageingchange] = useState(0);
     let pages = [];
-    let [page, pagechange] = useState('');
+    let [page, pagechange] = useState([]);
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
     useEffect(() => {
