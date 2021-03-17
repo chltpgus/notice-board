@@ -91,7 +91,7 @@ function Mytext() {
 
     return (
         <div className="contents" >
-            <div>
+            <div className="contentss">
                 <div className="contents-1">
                     <div className="postlist">
                         <Link to="/" className="mainbtn" >모든 글 목록</Link>
