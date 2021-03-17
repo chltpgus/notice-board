@@ -261,6 +261,7 @@ button{
   border-color: #bebebe;
   border-radius: 8px;
   display: flex;
+  width: 680px;
   margin: 5px;
 background-color: #efefef;
 padding: 20px;
@@ -274,6 +275,7 @@ padding: 20px;
   border-color: #bebebe;
   border-radius: 8px;
   margin: 5px;
+  width: 680px;
   background-color:rgb(255, 255, 255);
   padding: 20px;
 }
