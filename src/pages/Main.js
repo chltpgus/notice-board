@@ -33,7 +33,7 @@ function Main() {
             return res.json();
         })
         .then(function (res) {
-            let t;
+            let t=[];
             users = res;
             users.reverse();
             for(let a=0; a <pageSize; a++){
