@@ -39,8 +39,6 @@ function Main() {
             users = res;
             users.reverse();
             users2change(users);
-           
-        
         });
       }, []);
 
@@ -51,7 +49,7 @@ function Main() {
         }
         pagechange(pages);
         console.log(page);
-      }, [users]);
+      }, [users2]);
 
      
 
