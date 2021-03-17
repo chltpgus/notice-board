@@ -44,6 +44,7 @@ function Main() {
                 pages.push(a+1);
             }
             pagechange(pages);
+            console.log(pages)
         });
       }, []);
 
