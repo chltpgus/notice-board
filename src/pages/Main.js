@@ -41,7 +41,7 @@ function Main() {
                 t.push(users[a]);
             }
             users2change(users);
-           // users3change(t);
+           users3change(t);
             setTotalCount(users.length); 
         });
       }, []);
