@@ -46,7 +46,7 @@ function Main() {
 
       useEffect(() => {
           let a;
-          for(let i =0; )
+        
         users2change(users2);
       }, [currentPage]);
 
