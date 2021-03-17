@@ -82,6 +82,7 @@ function Mytext() {
             }
             users.reverse();
             users01change(users);
+            console.log(users);
         });
       }, [users]);
 
