@@ -19,6 +19,7 @@ function Main() {
     let users = []
     const history = useHistory();
     let [users2, users2change] = useState(users);
+    let [users3, users3change] = useState(users);
 
 
     let user = JSON.parse(sessionStorage.getItem('USER'));
@@ -39,15 +40,18 @@ function Main() {
             for(let a=0; a <pageSize; a++){
                 t.push(users[a]);
             }
-            users2change(t);
+            users2change(users);
+            users3change(t);
             setTotalCount(users.length); 
         });
       }, []);
 
       useEffect(() => {
-          let a;
-        
-        users2change(users2);
+        let t=[];
+        for(let a= pageSize*currentPage-4; a <pageSize*currentPage-1; a++){
+            t.push(users2[a]);
+        }
+        users3change(t);
       }, [currentPage]);
 
 
@@ -80,7 +84,7 @@ function Main() {
                     <Link onClick={writehandleClick} className="mainbtn">새로운 글 작성</Link>
                 </div>
             </div>
-            {users2.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
+            {users3.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
 
             <div className="contents-2">
                 <Pagination total={totalCount} current={currentPage} pageSize={pageSize} onChange={(page) => setCurrentPage(page)}/>
