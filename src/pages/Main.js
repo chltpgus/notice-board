@@ -19,6 +19,7 @@ function Main() {
     let users = []
     const history = useHistory();
     let [users2, users2change] = useState(users);
+    let [users3, users3change] = useState(users);
 
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
@@ -38,11 +39,10 @@ function Main() {
             setTotalCount(users.length); 
         });
       }, []);
-      
+
       useEffect(() => {
-      
-       
-        users2change(users);
+    
+        users2change(users2[0]);
       }, [currentPage]);
 
 
