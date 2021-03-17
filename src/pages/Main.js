@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-
+import Pagination from 'rc-pagination';
 
 function Postsprint({nickname, title, date, maintext}){
     return( 
@@ -25,11 +25,13 @@ function Main() {
     let users = []
     const history = useHistory();
     let [users2, users2change] = useState(users);
-    let [pageing, pageingchange] = useState(0);
-    let pages = [];
-    let [page, pagechange] = useState([]);
+
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
+    const [pageSize, setPageSize] = useState(10);
+    const [totalCount, setTotalCount] = useState(115);
+    const [currentPage, setCurrentPage] = useState(1);
+
     useEffect(() => {
         fetch('https://noticeboardserverr.herokuapp.com/written')
         .then(function (res) {
@@ -39,12 +41,7 @@ function Main() {
             users = res;
             users.reverse();
             users2change(users);
-            pageingchange(Math.ceil((users2.length)/5));
-            for(let a=0; a<pageing; a++){
-                pages.push(a+1);
-            }
-            pagechange(pages);
-      console.log(page);
+            
         });
       }, []);
 
@@ -79,7 +76,7 @@ function Main() {
             {users2.map(posts => <Postsprint nickname={posts.nickname} title={posts.title} date={posts.date} maintext={posts.maintext} />)}
 
             <div className="contents-2">
-                {page.map(pages => <Pagenation pages01={pages} />)}
+                <Pagination>total={totalCount} current={currentPage} pageSize={pageSize}</Pagination>
             </div>
         </div>
     );
