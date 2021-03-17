@@ -40,13 +40,17 @@ function Main() {
             users.reverse();
             users2change(users);
             pageingchange(Math.ceil((users2.length)/5));
-            for(let a=0; a<pageing; a++){
-                pages.push(a+1);
-            }
-            pagechange(pages);
-            console.log(page);
+        
         });
       }, []);
+
+      useEffect(() => {
+        for(let a=0; a<pageing; a++){
+            pages.push(a+1);
+        }
+        pagechange(pages);
+        console.log(page);
+      }, [pageing]);
 
      
 
