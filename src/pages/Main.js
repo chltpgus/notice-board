@@ -42,7 +42,7 @@ function Main() {
 
       useEffect(() => {
     
-        users2change(users2[0]);
+        users2change(users2);
       }, [currentPage]);
 
 
