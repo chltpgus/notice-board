@@ -39,7 +39,7 @@ function Main() {
             users2change(users);
             
         });
-      }, [users2]);
+      }, []);
 
 
 
