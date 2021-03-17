@@ -19,11 +19,11 @@ function Main() {
     let users = []
     const history = useHistory();
     let [users2, users2change] = useState(users);
-    let [users3, users3change] = useState(users);
+
 
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
-    const [pageSize, setPageSize] = useState(5);
+    const [pageSize, setPageSize] = useState(4);
     const [totalCount, setTotalCount] = useState(115);
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -33,15 +33,20 @@ function Main() {
             return res.json();
         })
         .then(function (res) {
+            let t;
             users = res;
             users.reverse();
-            users2change(users);
+            for(let a=0; a <pageSize; a++){
+                t.push(users[a]);
+            }
+            users2change(t);
             setTotalCount(users.length); 
         });
       }, []);
 
       useEffect(() => {
-    
+          let a;
+          for(let i =0; )
         users2change(users2);
       }, [currentPage]);
 
