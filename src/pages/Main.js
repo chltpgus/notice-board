@@ -52,7 +52,7 @@ function Main() {
         for(let a= (pageSize*currentPage-4); a <(pageSize*currentPage-1); a++){
             t.push(users2[a]);
         }
-        users3change(t);
+        //users3change(t);
         console.log(t);
       }, [currentPage]);
 
