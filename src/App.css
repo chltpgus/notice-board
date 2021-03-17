@@ -257,7 +257,7 @@ button{
   justify-content: center;
 }
 .contents-1{
-  border: 2px solid;
+  border: 1px solid;
   border-color: #bebebe;
   border-radius: 8px;
   display: flex;
@@ -280,7 +280,7 @@ padding: 20px;
 .contents-3{
   
   text-align: left;
-  border: 2px solid;
+  border: 1px solid;
   border-color: #bebebe;
   border-radius: 8px;
   margin: 5px;
@@ -301,7 +301,11 @@ padding: 20px;
   padding: 8px 20%;
   font-weight: 20px;
 }
-
+.rc-pagination {
+  display: flex;
+  justify-content: center;
+ 
+}
 
 @keyframes App-logo-spin {
   from {
