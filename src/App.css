@@ -297,9 +297,12 @@ padding: 20px;
   background-color:rgb(255, 255, 255);
   padding: 20px;
 }
-
+.contentss{
+  background-color: rgb(230, 187, 0);
+}
 .App-link {
   color: #61dafb;
+  border-radius: 8px;
 }
 
 .nav{
