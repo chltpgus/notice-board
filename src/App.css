@@ -103,11 +103,15 @@ button{
 }
 
 .Signuppage{
+  height: auto;
+  min-height: 760px;
   padding: 5px;
   background-color: #fffcf1;
 }
 
 .Writepage{
+  height: auto;
+  min-height: 760px;
   padding: 5px;
   background-color:  #fffcf1;
 }
@@ -167,6 +171,8 @@ button{
 }
 
 .loginpage{
+  height: auto;
+  min-height: 760px;
   padding: 5px;
   background-color: #fffcf1;
 }
