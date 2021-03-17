@@ -25,7 +25,7 @@ function Main() {
     let user = JSON.parse(sessionStorage.getItem('USER'));
  
     const [pageSize, setPageSize] = useState(4);
-    const [totalCount, setTotalCount] = useState(115);
+    const [totalCount, setTotalCount] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
