@@ -50,11 +50,10 @@ function Main() {
          
         let t=[];
           for (let a = (pageSize * currentPage - 4); a < (pageSize * currentPage ); a++) {
-              t.push(users2[a]);
+           if(users2[a]!==undefined){  t.push(users2[a]);}
           }
-          if (t[0] !== undefined) {
-              users3change(t);
-          }
+          
+        users3change(t);
 
       }, [currentPage]);
 
