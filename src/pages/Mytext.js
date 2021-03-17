@@ -48,7 +48,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                             maintext: maintext01
                         }
                     }} className="mainbtn">수정</Link>
-                <Link onClick={handleClick}  className="mainbtn">삭제</Link>
+                <Link onClick={handleClick} to="/mytext" className="mainbtn">삭제</Link>
                 </div>
             </div>
             <p>{nickname01}  {date01}</p>
@@ -64,6 +64,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
 function Mytext() {
     let users = [];
     let [users01, users01change] = useState(users);
+    let [users02, users02change] = useState(users);
     let user = JSON.parse(sessionStorage.getItem('USER'));
 
 
@@ -84,7 +85,7 @@ function Mytext() {
             users01change(users);
         
         });
-      }, []);
+      }, [users02]);
 
   
 
