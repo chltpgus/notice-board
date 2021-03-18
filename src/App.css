@@ -30,9 +30,9 @@ a{
 }
 
 .mainbtn:hover {
-  color: #0000007c;
+  color: #ffffff;
   border-radius: 20px;
-  background: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.658);
   text-decoration: none;
 }
 .delbtn{
