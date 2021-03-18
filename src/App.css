@@ -65,7 +65,7 @@ button{
 
 .Writebtn{
   padding: 30px;
-  width: 600px;
+  width: 550px;
 }
 .writediv{
   margin-top: 50px;
@@ -116,6 +116,8 @@ button{
 }
 
 .Writepage{
+  display: flex;
+  justify-content: center;
   height: auto;
   min-height: 760px;
   padding: 5px;
@@ -136,7 +138,7 @@ button{
 .writetext{
   color:  rgb(78, 78, 78);;
   margin: 20px;
-  width: 600px;
+  width: 550px;
 }
 
 .App {
@@ -253,7 +255,7 @@ button{
 
 .inputdiv, .inputdiv2{
   padding: 10px;
-  width: 600px;
+  width: 550px;
 }
 
 .ID, .PASS, .NICKNAME, .PASS2{
