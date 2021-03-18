@@ -136,9 +136,10 @@ button{
 }
 
 .writetext{
-  color:  rgb(78, 78, 78);;
+  color:  rgb(255, 255, 255);;
   margin: 20px;
   width: 550px;
+  font-size: 25px;
 }
 
 .App {
