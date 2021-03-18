@@ -329,7 +329,7 @@ padding: 20px;
   margin: 5px;
   width: 680px;
   background-color:rgb(255, 255, 255);
-  padding: 20px;
+  padding: 5px;
 }
 .contents-3{
   
@@ -528,7 +528,9 @@ padding: 20px;
 .writediv{
   width:325px
 }
-
+.signuptext {
+  font-size: 60px;
+}
 .loginbtn{
   padding: 20px 65px;
 }
