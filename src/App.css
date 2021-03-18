@@ -380,7 +380,7 @@ padding: 20px;
   color: #cacaca;
 }
 
-.contents-2{
+.contents-2, .Writepage{
   
   animation-duration: 1s;
   animation: fadein 1s;
