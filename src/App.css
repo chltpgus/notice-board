@@ -519,8 +519,11 @@ padding: 20px;
 .writetext{
   font-size: 18px;
 }
-.INPUT03, .INPUT02, .INPUT01{
+.INPUT03{
   width: 270px;
+}
+.INPUT02, .INPUT01{
+  width: 240px;
 }
 .writediv{
   width:325px

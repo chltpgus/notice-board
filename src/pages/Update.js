@@ -24,7 +24,10 @@ function Update(props) {
   const maintextonChange = (e) => {
       maintextInputChange(e.target.value);
   }
-  
+
+
+ 
+
   
   const handleClick = () => {
 

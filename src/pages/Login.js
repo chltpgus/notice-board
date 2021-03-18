@@ -20,6 +20,8 @@ function Login() {
         passInputChange(e.target.value);
     }
 
+    function enterkey() { if (window.event.keyCode == 13) { handleClick };
+
     const handleClick = () => {
 
         let emailError02 = emailError;
@@ -65,6 +67,8 @@ function Login() {
 
 
     }
+
+    enterkey();
 
     return (
         <div className="loginpage">
