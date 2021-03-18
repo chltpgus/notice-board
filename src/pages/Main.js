@@ -58,6 +58,7 @@ function Main() {
           }
           
         users3change(t);
+        window.scrollTo(0, 0);
 
       }, [currentPage]);
 
