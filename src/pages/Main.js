@@ -5,9 +5,13 @@ import Pagination from 'rc-pagination';
 function Postsprint({nickname, title, date, maintext}){
     return( 
         <div className="contents-2">
-            <h3>{title}</h3>
-            <p>{nickname}  {date}</p>
-            <p>{maintext}</p>
+            <div>
+                <h3>{title}</h3>
+                <p>{nickname}  {date}</p>
+            </div>
+            <div>
+                <p>{maintext}</p>
+            </div>
         </div>
         );
 }
