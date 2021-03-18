@@ -59,7 +59,7 @@ function Write() {
 
             history.push('/');
             alert("글 작성 완료");
-            window.location.reload();
+           
         }
     }
     return (
