@@ -65,9 +65,11 @@ button{
 
 .Writebtn{
   padding: 30px;
+  width: 600px;
 }
 .writediv{
   margin-top: 50px;
+  background-color: #a4a4a45e;
 }
 .savebtn, .cancelbtn{
   border-radius: 8px;
@@ -133,6 +135,7 @@ button{
 .writetext{
   color:  rgb(78, 78, 78);;
   margin: 20px;
+  width: 600px;
 }
 
 .App {
@@ -249,6 +252,7 @@ button{
 
 .inputdiv, inputdiv2{
   padding: 10px;
+  width: 600px;
 }
 
 .ID, .PASS, .NICKNAME, .PASS2{
