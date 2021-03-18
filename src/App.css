@@ -69,7 +69,8 @@ button{
 }
 .writediv{
   margin-top: 50px;
-  background-color: #a4a4a45e;
+  background-color: #00000059;
+  border-radius: 8px;
 }
 .savebtn, .cancelbtn{
   border-radius: 8px;
@@ -250,7 +251,7 @@ button{
   text-decoration: none;
 }
 
-.inputdiv, inputdiv2{
+.inputdiv, .inputdiv2{
   padding: 10px;
   width: 600px;
 }
