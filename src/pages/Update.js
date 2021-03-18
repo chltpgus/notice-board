@@ -18,16 +18,14 @@ function Update(props) {
   const [titleError, setTitleError] = useState(false);
   const [maintextError, setMaintextError] = useState(false);
 
+
   const titleonChange = (e) => {
       titleInputChange(e.target.value);
   }
   const maintextonChange = (e) => {
       maintextInputChange(e.target.value);
   }
-
-
- 
-
+  
   
   const handleClick = () => {
 
