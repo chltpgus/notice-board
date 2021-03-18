@@ -31,6 +31,12 @@ a{
 .delbtn{
   color: rgb(255, 0, 0);
 }
+.postp{
+  color: #8d8d8d;
+}
+.posttitle{
+  color: #e49300
+}
 
 button{
   font-family: 'Godo', sans-serif;

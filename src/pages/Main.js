@@ -6,14 +6,14 @@ function Postsprint({nickname, title, date, maintext}){
     return( 
         <div className="contents-2">
             <div className="titledate">
-                <h3>{title}</h3>
-                <p>{nickname}  {date}</p>
+                <h3 className="psottitle">{title}</h3>
+                <p className="postp">{nickname}  {date}</p>
             </div>
             <div>
                 <p>{maintext}</p>
             </div>
         </div>
-        );
+    );
 }
 
 
