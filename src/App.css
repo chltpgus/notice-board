@@ -71,6 +71,7 @@ button{
   background-color: #00000059;
   border-radius: 8px;
   height: 600px;
+  width: 550px;
 }
 .savebtn, .cancelbtn{
   border-radius: 8px;

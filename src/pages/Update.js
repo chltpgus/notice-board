@@ -66,6 +66,7 @@ function Update(props) {
   }
   return (
       <div className="Writepage">
+          <div className="writediv">
           <div>
               <p className="writetext">글을 수정합니다. </p>
           </div>
@@ -80,6 +81,7 @@ function Update(props) {
           <div className="Writebtn">
               <Link className="savebtn" onClick={handleClick} >저장</Link>
               <Link className="cancelbtn" to = "/mytext">취소</Link>
+          </div>
           </div>
       </div>
   );
