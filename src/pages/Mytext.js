@@ -45,7 +45,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                             maintext: maintext01
                         }
                     }} className="mainbtn">수정</Link>
-                    <Link onClick={handleClick} to="/" className="mainbtn">삭제</Link>
+                    <Link onClick={handleClick} to="/" className="delbtn">삭제</Link>
                 </div>
             </div>
             <div className="titledate">
