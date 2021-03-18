@@ -426,7 +426,7 @@ padding: 20px;
 @media all and (max-width: 1023px)
 {
   .nav{
-    padding: 8px 20%;
+    padding: 8px 0px;
   }
 
 }
@@ -458,6 +458,43 @@ padding: 20px;
 {
   .contents-1, .contents-2, .contents-3{
     width: 350px;
+  }
+  .INPUT04{
+    width: 300px;
+}
+.INPUT03{
+  width: 300px;
+}
+.writediv{
+  width:350px
+}
+}
+
+@media all and (max-width: 419px)
+{
+  .contents-1, .contents-2, .contents-3{
+    width: 300px;
+    font-size: 15px;
+  }
+  .nav{
+    font-size: 14px;
+  }
+  .INPUT04{
+    width: 300px;
+}
+.INPUT03{
+  width: 300px;
+}
+.writediv{
+  width:350px
+}
+}
+
+@media all and (max-width: 376px)
+{
+  .contents-1, .contents-2, .contents-3{
+    width: 350px;
+  
   }
   .INPUT04{
     width: 300px;
