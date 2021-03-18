@@ -54,6 +54,7 @@ function Login() {
                 history.push('/');
                 alert("로그인 성공");
                 window.location.reload();
+                window.scrollTo(0, 0)
             }
             else {
                 setPasswordError(true);
