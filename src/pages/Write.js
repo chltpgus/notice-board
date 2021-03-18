@@ -64,22 +64,22 @@ function Write() {
     }
     return (
         <div className="Writepage">
-            <div className="contentss">
-                <div>
-                    <p className="writetext">새로운 글을 작성합니다. </p>
-                </div>
-                <div className="inputdiv">
-                    <input type="text" onChange={titleonChange} value={titleInput} id="name" className="INPUT03" placeholder="제목" />
-                    {titleError && <p style={{ color: 'red' }}>제목을 입력하세요.</p>}
-                </div>
-                <div className="inputdiv2">
-                    <textarea type="text" onChange={maintextonChange} value={maintextInput} id="name" className="INPUT04" placeholder="본문 내용" />
-                    {maintextError && <p style={{ color: 'red' }}>본문 내용을 입력하세요.</p>}
-                </div>
-                <div className="Writebtn">
-                    <Link className="savebtn" onClick={handleClick}>저장</Link>
-                    <Link className="cancelbtn" to="/">취소</Link>
-                </div>
+            <div style="margin-top: 50px;">
+            <div>
+                <p className="writetext">새로운 글을 작성합니다. </p>
+            </div>
+            <div className="inputdiv">
+                <input type="text" onChange={titleonChange} value={titleInput} id="name" className="INPUT03" placeholder="제목" />
+                {titleError && <p style={{ color: 'red' }}>제목을 입력하세요.</p>}
+            </div>
+            <div className="inputdiv2">
+                <textarea type="text" onChange={maintextonChange} value={maintextInput} id="name" className="INPUT04" placeholder="본문 내용" />
+                {maintextError && <p style={{ color: 'red' }}>본문 내용을 입력하세요.</p>}
+            </div>
+            <div className="Writebtn">
+                <Link className="savebtn" onClick={handleClick}>저장</Link>
+                <Link className="cancelbtn" to = "/">취소</Link>
+            </div>
             </div>
         </div>
     );
