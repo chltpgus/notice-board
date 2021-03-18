@@ -468,6 +468,9 @@ padding: 20px;
 .writediv{
   width:350px
 }
+.loginbtn{
+  padding: 20px 110px;
+}
 }
 
 @media all and (max-width: 419px)
