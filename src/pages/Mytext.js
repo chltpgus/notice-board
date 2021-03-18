@@ -49,7 +49,7 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                 </div>
             </div>
             <div className="titledate">
-                <h3 className="psottitle">{title01}</h3>
+                <h3 className="posttitle">{title01}</h3>
                 <p className="postp">{nickname01}  {date01}</p>
             </div>
             <p>{maintext01}</p>
