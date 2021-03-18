@@ -5,7 +5,7 @@ import Pagination from 'rc-pagination';
 function Postsprint({nickname, title, date, maintext}){
     return( 
         <div className="contents-2">
-            <div>
+            <div className="titledate">
                 <h3>{title}</h3>
                 <p>{nickname}  {date}</p>
             </div>
