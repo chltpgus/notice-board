@@ -17,7 +17,6 @@ function Update(props) {
 
   const [titleError, setTitleError] = useState(false);
   const [maintextError, setMaintextError] = useState(false);
-  const [maintextcharError, setMaintextcharError] = useState(false);
 
   const titleonChange = (e) => {
       titleInputChange(e.target.value);
@@ -41,13 +40,9 @@ function Update(props) {
           setMaintextError(false);
       }
 
-      if(maintextInput.length < 400){
-        setMaintextcharError(true);
-    }else{
-        setMaintextcharError(false);
-    }
+    
       
-      if (titleInput !== "" && maintextInput !== ""&& maintextcharError===false) {
+      if (titleInput !== "" && maintextInput !== "") {
 
         fetch("https://noticeboardserverr.herokuapp.com/written/update", {
             method: "POST",
@@ -85,7 +80,6 @@ function Update(props) {
           <div className="inputdiv2">
               <textarea type="text" onChange={maintextonChange} value={maintextInput} id="name" className="INPUT04" placeholder="본문 내용" />
               {maintextError && <p style={{ color: 'red' }}>본문 내용을 입력하세요.</p>}
-              {maintextcharError && <p style={{ color: 'red' }}>200자 미만으로 입력하세요.</p>}
           </div>
           <div className="Writebtn">
               <Link className="savebtn" onClick={handleClick} >저장</Link>
