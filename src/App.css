@@ -423,3 +423,49 @@ padding: 20px;
       opacity: 1;
   }
 }
+@media all and (max-width: 1023px)
+{
+  .nav{
+    padding: 8px 20%;
+  }
+
+}
+@media all and (max-width: 752px)
+{
+  .contents-1, .contents-2, .contents-3{
+    width: 550px;
+  }
+  
+}
+
+@media all and (max-width: 752px)
+{
+  .contents-1, .contents-2, .contents-3{
+    width: 550px;
+  }
+  
+}
+
+@media all and (max-width: 630px)
+{
+  .contents-1, .contents-2, .contents-3{
+    width: 450px;
+  }
+  
+}
+
+@media all and (max-width: 529px)
+{
+  .contents-1, .contents-2, .contents-3{
+    width: 350px;
+  }
+  .INPUT04{
+    width: 300px;
+}
+.INPUT03{
+  width: 300px;
+}
+.writediv{
+  width:350px
+}
+}
