@@ -103,6 +103,7 @@ button{
   border-radius: 8px;
   height: 600px;
   width: 550px;
+  transition: 1s ease all
 }
 .savebtn, .cancelbtn{
   border-radius: 8px;
@@ -242,6 +243,7 @@ button{
   background-color:rgb(255, 255, 255);;
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
+  transition: 1s ease all
 }
 
 .INPUT01:hover {
@@ -261,6 +263,7 @@ button{
   background-color:rgb(255, 255, 255);;
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
+  transition: 1s ease all
 }
 
 .INPUT02:hover, .INPUT03:hover{
@@ -279,6 +282,7 @@ button{
   background-color:rgb(243, 243, 243);
   outline-color: rgb(230, 187, 0);
   border-color: rgba(0, 0, 0, 0.24);
+  transition: 1s ease all
 }
 
 .INPUT04:hover{
@@ -330,7 +334,9 @@ transition: 1s ease all
   margin: 5px;
   width: 680px;
   background-color:rgb(255, 255, 255);
-  padding: 5px;
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   transition: 1s ease all
 }
 .contents-3{
@@ -388,7 +394,7 @@ transition: 1s ease all
   color: #cacaca;
 }
 
-.contents-2, .writediv{
+.contents-2, .writediv, .contentss{
   
   animation-duration: 1s;
   animation: fadein 1s;
@@ -478,6 +484,7 @@ transition: 1s ease all
 }
 .loginbtn{
   padding: 20px 110px;
+  transition: 1s ease all
 }
 }
 
