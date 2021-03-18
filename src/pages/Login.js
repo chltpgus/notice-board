@@ -21,10 +21,6 @@ function Login() {
     }
 
 
-        if (window.event.keyCode == 13) {
-            handleClick();
-        }
-
 
     const handleClick = () => {
 
