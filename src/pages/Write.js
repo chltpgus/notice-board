@@ -64,7 +64,7 @@ function Write() {
     }
     return (
         <div className="Writepage">
-            <div>
+            <div className="writediv">
             <div>
                 <p className="writetext">새로운 글을 작성합니다. </p>
             </div>
