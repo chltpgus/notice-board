@@ -504,7 +504,7 @@ padding: 20px;
 }
 }
 
-@media all and (max-width: 360px)
+@media all and (max-width: 375px)
 {
   .contents-1, .contents-2, .contents-3{
     width: 270px;
