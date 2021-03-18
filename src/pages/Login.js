@@ -22,7 +22,7 @@ function Login() {
 
     function enterkey() {
         if (window.event.keyCode == 13) {
-            handleClick
+            handleClick();
         }
     };
 
