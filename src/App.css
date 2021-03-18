@@ -394,7 +394,7 @@ transition: 1s ease all
   color: #cacaca;
 }
 
- .writediv, .contentss{
+.contents-1,.contents-2,.contents-3, .writediv, .contentss{
   
   animation-duration: 1s;
   animation: fadein 1s;
