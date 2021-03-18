@@ -28,6 +28,9 @@ a{
 .mainbtn{
   color: black;
 }
+.delbtn{
+  color: rgb(255, 0, 0);
+}
 
 button{
   font-family: 'Godo', sans-serif;
@@ -270,7 +273,7 @@ button{
 }
 .titlediv{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .contents{
   display: flex;
