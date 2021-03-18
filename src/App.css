@@ -56,6 +56,12 @@ button{
   border-radius: 8px;
   margin: 10px;
 }
+.logout:hover {
+  color: #ffffff;
+  border-radius: 20px;
+  background: rgba(230, 188, 0, 0.541);
+  text-decoration: none;
+}
 
 .logbtndiv{
   padding: 30px;
@@ -142,6 +148,7 @@ button{
 .signuptext{
   font-family:'TmonMonsori';
   margin: 30px;
+  margin-top: 80px;
   font-size: 70px;
 }
 
@@ -204,6 +211,7 @@ button{
 .logintext{
   font-family:'TmonMonsori';
   margin: 30px;
+  margin-top: 80px;
   font-size: 70px;
 }
 
