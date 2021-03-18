@@ -33,9 +33,8 @@ function Postsprint({nickname01, title01, date01, maintext01}){
     
     return( 
         <div className="contents-2">
-            
+
             <div className="titlediv">
-                <h3>{title01}</h3>
                 <div>
                     <Link to={{
                         pathname: '/update',
@@ -46,10 +45,13 @@ function Postsprint({nickname01, title01, date01, maintext01}){
                             maintext: maintext01
                         }
                     }} className="mainbtn">수정</Link>
-                <Link onClick={handleClick} to ="/" className="mainbtn">삭제</Link>
+                    <Link onClick={handleClick} to="/" className="mainbtn">삭제</Link>
                 </div>
             </div>
-            <p>{nickname01}  {date01}</p>
+            <div className="titledate">
+                <h3>{title01}</h3>
+                <p>{nickname01}  {date01}</p>
+            </div>
             <p>{maintext01}</p>
         </div>
         );
