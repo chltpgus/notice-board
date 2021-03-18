@@ -313,6 +313,7 @@ button{
   background-image: url(./img/background.jpg);
   background-color:#fffcf1;
   justify-content: center;
+  transition: 1s ease all
 }
 .contents-1{
   border: 1px solid;
