@@ -268,7 +268,7 @@ button{
 
 .INPUT02:hover, .INPUT03:hover{
   color: #000000d5;
-  background: rgba(245, 245, 245, 0.664);
+  background: hsl(0deg 0% 84%);
   text-decoration: none;
 }
 
@@ -287,7 +287,7 @@ button{
 
 .INPUT04:hover{
   color: #000000d5;
-  background: rgba(245, 245, 245, 0.664);
+  background: hsl(0deg 0% 84%);
   text-decoration: none;
 }
 
@@ -525,7 +525,7 @@ transition: 1s ease all
     font-size: 14px;
   }
   .INPUT04{
-    width: 300px;
+    width: 270px;
 }
 .writetext{
   font-size: 18px;
