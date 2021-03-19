@@ -55,6 +55,7 @@ function Login() {
                 sessionStorage.setItem('USER', JSON.stringify(user));  
                 history.push('/');
                 alert("로그인 성공");
+                window.location.reload();
                 window.scrollTo(0, 0)
             }
             else {
