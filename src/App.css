@@ -308,7 +308,7 @@ button{
 .contents{
   display: flex;
   height: auto;
-  min-height: 760px;
+  min-height: 550px;
   padding: 10px;
   background-image: url(./img/background.jpg);
   background-color:#fffcf1;
