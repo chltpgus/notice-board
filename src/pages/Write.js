@@ -57,7 +57,7 @@ function Write() {
             })
                 .then(res => res.json())
 
-            history.push('/');s
+            history.push('/');
             alert("글 작성 완료");
            
         }
