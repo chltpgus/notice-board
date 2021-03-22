@@ -25,3 +25,7 @@ Netlify(웹호스팅), React, Html, Css, Javascript
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111965130-be2d4780-8b38-11eb-9df4-df25f49645d6.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111965306-ee74e600-8b38-11eb-8666-3b98f492a63e.png" align="center" width="42%"></p>
 <p align="center">Write.js 는 글을 작성하는 component다. 제목과 내용을 넣고 저장을 누르면 fetch로 웹서버에 Post 전송을 한다. 전송 객체에는 닉네임, 제목, 날짜, 내용이 들어간다.</p>
 
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111966091-dbaee100-8b39-11eb-963d-4d7d9d2d3c4f.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111965306-ee74e600-8b38-11eb-8666-3b98f492a63e.png" align="center" width="42%"></p>
+<p align="center">Mytext.js 는 내 글을 관리하는 component다. 내가 작성한 게시글 들을 보여주고 수정, 삭제를 할 수 있다. </p>
+
+
