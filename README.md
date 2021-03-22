@@ -17,3 +17,6 @@ Netlify(웹호스팅), React, Html, Css, Javascript
 
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111961710-b8356780-8b34-11eb-9899-008e36026036.png" align="center" width="35%"><img src="https://user-images.githubusercontent.com/67909892/111962165-532e4180-8b35-11eb-846d-4525de10011f.png" align="center" width="46%"></p>
 <p align="center">Signup.js 는 회원가입을 하는 componente 다. 회원가입은 이메일, 비밀번호, 닉네임으로 구성되어 있고 중복이 없는 정보를 입력해서 회원가입을 누르면 fetch로 웹서버에 객체를 Post로 전송한다. </p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111964575-1adc3280-8b38-11eb-9d3a-93c09dd2c982.png" align="center" width="35%"><img src="https://user-images.githubusercontent.com/67909892/111964674-36473d80-8b38-11eb-9878-154eba936d5b.png" align="center" width="46%"></p>
+<p align="center">Signup.js 는 회원가입을 하는 componente 다. 회원가입은 이메일, 비밀번호, 닉네임으로 구성되어 있고 중복이 없는 정보를 입력해서 회원가입을 누르면 fetch로 웹서버에 객체를 Post로 전송한다. </p>
