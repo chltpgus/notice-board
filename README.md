@@ -16,4 +16,4 @@ Netlify(웹호스팅), React, Html, Css, Javascript
 <p align="center">처음에 출력되는 Main.js component는 fetch()로 웹서버에서 게시글들을 get 요청해서 받아온다. useEffect()을 사용해서 계속해서 get 요청 하는 것을 방지한다. pagination 을 누를 때 게시판 정보를 수정하기 위해서 currentPage상태가 변경될 때 안에 함수가 실행되게 useEffect()를 작성했다.</p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111961710-b8356780-8b34-11eb-9899-008e36026036.png" align="center" width="35%"><img src="https://user-images.githubusercontent.com/67909892/111962165-532e4180-8b35-11eb-846d-4525de10011f.png" align="center" width="46%"></p>
-<p align="center">Signup.js 는 회원가입을 하는 componente 다. </p>
+<p align="center">Signup.js 는 회원가입을 하는 componente 다. 회원가입은 이메일, 비밀번호, 닉네임으로 구성되어 있고 중복이 없는 정보를 입력해서 회원가입을 누르면 fetch로 웹서버에 객체를 Post로 전송한다. </p>
