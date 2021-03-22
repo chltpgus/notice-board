@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# notice-board
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 제작 이유
+모든 사이트의 기본 구성이라고 생각이 되는 로그인, 게시판을 만들어 실력 증진을 하고 싶었고 React, CRUD, REST API를 학습 및 사용하고 싶었다.
 
-## Available Scripts
+# 사용 기술 
+Netlify(웹서버 호스팅), React, Javascript, HTML, CSS, rc-pagination
 
-In the project directory, you can run:
+# 프로젝트 설명
+notice-board는 로그인, 글 작성, 글 수정 등을 할 수 있는 게시판 사이트다.
 
-### `npm start`
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111937847-041fe680-8b0c-11eb-8c66-bb99c67aa9c8.png" align="center" width="44%"><img src="https://user-images.githubusercontent.com/67909892/111939142-d0928b80-8b0e-11eb-89eb-f626b4305613.png" align="center" width="40%"></p>
+<p align="center">BrowserRouter, Route를 사용해서 Header, component, Footer를 구성하고 이벤트가 있으면 component만 번경되는 식으로 구성했다.</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111960550-3ee94500-8b33-11eb-9e3c-20f576f0791e.png" align="center" width="30%"><img src="https://user-images.githubusercontent.com/67909892/111960818-925b9300-8b33-11eb-87f3-3a317250d466.png" align="center" width="46%"></p>
+<p align="center">처음에 출력되는 Main.js component는 fetch()로 웹서버에서 게시글들을 get 요청해서 받아온다. useEffect()을 사용해서 계속해서 get 요청 하는 것을 방지한다. pagination 을 누를 때 게시판 정보를 수정하기 위해서 currentPage상태가 변경될 때 안에 함수가 실행되게 useEffect()를 작성했다.</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111961710-b8356780-8b34-11eb-9899-008e36026036.png" align="center" width="35%"><img src="https://user-images.githubusercontent.com/67909892/111962165-532e4180-8b35-11eb-846d-4525de10011f.png" align="center" width="46%"></p>
+<p align="center">Signup.js 는 회원가입을 하는 component 다. 회원가입은 이메일, 비밀번호, 닉네임으로 구성되어 있고 중복이 없는 정보를 입력해서 회원가입을 누르면 fetch로 웹서버에 객체를 Post로 전송한다. </p>
 
-### `npm test`
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111964575-1adc3280-8b38-11eb-9d3a-93c09dd2c982.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111964674-36473d80-8b38-11eb-9878-154eba936d5b.png" align="center" width="45%"></p>
+<p align="center">Login.js component는 이메일, 비밀번호를 맞게 입력하면 웹서버에서 이메일이 있나 확인하고 있으면 비밀번호를 조회해서 로그인을 성공시킨다.</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111965130-be2d4780-8b38-11eb-9df4-df25f49645d6.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111965306-ee74e600-8b38-11eb-8666-3b98f492a63e.png" align="center" width="42%"></p>
+<p align="center">Write.js 는 글을 작성하는 component다. 제목과 내용을 넣고 저장을 누르면 fetch로 웹서버에 Post 전송을 한다. 전송 객체에는 닉네임, 제목, 날짜, 내용이 들어간다.</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111966091-dbaee100-8b39-11eb-963d-4d7d9d2d3c4f.png" align="center" width="40%"></p>
+<p align="center">Mytext.js 는 내 글을 관리하는 component다. 내가 작성한 게시글 들을 보여주고 수정, 삭제를 할 수 있다. </p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111971764-0734ca00-8b40-11eb-879e-9f16d2b4e332.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111972209-8d511080-8b40-11eb-8067-f7edf256f03f.png" align="center" width="42%"></p>
+<p align="center">/written/update 에 POST 전송이 오면 닉네임, 제목, 날짜, 글 내용을 확인하고 새로 추가된 제목, 타이틀을 업데이트 해서 데이터베이스에 넣어준다.
+/written/delete 에 POST 전송이 오면 닉네임, 제목, 날짜, 글 내용을 확인하고 데이터베이스에서 글을 삭제한다.</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+웹사이트 주소 : https://bulletinboardsite.netlify.app/
