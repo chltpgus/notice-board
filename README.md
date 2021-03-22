@@ -6,4 +6,4 @@ notice-board는 로그인, 글 작성, 글 수정 등을 할 수 있는 게시�
 
 사용 기술 : Netlify(웹호스팅), React, Html, Css, Javascript
 
-<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111937847-041fe680-8b0c-11eb-8c66-bb99c67aa9c8.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111939142-d0928b80-8b0e-11eb-89eb-f626b4305613.png" align="center" width="80%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111937847-041fe680-8b0c-11eb-8c66-bb99c67aa9c8.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111939142-d0928b80-8b0e-11eb-89eb-f626b4305613.png" align="center" width="40%"></p>
