@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
-import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import {  useHistory  } from 'react-router-dom';
 
 
 
@@ -9,10 +9,10 @@ import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
 
 function Write() {   
     const history = useHistory();
-    const [titleInput, titleInputChange] = useState('');
+    const [titleInput, titleInputChange] = useState('');      //제목, 글 내용 input 데이터 useState를 선언
     const [maintextInput, maintextInputChange] = useState('');
 
-    const [titleError, setTitleError] = useState(false);
+    const [titleError, setTitleError] = useState(false);       //에러를 출력하기 위한 useState를 선언
     const [maintextError, setMaintextError] = useState(false);
     
     const titleonChange = (e) => {
@@ -22,9 +22,9 @@ function Write() {
         maintextInputChange(e.target.value);
     }
     
-    const handleClick = () => {
+    const handleClick = () => { //저장 버튼을 클릭하면
 
-        if(titleInput === ""){
+        if(titleInput === ""){  //에러들을 출력
             setTitleError(true);
         }else{
             setTitleError(false);
@@ -36,19 +36,19 @@ function Write() {
             setMaintextError(false);
         }
 
-        if (titleInput !== "" && maintextInput !== "") {
+        if (titleInput !== "" && maintextInput !== "") { //에러들이 없으면
             let user = JSON.parse(sessionStorage.getItem('USER'));
             let today = new Date();
             let year = today.getFullYear(); // 년도
             let month = today.getMonth() + 1;  // 월
             let nal = today.getDate();
 
-            fetch("https://noticeboardserverr.herokuapp.com/written", {
+            fetch("https://noticeboardserverr.herokuapp.com/written", {  //fetch로 post 전송을 한다.
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({
+                body: JSON.stringify({          //닉네임, 제목, 날짜, 글 내용을 json 객체로 전송한다.
                     nickname: user.nickname,
                     title: titleInput,
                     date: (year + "-" + month + "-" + nal),

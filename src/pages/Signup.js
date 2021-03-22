@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+
 
 
 
 function Signup() {
-    const [emailInput, emailInputChange] = useState('');
+    const [emailInput, emailInputChange] = useState(''); //input 데이터들의 상태 useState를 선언한다.
     const [passInput, passInputChange] = useState('');
     const [pass2Input, pass2InputChange] = useState('');
     const [nicknameInput, nicknameInputChange] = useState('');
 
-    const [emailError, setEmailError] = useState(false);
+    const [emailError, setEmailError] = useState(false);  //에러 상태를 보여줄 useState를 선언
     const [emailoverlapError, setEmailoverlapError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
     const [nicknameError, setNicknameError] = useState(false);
 
 
     
-    const emailonChange = (e) => {
+    const emailonChange = (e) => {  // input 데이터를 보여줄 함수들을 선언
         emailInputChange(e.target.value);
     }
     const passonChange = (e) => {
@@ -31,14 +31,14 @@ function Signup() {
     }
 
 
-    const handleClick = () => {
+    const handleClick = () => {   //회원가입 버튼을 누르면 실행
 
-        let emailError02 = emailError;
+        let emailError02 = emailError;      // 에러 상태들을 임시로 변수들에 저장해준다.
         let emailoverlapError02 = emailoverlapError;
         let passwordError02 = passwordError;
         let nicknameError02 = nicknameError;
 
-        let users = {
+        let users = { //users에 인풋 데이터들을 넣는다.
 
             email: emailInput,
             password: passInput,
@@ -49,7 +49,7 @@ function Signup() {
  
 
         if (users.email != "" && users.nickname != "") {
-            fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email)
+            fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + users.email) // 웹서버에 기존 이메일이 있는지 확인하고 데이터를 가져온다.
                 .then(function (res) {
                     return res.json();
                 })
@@ -57,14 +57,14 @@ function Signup() {
                     let user = res;
 
     
-                        fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname)
+                        fetch('https://noticeboardserverr.herokuapp.com/signup/nickname=' + users.nickname) // 웹서버에 기존 닉네임이 있는지 확인하고 데이터를 가져온다.
                             .then(function (res2) {
                                 return res2.json();
                             })
                             .then(function (res2) {
                                 let user2 = res2;
             
-                                if (emailInput === user.email) {
+                                if (emailInput === user.email) {  // 가져온 데이터들을 사용해서 중복 데이터가 있는지 등등 확인후에 에러들을 출력
                                     setEmailoverlapError(true);
                                     emailoverlapError02 = true;
                                    
@@ -101,14 +101,14 @@ function Signup() {
                                     passwordError02 = false;
                                 }
                         
-
+                                // 에러가 없으면 데이터들을 웹서버에 post 전송을 한다.
                                 if (emailError02 === false && emailoverlapError02 === false && passwordError02 === false && nicknameError02 === false && emailInput !== "" && passInput !== "" && nicknameInput !== "") {
                                     fetch("https://noticeboardserverr.herokuapp.com/signup", {
                                         method: "POST",
                                         headers: {
                                             "Content-Type": "application/json",
                                         },
-                                        body: JSON.stringify({
+                                        body: JSON.stringify({ //이메일, 패스워드, 닉네임을 보내 회원가입을 한다.
                                             email: emailInput,
                                             password: passInput,
                                             nickname: nicknameInput

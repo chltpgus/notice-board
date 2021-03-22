@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
-import { BrowserRouter, Route, useHistory,   } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useHistory  } from 'react-router-dom';
 import {useLocation} from "react-router";
 
 
@@ -9,17 +9,17 @@ import {useLocation} from "react-router";
 
 function Update(props) {   
   const location = useLocation();
-  const [user, userInputChange] = useState(location.state);
+  const [user, userInputChange] = useState(location.state); //Mytent.js에서 이동하면서 전송한 데이터를 저장한다.
 
   const history = useHistory();
-  const [titleInput, titleInputChange] = useState(user.title);
-  const [maintextInput, maintextInputChange] = useState(user.maintext);
+  const [titleInput, titleInputChange] = useState(user.title); // 받은 제목을 input에 보이게 저장한다.
+  const [maintextInput, maintextInputChange] = useState(user.maintext); // 받은 글 내용을 input에 보이게 저장한다.
 
-  const [titleError, setTitleError] = useState(false);
+  const [titleError, setTitleError] = useState(false);     //에러들을 관리할 상태들을 선언
   const [maintextError, setMaintextError] = useState(false);
 
 
-  const titleonChange = (e) => {
+  const titleonChange = (e) => {     //input데이터가 보일 수 있게 함수들을 선언
       titleInputChange(e.target.value);
   }
   const maintextonChange = (e) => {
@@ -29,7 +29,7 @@ function Update(props) {
   
   const handleClick = () => {
 
-      if(titleInput === ""){
+      if(titleInput === ""){  //에러들이 출력될 수 있게 상태들을 조건에따라 바꿔준다.
           setTitleError(true);
       }else{
           setTitleError(false);
@@ -45,12 +45,12 @@ function Update(props) {
       
       if (titleInput !== "" && maintextInput !== "") {
 
-        fetch("https://noticeboardserverr.herokuapp.com/written/update", {
+        fetch("https://noticeboardserverr.herokuapp.com/written/update", {  //fetch로 post전송
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({
+            body: JSON.stringify({ // 닉네임, 기존 제목, 날짜, 기존 글 내용, 새 제목, 새 글 내용 을 json 객체로 보낸다.
                 nickname: user.nickname,
                 title: user.title,
                 date: user.date,

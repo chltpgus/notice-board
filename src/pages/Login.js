@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
-import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
-import Signup from './Signup';
+import { Link} from 'react-router-dom';
+import {  useHistory  } from 'react-router-dom';
+
 
 function Login() {
-    const [emailInput, emailInputChange] = useState('');
-    const [passInput, passInputChange] = useState('');
+    const [emailInput, emailInputChange] = useState(''); //이메일이 들어가는 input 데이터 선언
+    const [passInput, passInputChange] = useState(''); //패스워드가 들어가는 input 데이터 선언
 
-    const [emailError, setEmailError] = useState(false);
+    const [emailError, setEmailError] = useState(false); //각종 에러들을 출력하기 위한 상태 선언
     const [emailError2, setEmailError2] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
-    const history = useHistory();
+    const history = useHistory();  
 
-    const emailonChange = (e) => {
+    const emailonChange = (e) => {          //emailInput, passInput에 input 입력 값이 들어가는데 변수랑 같이 보이는 값을 동적으로 변경하기 위해서 함수 선언
         emailInputChange(e.target.value);
     }
     const passonChange = (e) => {
@@ -22,11 +22,11 @@ function Login() {
 
 
 
-    const handleClick = () => {
+    const handleClick = () => {  //로그인 버튼을 누르면
 
         let emailError02 = emailError;
   
-        fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + emailInput)
+        fetch('https://noticeboardserverr.herokuapp.com/signup/email=' + emailInput)  // fetch로 emailInput에 입력된 값이 웹서버에 있으면 가져온다.
         .then(function (res) {
             return res.json();
         })
@@ -50,9 +50,9 @@ function Login() {
                 setEmailError2(false);
             }
 
-            if (passInput === user.password && emailError02 === false) {
+            if (passInput === user.password && emailError02 === false) {  // 웹서버에 데이터 값들이 있으면
                 setPasswordError(false);
-                sessionStorage.setItem('USER', JSON.stringify(user));  
+                sessionStorage.setItem('USER', JSON.stringify(user));    //세션스토리지에 값들을 넣어서 로그인 된 상태를 만든다.
                 history.push('/');
                 alert("로그인 성공");
                 window.location.reload();

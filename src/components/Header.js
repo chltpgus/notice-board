@@ -1,10 +1,10 @@
 import React,  { useState } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
 function Header() {
-    let user = JSON.parse(sessionStorage.getItem('USER'));
+    let user = JSON.parse(sessionStorage.getItem('USER')); // 로그인 한 유저 데이터를 가져온다.
     let state;
 
       
@@ -18,8 +18,8 @@ function Header() {
     
     
 
-    const handleClick = () => {
-        sessionStorage.setItem('USER', null);  
+    const handleClick = () => {  //로그아웃 버튼을 클릭하면
+        sessionStorage.setItem('USER', null);  //세션 스토리지를 초기화한다.
         let user = JSON.parse(sessionStorage.getItem('USER'));
 
         if(user === null){
@@ -28,17 +28,17 @@ function Header() {
         else{
             setLoginout(true);
         }
-        console.log(user);
+     
     }
-    const handleClick2 = () => {
-        let user = JSON.parse(sessionStorage.getItem('USER'));
+    const handleClick2 = () => { // 자유 게시판 로고를 클릭하면
+        let user = JSON.parse(sessionStorage.getItem('USER')); //세션 스토리지를 가져온다.
         if(user === null){
             setLoginout(false);
         }
         else{
             setLoginout(true);
         }
-        console.log(user);
+
     }
 
     return (

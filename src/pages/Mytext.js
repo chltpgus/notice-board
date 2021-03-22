@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
-import { BrowserRouter, Route, useHistory  } from 'react-router-dom';
-import Signup from './Signup';
-import Update from './Update';
+import { Link } from 'react-router-dom';
+
+
 
 
 
 
 function Postsprint({nickname01, title01, date01, maintext01}){
-    const history = useHistory();
+
     const handleClick = () => {
         
-        fetch("https://noticeboardserverr.herokuapp.com/written/delete", {
+        fetch("https://noticeboardserverr.herokuapp.com/written/delete", { //삭제 버튼을 누르면 fetch로 json으로 객체를 post 전송으로 보내 삭제한다.
                                         method: "POST",
                                         headers: {
                                             "Content-Type": "application/json",
                                         },
-                                        body: JSON.stringify({
+                                        body: JSON.stringify({ //닉네임, 제목, 날짜, 글 내용 을 보낸다.
                                             nickname: nickname01,
                                             title: title01,
                                             date: date01,
@@ -62,26 +61,26 @@ function Postsprint({nickname01, title01, date01, maintext01}){
 
 
 function Mytext() {
-    let users = [];
-    let [users01, users01change] = useState(users);
-    let user = JSON.parse(sessionStorage.getItem('USER'));
+    let users = [];  //fetch로 가져온 값을 임시로 저장할 배열을 선언
+    let [users01, users01change] = useState(users); //fetch로 가져온 값을 저장할 상태 선언
+    let user = JSON.parse(sessionStorage.getItem('USER')); //로그인 정보가 담여있는 세션 스토리지를 가져온다.
 
 
     useEffect(() => {
-        fetch('https://noticeboardserverr.herokuapp.com/written')
+        fetch('https://noticeboardserverr.herokuapp.com/written') //fetch로 작성된 글들을 가져온다.
         .then(function (res) {
             return res.json();
         })
         .then(function (res) {
             users = [];
             for (let a = 0; a < res.length; a++) {
-                if(user.nickname === res[a].nickname){
+                if(user.nickname === res[a].nickname){ //로그인 된 닉네임으로 작성된 글들을 분류해서 users 배열에 넣는다.
                     users.push(res[a]);
                 }
                
             }
             users.reverse();
-            users01change(users);
+            users01change(users); // 저장된 값들을 user01 useState에 넣는다.
         
         });
       }, []);
