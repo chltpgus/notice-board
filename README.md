@@ -16,7 +16,12 @@ Netlify(웹호스팅), React, Html, Css, Javascript
 <p align="center">처음에 출력되는 Main.js component는 fetch()로 웹서버에서 게시글들을 get 요청해서 받아온다. useEffect()을 사용해서 계속해서 get 요청 하는 것을 방지한다. pagination 을 누를 때 게시판 정보를 수정하기 위해서 currentPage상태가 변경될 때 안에 함수가 실행되게 useEffect()를 작성했다.</p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111961710-b8356780-8b34-11eb-9899-008e36026036.png" align="center" width="35%"><img src="https://user-images.githubusercontent.com/67909892/111962165-532e4180-8b35-11eb-846d-4525de10011f.png" align="center" width="46%"></p>
-<p align="center">Signup.js 는 회원가입을 하는 componente 다. 회원가입은 이메일, 비밀번호, 닉네임으로 구성되어 있고 중복이 없는 정보를 입력해서 회원가입을 누르면 fetch로 웹서버에 객체를 Post로 전송한다. </p>
+<p align="center">Signup.js 는 회원가입을 하는 component 다. 회원가입은 이메일, 비밀번호, 닉네임으로 구성되어 있고 중복이 없는 정보를 입력해서 회원가입을 누르면 fetch로 웹서버에 객체를 Post로 전송한다. </p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111964575-1adc3280-8b38-11eb-9d3a-93c09dd2c982.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111964674-36473d80-8b38-11eb-9878-154eba936d5b.png" align="center" width="46%"></p>
-<p align="center">Login.js componente는 이메일, 비밀번호를 맞게 입력하면 웹서버에서 이메일이 있나 확인하고 있으면 비밀번호를 조회해서 로그인을 성공시킨다.</p>
+<p align="center">Login.js component는 이메일, 비밀번호를 맞게 입력하면 웹서버에서 이메일이 있나 확인하고 있으면 비밀번호를 조회해서 로그인을 성공시킨다.</p>
+
+
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111965130-be2d4780-8b38-11eb-9df4-df25f49645d6.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111965306-ee74e600-8b38-11eb-8666-3b98f492a63e.png" align="center" width="46%"></p>
+<p align="center">Write.js 는 글을 작성하는 component다. 제목과 내용을 넣고 저장을 누르면 fetch로 웹서버에 Post 전송을 한다. 전송 객체에는 닉네임, 제목, 날짜, 내용이 들어간다.</p>
+
