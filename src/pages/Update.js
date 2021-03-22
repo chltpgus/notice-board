@@ -63,6 +63,7 @@ function Update(props) {
 
         history.push('/mytext');
         alert("글 수정 완료");
+        window.location.reload();
       
     }
 
