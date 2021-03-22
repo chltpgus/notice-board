@@ -28,7 +28,8 @@ notice-board는 로그인, 글 작성, 글 수정 등을 할 수 있는 게시�
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111966091-dbaee100-8b39-11eb-963d-4d7d9d2d3c4f.png" align="center" width="40%"></p>
 <p align="center">Mytext.js 는 내 글을 관리하는 component다. 내가 작성한 게시글 들을 보여주고 수정, 삭제를 할 수 있다. </p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111966381-33e5e300-8b3a-11eb-9add-6d0ec8ae0e6f.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111966693-8cb57b80-8b3a-11eb-8d49-e7bb59cc13b7.png" align="center" width="42%"></p>
-<p align="center">Update.js 는 Mytext.js에서 수정 버튼을 누르면 나오는 component다. 기존에 있는 내가 작성한 게시글을 수정할 수 있다. 내 닉네임, 제목, 날짜, 내용을 웹서버에 보내서 같은 데이터에 update를 해서 글을 변경한다.</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/111971764-0734ca00-8b40-11eb-879e-9f16d2b4e332.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111972209-8d511080-8b40-11eb-8067-f7edf256f03f.png" align="center" width="42%"></p>
+<p align="center">/written/update 에 POST 전송이 오면 닉네임, 제목, 날짜, 글 내용을 확인하고 새로 추가된 제목, 타이틀을 업데이트 해서 데이터베이스에 넣어준다.
+/written/delete 에 POST 전송이 오면 닉네임, 제목, 날짜, 글 내용을 확인하고 데이터베이스에서 글을 삭제한다.</p>
 
 웹사이트 주소 : https://bulletinboardsite.netlify.app/
