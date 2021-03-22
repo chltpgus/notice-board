@@ -31,4 +31,4 @@ Netlify(웹호스팅), React, Html, Css, Javascript
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111966381-33e5e300-8b3a-11eb-9add-6d0ec8ae0e6f.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/111966693-8cb57b80-8b3a-11eb-8d49-e7bb59cc13b7.png" align="center" width="42%"></p>
 <p align="center">Update.js 는 Mytext.js에서 수정 버튼을 누르면 나오는 component다. 기존에 있는 내가 작성한 게시글을 수정할 수 있다. 내 닉네임, 제목, 날짜, 내용을 웹서버에 보내서 같은 데이터에 update를 해서 글을 변경한다.</p>
 
-
+웹사이트 주소 : https://bulletinboardsite.netlify.app/
