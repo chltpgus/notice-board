@@ -5,6 +5,7 @@
 
 # 사용 기술 
 Netlify(웹서버 호스팅), React, Javascript, HTML, CSS, rc-pagination
+백엔드 : https://github.com/chltpgus/noticeboard-server
 
 # 프로젝트 설명
 notice-board는 로그인, 글 작성, 글 수정, 글 삭제 등을 할 수 있는 게시판 사이트다.
