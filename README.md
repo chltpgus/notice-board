@@ -26,8 +26,10 @@ notice-board는 로그인, 글 작성, 글 수정, 글 삭제 등을 할 수 있
 <p align="center">Write.js 는 글을 작성하는 component다. 제목과 내용을 넣고 저장을 누르면 fetch로 웹서버에 Post 전송을 한다. 전송 객체에는 닉네임, 제목, 날짜, 내용이 들어간다.</p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111966091-dbaee100-8b39-11eb-963d-4d7d9d2d3c4f.png" align="center" width="40%"></p>
-<p align="center">Mytext.js 는 내 글을 관리하는 component다. 내가 작성한 게시글 들을 보여주고 수정, 삭제를 할 수 있다. </p>
+<p align="center">Mytext.js 는 내 글을 관리하는 component다. 내가 작성한 게시글 들을 보여주고 수정, 삭제를 할 수 있다. 삭제 버튼을 누르면 바로 삭제된다.</p>
 
+<p align="center"><img src="https://user-images.githubusercontent.com/67909892/112280560-7b01de80-8cc8-11eb-8746-72b70727a1df.png" align="center" width="40%"><img src="https://user-images.githubusercontent.com/67909892/112281049-fa8fad80-8cc8-11eb-9519-38d6694e2788.png" align="center" width="42%"></p>
+<p align="center">Update.js는 Mytext.js에서 수정 버튼을 누르면 글 내용을 수정할 수 있는 화면을 제공하는 component다. 객체에 기존 정보들과 새로 작성한 글과 제목을 보내서 서버에서 UPDATE해서 글을 수정한다.</p>
 
 
 웹사이트 주소 : https://bulletinboardsite.netlify.app/
