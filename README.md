@@ -7,7 +7,7 @@
 Netlify(웹서버 호스팅), React, Javascript, HTML, CSS, rc-pagination
 
 # 프로젝트 설명
-notice-board는 로그인, 글 작성, 글 수정 등을 할 수 있는 게시판 사이트다.
+notice-board는 로그인, 글 작성, 글 수정, 글 삭제 등을 할 수 있는 게시판 사이트다.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/67909892/111937847-041fe680-8b0c-11eb-8c66-bb99c67aa9c8.png" align="center" width="44%"><img src="https://user-images.githubusercontent.com/67909892/111939142-d0928b80-8b0e-11eb-89eb-f626b4305613.png" align="center" width="40%"></p>
 <p align="center">BrowserRouter, Route를 사용해서 Header, component, Footer를 구성하고 이벤트가 있으면 component만 번경되는 식으로 구성했다.</p>
