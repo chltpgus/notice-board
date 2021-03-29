@@ -9,12 +9,12 @@ import Signup from './pages/Signup';
 import Write from './pages/Write';
 import Mytext from './pages/Mytext';
 import Update from './pages/Update';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter , Route } from 'react-router-dom';
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter >
       <div className="App">
         <Header />
         
@@ -27,7 +27,7 @@ function App() {
        
         <Footer/>
       </div>
-    </BrowserRouter>
+    </HashRouter >
   );
 
 }
