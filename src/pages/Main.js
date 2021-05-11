@@ -62,9 +62,7 @@ function Main() {
 
       }, [currentPage]);
 
-
-
-    
+ 
      
 
     const writehandleClick = () => { //새로운 글 작성 버튼을 눌렀는데 로그인이 안되어 있으면 로그인 컴포넌트로 이동
